@@ -20,7 +20,7 @@ Deno.test("anchor tag element", async (t) => {
     );
 
     const expected =
-      `<a download="filename.txt" href="https://example.com" hreflang="en" ping="https://example.com" referer-policy="no-referrer" rel="noopener" target="_blank" type="text/html" >anchor</a>`;
+      `<a download="filename.txt" href="https://example.com" hreflang="en" ping="https://example.com" referer-policy="no-referrer" rel="noopener" target="_blank" type="text/html">anchor</a>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
@@ -35,7 +35,7 @@ Deno.test("anchor tag element", async (t) => {
       },
     );
 
-    const expected = `<a download="filename.txt" ><span>anchor</span></a>`;
+    const expected = `<a download="filename.txt"><span>anchor</span></a>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

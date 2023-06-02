@@ -6,4 +6,4 @@ export {
   html,
   type HTMLTemplate,
   renderToString,
-} from "https://deno.land/x/staggard@0.0.29/main.ts";
+} from "https://deno.land/x/staggard@0.0.30/main.ts";
