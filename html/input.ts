@@ -1,5 +1,5 @@
-import { attr, type AttributeValue, html } from "../deps.ts";
-import { HTMLGlobalAttributes } from "./global_attributes.ts";
+import { html } from "../deps.ts";
+import { attributeList } from "./element_helper.ts";
 import { InputAttributes } from "./input_attributes.ts";
 
 export interface InputFieldOptions<T> {
@@ -9,7 +9,13 @@ export interface InputFieldOptions<T> {
 
 export const input = <T>(
   { attributes, classes }: InputFieldOptions<T> = {},
-) => html`<input ${attributeList<T>(attributes, classes)} />`;
+) => {
+  return html`<input ${
+    attributeList<InputAttributes<T>>(attributes, classes, {
+      prioritySort: "type",
+    })
+  } />`;
+};
 
 export const buttonInput = (
   { attributes = {} }: InputFieldOptions<"button"> = {},
@@ -98,26 +104,3 @@ export const urlInput = (
 export const weekInput = (
   { attributes = {} }: InputFieldOptions<"week"> = {},
 ) => input({ attributes: { ...attributes, type: "week" } });
-
-function attributeList<T>(
-  attributes?: InputAttributes<T>,
-  classes?: (string | undefined)[],
-) {
-  if (!attributes) return "";
-
-  if (classes && classes.length > 0) {
-    (attributes as HTMLGlobalAttributes).class = classes.concat([
-      (attributes as HTMLGlobalAttributes).class,
-    ])
-      .filter((c) => c !== undefined)
-      .join(" ");
-  }
-
-  return Object.entries(attributes)
-    .sort(([a], [b]) => {
-      if (a === "type") return -1;
-      else if (b === "type") return 1;
-      return a.localeCompare(b);
-    }) // always start with type attribute!
-    .map(([attribute, value]) => attr(attribute, value as AttributeValue));
-}

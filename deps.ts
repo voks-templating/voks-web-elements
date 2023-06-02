@@ -4,5 +4,6 @@ export {
   attr,
   type AttributeValue,
   html,
+  type HTMLTemplate,
   renderToString,
 } from "https://deno.land/x/staggard@0.0.29/main.ts";
