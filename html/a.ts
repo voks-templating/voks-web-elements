@@ -21,9 +21,9 @@ export interface AnchorElementOptions {
 }
 
 export const a = (
-  labelOrChildren: string | HTMLTemplate,
+  content: string | HTMLTemplate,
   { attributes, classes }: AnchorElementOptions = {},
 ) =>
   html`<a ${
     attributeList<AnchorAttributes>(attributes, classes)
-  }>${labelOrChildren}</a>`;
+  }>${content}</a>`;
