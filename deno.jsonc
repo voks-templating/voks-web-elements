@@ -1,8 +1,5 @@
 {
   "tasks": {
     "check": "deno lint && deno check *.ts **/*.ts"
-  },
-  "imports": {
-    "std/": "https://deno.land/std@0.190.0/"
   }
 }
