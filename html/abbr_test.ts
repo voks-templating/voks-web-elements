@@ -1,8 +1,8 @@
 import { assertEquals, renderToString } from "../deps.ts";
 import { abbr } from "./abbr.ts";
 
-Deno.test("anchor tag element", async (t) => {
-  await t.step("anchor with attributes", async () => {
+Deno.test("abbr tag element", async (t) => {
+  await t.step("abbr with attributes", async () => {
     const actual = abbr(
       "HTML",
       {
