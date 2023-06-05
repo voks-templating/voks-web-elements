@@ -5,7 +5,7 @@ import { output } from "./output.ts";
 Deno.test("output tag element", async (t) => {
   await t.step("output without attributes", async () => {
     const actual = output("Content");
-    
+
     const expected = `<output>Content</output>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,20 @@ Deno.test("output tag element", async (t) => {
   });
 
   await t.step("output with attributes", async () => {
-
     const actual = output(
-    "Content",
+      "Content",
       {
-        attributes: {},
+        attributes: {
+          for: "id",
+          form: "form",
+          name: "name",
+        },
       },
     );
 
-    
-    const expected = `<output>Content</output>`;
+    const expected =
+      `<output for="id" form="form" name="name">Content</output>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  
