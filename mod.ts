@@ -77,3 +77,4 @@ export * from "./html/menu.ts";
 export * from "./html/meta.ts";
 export * from "./html/meter.ts";
 export * from "./html/object.ts";
+export * from "./html/ol.ts";
