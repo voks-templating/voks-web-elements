@@ -51,3 +51,4 @@ export * from "./html/script.ts";
 export * from "./html/section.ts";
 export * from "./html/select.ts";
 export * from "./html/slot.ts";
+export * from "./html/small.ts";
