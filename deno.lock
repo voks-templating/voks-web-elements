@@ -87,6 +87,10 @@
     "https://deno.land/x/voks@1.0.3/deps.ts": "dc25948fd7e3c39d1c83ace3f455beee6f293254c377cca3b7cd07b9232689ab",
     "https://deno.land/x/voks@1.0.3/mod.ts": "80f33d5a320715d4e1c31700047fb255269b319fd8fac017bb6a63e53d7de614",
     "https://deno.land/x/voks@1.0.3/template_attribute.ts": "82788cb2194c5cf5d26db0b2613b96362ce3d1cddc61b3ed660c072840d40c75",
-    "https://deno.land/x/voks@1.0.3/template_string.ts": "93b5fcb6b2835eb8695022656809a1bd6bf91f3de1ef30689712a2853f521bb4"
+    "https://deno.land/x/voks@1.0.3/template_string.ts": "93b5fcb6b2835eb8695022656809a1bd6bf91f3de1ef30689712a2853f521bb4",
+    "https://deno.land/x/voks@1.0.4/deps.ts": "dc25948fd7e3c39d1c83ace3f455beee6f293254c377cca3b7cd07b9232689ab",
+    "https://deno.land/x/voks@1.0.4/mod.ts": "80f33d5a320715d4e1c31700047fb255269b319fd8fac017bb6a63e53d7de614",
+    "https://deno.land/x/voks@1.0.4/template_attribute.ts": "82788cb2194c5cf5d26db0b2613b96362ce3d1cddc61b3ed660c072840d40c75",
+    "https://deno.land/x/voks@1.0.4/template_string.ts": "93b5fcb6b2835eb8695022656809a1bd6bf91f3de1ef30689712a2853f521bb4"
   }
 }
