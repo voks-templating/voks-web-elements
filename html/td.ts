@@ -2,7 +2,11 @@ import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
-export type TdAttributes = HTMLGlobalAttributes;
+export type TdAttributes = {
+  colspan?: number;
+  headers?: string;
+  rowspan?: number;
+} | HTMLGlobalAttributes;
 
 export interface TdElementOptions {
   classes?: string[];
@@ -12,8 +16,5 @@ export interface TdElementOptions {
 export const td = (
   content: string | HTMLTemplate,
   { attributes, classes }: TdElementOptions = {},
-) =>html`<td ${
-  attributeList<TdAttributes>(attributes, classes)
-}>${content}</td>`;
-
-  
+) =>
+  html`<td ${attributeList<TdAttributes>(attributes, classes)}>${content}</td>`;
