@@ -90,3 +90,4 @@ export * from "./html/noscript.ts";
 export * from "./html/summary.ts";
 export * from "./html/sup.ts";
 export * from "./html/table.ts";
+export * from "./html/tbody.ts";
