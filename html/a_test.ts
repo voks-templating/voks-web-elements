@@ -1,4 +1,5 @@
-import { assertEquals, html, renderToString } from "../deps.ts";
+import { assertEquals } from "asserts";
+import { html, renderToString } from "../deps.ts";
 import { a } from "./a.ts";
 
 Deno.test("anchor tag element", async (t) => {

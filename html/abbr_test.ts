@@ -1,4 +1,5 @@
-import { assertEquals, renderToString } from "../deps.ts";
+import { assertEquals } from "asserts";
+import { renderToString } from "../deps.ts";
 import { abbr } from "./abbr.ts";
 
 Deno.test("abbr tag element", async (t) => {

@@ -1,0 +1,34 @@
+{
+  "name": "voks-elements",
+  "version": "0.0.1",
+  "description": "voks-elements is a collection of html elements built with the Voks templating engine.",
+  "main": "dist/mod.js",
+  "types": "mod.ts",
+  "directories": {
+    "dist": "dist",
+    "scripts": "scripts"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "*.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:voks-templating/voks.git"
+  },
+  "author": "Falk Hoppe <falk@hey.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/voks-templating/voks/issues"
+  },
+  "homepage": "https://github.com/voks-templating/voks#readme",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "tagFormat": "${version}"
+  }
+}
