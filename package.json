@@ -1,7 +1,7 @@
 {
-  "name": "voks-web-elements",
+  "name": "@voks/voks-web-elements",
   "version": "0.0.1",
-  "description": "voks-elements is a collection of html elements built with the Voks templating engine.",
+  "description": "@voks/voks-web-elements is a collection of html elements built with the Voks templating engine.",
   "main": "dist/mod.js",
   "types": "mod.ts",
   "directories": {
