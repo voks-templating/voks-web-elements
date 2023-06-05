@@ -47,3 +47,4 @@ export * from "./html/rt.ts";
 export * from "./html/ruby.ts";
 export * from "./html/s.ts";
 export * from "./html/samp.ts";
+export * from "./html/script.ts";
