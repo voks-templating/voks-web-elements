@@ -34,3 +34,4 @@ export * from "./html/dl.ts";
 export * from "./html/dt.ts";
 export * from "./html/em.ts";
 export * from "./html/embed.ts";
+export * from "./html/fieldset.ts";
