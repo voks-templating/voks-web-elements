@@ -12,6 +12,7 @@ export * from "./html/bdo.ts";
 export * from "./html/blockquote.ts";
 export * from "./html/body.ts";
 export * from "./html/br.ts";
+export * from "./html/button.ts";
 export * from "./html/global_attributes.ts";
 export * from "./html/input.ts";
 export * from "./html/input_attributes.ts";
