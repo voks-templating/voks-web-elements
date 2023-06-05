@@ -1,21 +1,18 @@
 import { assertEquals } from "asserts";
-  import { renderToString } from "../deps.ts";
-  import { b } from "./b.ts";
+import { renderToString } from "../deps.ts";
+import { b } from "./b.ts";
 
-  Deno.test("b tag element", async (t) => {
-    await t.step("b with attributes", async () => {
-
-      const actual = b(
+Deno.test("b tag element", async (t) => {
+  await t.step("b with attributes", async () => {
+    const actual = b(
       "Content",
-        {
-          attributes: {},
-        },
-      );
+      {
+        attributes: {},
+      },
+    );
 
-      const expected = `<b>Content</b>`;
-      const rendered = await renderToString(actual, { minify: true });
-      assertEquals(rendered, expected);
-    });
+    const expected = `<b>Content</b>`;
+    const rendered = await renderToString(actual, { minify: true });
+    assertEquals(rendered, expected);
   });
-
-  
+});

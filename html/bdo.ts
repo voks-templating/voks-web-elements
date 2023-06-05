@@ -12,8 +12,7 @@ export interface BdoElementOptions {
 export const bdo = (
   content: string | HTMLTemplate,
   { attributes, classes }: BdoElementOptions = {},
-) =>html`<bdo ${
-  attributeList<BdoAttributes>(attributes, classes)
-}>${content}</bdo>`;
-
-  
+) =>
+  html`<bdo ${
+    attributeList<BdoAttributes>(attributes, classes)
+  }>${content}</bdo>`;

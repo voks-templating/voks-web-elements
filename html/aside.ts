@@ -16,4 +16,3 @@ export const aside = (
   html`<aside ${
     attributeList<AsideAttributes>(attributes, classes)
   }>${content}</aside>`;
-  

@@ -12,8 +12,4 @@ export interface BElementOptions {
 export const b = (
   content: string | HTMLTemplate,
   { attributes, classes }: BElementOptions = {},
-) =>
-  html`<b ${
-    attributeList<BAttributes>(attributes, classes)
-  }>${content}</b>`;
-  
+) => html`<b ${attributeList<BAttributes>(attributes, classes)}>${content}</b>`;

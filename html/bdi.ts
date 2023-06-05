@@ -12,8 +12,7 @@ export interface BdiElementOptions {
 export const bdi = (
   content: string | HTMLTemplate,
   { attributes, classes }: BdiElementOptions = {},
-) =>html`<bdi ${
-  attributeList<BdiAttributes>(attributes, classes)
-}>${content}</bdi>`;
-
-  
+) =>
+  html`<bdi ${
+    attributeList<BdiAttributes>(attributes, classes)
+  }>${content}</bdi>`;
