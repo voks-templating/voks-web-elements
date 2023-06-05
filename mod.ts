@@ -84,3 +84,4 @@ export * from "./html/output.ts";
 export * from "./html/p.ts";
 export * from "./html/picture.ts";
 export * from "./html/pre.ts";
+export * from "./html/progress.ts";
