@@ -12,8 +12,7 @@ export interface SampElementOptions {
 export const samp = (
   content: string | HTMLTemplate,
   { attributes, classes }: SampElementOptions = {},
-) =>html`<samp ${
-  attributeList<SampAttributes>(attributes, classes)
-}>${content}</samp>`;
-
-  
+) =>
+  html`<samp ${
+    attributeList<SampAttributes>(attributes, classes)
+  }>${content}</samp>`;

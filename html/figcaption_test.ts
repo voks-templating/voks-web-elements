@@ -5,7 +5,7 @@ import { figcaption } from "./figcaption.ts";
 Deno.test("figcaption tag element", async (t) => {
   await t.step("figcaption without attributes", async () => {
     const actual = figcaption("Content");
-    
+
     const expected = `<figcaption>Content</figcaption>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("figcaption tag element", async (t) => {
   });
 
   await t.step("figcaption with attributes", async () => {
-
     const actual = figcaption(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<figcaption>Content</figcaption>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

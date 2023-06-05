@@ -5,7 +5,7 @@ import { em } from "./em.ts";
 Deno.test("em tag element", async (t) => {
   await t.step("em without attributes", async () => {
     const actual = em("Content");
-    
+
     const expected = `<em>Content</em>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("em tag element", async (t) => {
   });
 
   await t.step("em with attributes", async () => {
-
     const actual = em(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<em>Content</em>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

@@ -12,8 +12,7 @@ export interface FigureElementOptions {
 export const figure = (
   content: string | HTMLTemplate,
   { attributes, classes }: FigureElementOptions = {},
-) =>html`<figure ${
-  attributeList<FigureAttributes>(attributes, classes)
-}>${content}</figure>`;
-
-  
+) =>
+  html`<figure ${
+    attributeList<FigureAttributes>(attributes, classes)
+  }>${content}</figure>`;

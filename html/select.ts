@@ -12,8 +12,7 @@ export interface SelectElementOptions {
 export const select = (
   content: string | HTMLTemplate,
   { attributes, classes }: SelectElementOptions = {},
-) =>html`<select ${
-  attributeList<SelectAttributes>(attributes, classes)
-}>${content}</select>`;
-
-  
+) =>
+  html`<select ${
+    attributeList<SelectAttributes>(attributes, classes)
+  }>${content}</select>`;

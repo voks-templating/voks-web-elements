@@ -12,8 +12,7 @@ export interface NavElementOptions {
 export const nav = (
   content: string | HTMLTemplate,
   { attributes, classes }: NavElementOptions = {},
-) =>html`<nav ${
-  attributeList<NavAttributes>(attributes, classes)
-}>${content}</nav>`;
-
-  
+) =>
+  html`<nav ${
+    attributeList<NavAttributes>(attributes, classes)
+  }>${content}</nav>`;

@@ -12,8 +12,7 @@ export interface DialogElementOptions {
 export const dialog = (
   content: string | HTMLTemplate,
   { attributes, classes }: DialogElementOptions = {},
-) =>html`<dialog ${
-  attributeList<DialogAttributes>(attributes, classes)
-}>${content}</dialog>`;
-
-  
+) =>
+  html`<dialog ${
+    attributeList<DialogAttributes>(attributes, classes)
+  }>${content}</dialog>`;

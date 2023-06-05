@@ -12,8 +12,7 @@ export interface FormElementOptions {
 export const form = (
   content: string | HTMLTemplate,
   { attributes, classes }: FormElementOptions = {},
-) =>html`<form ${
-  attributeList<FormAttributes>(attributes, classes)
-}>${content}</form>`;
-
-  
+) =>
+  html`<form ${
+    attributeList<FormAttributes>(attributes, classes)
+  }>${content}</form>`;

@@ -12,8 +12,7 @@ export interface FieldsetElementOptions {
 export const fieldset = (
   content: string | HTMLTemplate,
   { attributes, classes }: FieldsetElementOptions = {},
-) =>html`<fieldset ${
-  attributeList<FieldsetAttributes>(attributes, classes)
-}>${content}</fieldset>`;
-
-  
+) =>
+  html`<fieldset ${
+    attributeList<FieldsetAttributes>(attributes, classes)
+  }>${content}</fieldset>`;

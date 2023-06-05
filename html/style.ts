@@ -12,8 +12,7 @@ export interface StyleElementOptions {
 export const style = (
   content: string | HTMLTemplate,
   { attributes, classes }: StyleElementOptions = {},
-) =>html`<style ${
-  attributeList<StyleAttributes>(attributes, classes)
-}>${content}</style>`;
-
-  
+) =>
+  html`<style ${
+    attributeList<StyleAttributes>(attributes, classes)
+  }>${content}</style>`;

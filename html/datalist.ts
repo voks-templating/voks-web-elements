@@ -12,8 +12,7 @@ export interface DatalistElementOptions {
 export const datalist = (
   content: string | HTMLTemplate,
   { attributes, classes }: DatalistElementOptions = {},
-) =>html`<datalist ${
-  attributeList<DatalistAttributes>(attributes, classes)
-}>${content}</datalist>`;
-
-  
+) =>
+  html`<datalist ${
+    attributeList<DatalistAttributes>(attributes, classes)
+  }>${content}</datalist>`;

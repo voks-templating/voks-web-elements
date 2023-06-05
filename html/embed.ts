@@ -12,8 +12,7 @@ export interface EmbedElementOptions {
 export const embed = (
   content: string | HTMLTemplate,
   { attributes, classes }: EmbedElementOptions = {},
-) =>html`<embed ${
-  attributeList<EmbedAttributes>(attributes, classes)
-}>${content}</embed>`;
-
-  
+) =>
+  html`<embed ${
+    attributeList<EmbedAttributes>(attributes, classes)
+  }>${content}</embed>`;

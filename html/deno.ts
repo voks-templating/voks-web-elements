@@ -11,8 +11,4 @@ export interface DenoElementOptions {
 
 export const deno = (
   { attributes, classes }: DenoElementOptions = {},
-) =>html`<deno ${
-  attributeList<DenoAttributes>(attributes, classes)
-}></deno>`;
-
-  
+) => html`<deno ${attributeList<DenoAttributes>(attributes, classes)}></deno>`;

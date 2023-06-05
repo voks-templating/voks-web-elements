@@ -12,8 +12,7 @@ export interface TimeElementOptions {
 export const time = (
   content: string | HTMLTemplate,
   { attributes, classes }: TimeElementOptions = {},
-) =>html`<time ${
-  attributeList<TimeAttributes>(attributes, classes)
-}>${content}</time>`;
-
-  
+) =>
+  html`<time ${
+    attributeList<TimeAttributes>(attributes, classes)
+  }>${content}</time>`;

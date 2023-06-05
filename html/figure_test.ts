@@ -5,7 +5,7 @@ import { figure } from "./figure.ts";
 Deno.test("figure tag element", async (t) => {
   await t.step("figure without attributes", async () => {
     const actual = figure("Content");
-    
+
     const expected = `<figure>Content</figure>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("figure tag element", async (t) => {
   });
 
   await t.step("figure with attributes", async () => {
-
     const actual = figure(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<figure>Content</figure>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

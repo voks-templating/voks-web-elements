@@ -12,8 +12,7 @@ export interface TitleElementOptions {
 export const title = (
   content: string | HTMLTemplate,
   { attributes, classes }: TitleElementOptions = {},
-) =>html`<title ${
-  attributeList<TitleAttributes>(attributes, classes)
-}>${content}</title>`;
-
-  
+) =>
+  html`<title ${
+    attributeList<TitleAttributes>(attributes, classes)
+  }>${content}</title>`;

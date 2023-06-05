@@ -12,8 +12,5 @@ export interface RpElementOptions {
 export const rp = (
   content: string | HTMLTemplate,
   { attributes, classes }: RpElementOptions = {},
-) =>html`<rp ${
-  attributeList<RpAttributes>(attributes, classes)
-}>${content}</rp>`;
-
-  
+) =>
+  html`<rp ${attributeList<RpAttributes>(attributes, classes)}>${content}</rp>`;

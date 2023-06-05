@@ -12,8 +12,7 @@ export interface VideoElementOptions {
 export const video = (
   content: string | HTMLTemplate,
   { attributes, classes }: VideoElementOptions = {},
-) =>html`<video ${
-  attributeList<VideoAttributes>(attributes, classes)
-}>${content}</video>`;
-
-  
+) =>
+  html`<video ${
+    attributeList<VideoAttributes>(attributes, classes)
+  }>${content}</video>`;

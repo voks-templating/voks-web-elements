@@ -12,8 +12,7 @@ export interface SlotElementOptions {
 export const slot = (
   content: string | HTMLTemplate,
   { attributes, classes }: SlotElementOptions = {},
-) =>html`<slot ${
-  attributeList<SlotAttributes>(attributes, classes)
-}>${content}</slot>`;
-
-  
+) =>
+  html`<slot ${
+    attributeList<SlotAttributes>(attributes, classes)
+  }>${content}</slot>`;

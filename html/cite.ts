@@ -12,8 +12,7 @@ export interface CiteElementOptions {
 export const cite = (
   content: string | HTMLTemplate,
   { attributes, classes }: CiteElementOptions = {},
-) =>html`<cite ${
-  attributeList<CiteAttributes>(attributes, classes)
-}>${content}</cite>`;
-
-  
+) =>
+  html`<cite ${
+    attributeList<CiteAttributes>(attributes, classes)
+  }>${content}</cite>`;

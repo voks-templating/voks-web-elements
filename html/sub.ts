@@ -12,8 +12,7 @@ export interface SubElementOptions {
 export const sub = (
   content: string | HTMLTemplate,
   { attributes, classes }: SubElementOptions = {},
-) =>html`<sub ${
-  attributeList<SubAttributes>(attributes, classes)
-}>${content}</sub>`;
-
-  
+) =>
+  html`<sub ${
+    attributeList<SubAttributes>(attributes, classes)
+  }>${content}</sub>`;

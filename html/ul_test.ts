@@ -5,7 +5,7 @@ import { ul } from "./ul.ts";
 Deno.test("ul tag element", async (t) => {
   await t.step("ul without attributes", async () => {
     const actual = ul("Content");
-    
+
     const expected = `<ul>Content</ul>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("ul tag element", async (t) => {
   });
 
   await t.step("ul with attributes", async () => {
-
     const actual = ul(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<ul>Content</ul>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

@@ -12,8 +12,7 @@ export interface SourceElementOptions {
 export const source = (
   content: string | HTMLTemplate,
   { attributes, classes }: SourceElementOptions = {},
-) =>html`<source ${
-  attributeList<SourceAttributes>(attributes, classes)
-}>${content}</source>`;
-
-  
+) =>
+  html`<source ${
+    attributeList<SourceAttributes>(attributes, classes)
+  }>${content}</source>`;

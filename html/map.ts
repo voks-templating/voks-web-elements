@@ -12,8 +12,7 @@ export interface MapElementOptions {
 export const map = (
   content: string | HTMLTemplate,
   { attributes, classes }: MapElementOptions = {},
-) =>html`<map ${
-  attributeList<MapAttributes>(attributes, classes)
-}>${content}</map>`;
-
-  
+) =>
+  html`<map ${
+    attributeList<MapAttributes>(attributes, classes)
+  }>${content}</map>`;

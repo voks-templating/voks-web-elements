@@ -12,8 +12,7 @@ export interface SpanElementOptions {
 export const span = (
   content: string | HTMLTemplate,
   { attributes, classes }: SpanElementOptions = {},
-) =>html`<span ${
-  attributeList<SpanAttributes>(attributes, classes)
-}>${content}</span>`;
-
-  
+) =>
+  html`<span ${
+    attributeList<SpanAttributes>(attributes, classes)
+  }>${content}</span>`;

@@ -12,8 +12,7 @@ export interface FooterElementOptions {
 export const footer = (
   content: string | HTMLTemplate,
   { attributes, classes }: FooterElementOptions = {},
-) =>html`<footer ${
-  attributeList<FooterAttributes>(attributes, classes)
-}>${content}</footer>`;
-
-  
+) =>
+  html`<footer ${
+    attributeList<FooterAttributes>(attributes, classes)
+  }>${content}</footer>`;

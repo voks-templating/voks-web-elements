@@ -5,7 +5,7 @@ import { slot } from "./slot.ts";
 Deno.test("slot tag element", async (t) => {
   await t.step("slot without attributes", async () => {
     const actual = slot("Content");
-    
+
     const expected = `<slot>Content</slot>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("slot tag element", async (t) => {
   });
 
   await t.step("slot with attributes", async () => {
-
     const actual = slot(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<slot>Content</slot>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

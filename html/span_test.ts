@@ -5,7 +5,7 @@ import { span } from "./span.ts";
 Deno.test("span tag element", async (t) => {
   await t.step("span without attributes", async () => {
     const actual = span("Content");
-    
+
     const expected = `<span>Content</span>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("span tag element", async (t) => {
   });
 
   await t.step("span with attributes", async () => {
-
     const actual = span(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<span>Content</span>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

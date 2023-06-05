@@ -12,8 +12,4 @@ export interface SElementOptions {
 export const s = (
   content: string | HTMLTemplate,
   { attributes, classes }: SElementOptions = {},
-) =>html`<s ${
-  attributeList<SAttributes>(attributes, classes)
-}>${content}</s>`;
-
-  
+) => html`<s ${attributeList<SAttributes>(attributes, classes)}>${content}</s>`;

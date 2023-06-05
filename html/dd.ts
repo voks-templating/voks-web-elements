@@ -12,8 +12,5 @@ export interface DdElementOptions {
 export const dd = (
   content: string | HTMLTemplate,
   { attributes, classes }: DdElementOptions = {},
-) =>html`<dd ${
-  attributeList<DdAttributes>(attributes, classes)
-}>${content}</dd>`;
-
-  
+) =>
+  html`<dd ${attributeList<DdAttributes>(attributes, classes)}>${content}</dd>`;

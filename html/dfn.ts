@@ -12,8 +12,7 @@ export interface DfnElementOptions {
 export const dfn = (
   content: string | HTMLTemplate,
   { attributes, classes }: DfnElementOptions = {},
-) =>html`<dfn ${
-  attributeList<DfnAttributes>(attributes, classes)
-}>${content}</dfn>`;
-
-  
+) =>
+  html`<dfn ${
+    attributeList<DfnAttributes>(attributes, classes)
+  }>${content}</dfn>`;

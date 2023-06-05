@@ -12,8 +12,7 @@ export interface ScriptElementOptions {
 export const script = (
   content: string | HTMLTemplate,
   { attributes, classes }: ScriptElementOptions = {},
-) =>html`<script ${
-  attributeList<ScriptAttributes>(attributes, classes)
-}>${content}</script>`;
-
-  
+) =>
+  html`<script ${
+    attributeList<ScriptAttributes>(attributes, classes)
+  }>${content}</script>`;

@@ -5,7 +5,7 @@ import { rp } from "./rp.ts";
 Deno.test("rp tag element", async (t) => {
   await t.step("rp without attributes", async () => {
     const actual = rp("Content");
-    
+
     const expected = `<rp>Content</rp>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("rp tag element", async (t) => {
   });
 
   await t.step("rp with attributes", async () => {
-
     const actual = rp(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<rp>Content</rp>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

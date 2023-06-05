@@ -12,8 +12,7 @@ export interface DivElementOptions {
 export const div = (
   content: string | HTMLTemplate,
   { attributes, classes }: DivElementOptions = {},
-) =>html`<div ${
-  attributeList<DivAttributes>(attributes, classes)
-}>${content}</div>`;
-
-  
+) =>
+  html`<div ${
+    attributeList<DivAttributes>(attributes, classes)
+  }>${content}</div>`;

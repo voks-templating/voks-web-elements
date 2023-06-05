@@ -5,7 +5,7 @@ import { small } from "./small.ts";
 Deno.test("small tag element", async (t) => {
   await t.step("small without attributes", async () => {
     const actual = small("Content");
-    
+
     const expected = `<small>Content</small>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("small tag element", async (t) => {
   });
 
   await t.step("small with attributes", async () => {
-
     const actual = small(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<small>Content</small>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

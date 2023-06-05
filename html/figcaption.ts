@@ -12,8 +12,7 @@ export interface FigcaptionElementOptions {
 export const figcaption = (
   content: string | HTMLTemplate,
   { attributes, classes }: FigcaptionElementOptions = {},
-) =>html`<figcaption ${
-  attributeList<FigcaptionAttributes>(attributes, classes)
-}>${content}</figcaption>`;
-
-  
+) =>
+  html`<figcaption ${
+    attributeList<FigcaptionAttributes>(attributes, classes)
+  }>${content}</figcaption>`;

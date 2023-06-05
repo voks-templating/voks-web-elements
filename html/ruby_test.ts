@@ -5,7 +5,7 @@ import { ruby } from "./ruby.ts";
 Deno.test("ruby tag element", async (t) => {
   await t.step("ruby without attributes", async () => {
     const actual = ruby("Content");
-    
+
     const expected = `<ruby>Content</ruby>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("ruby tag element", async (t) => {
   });
 
   await t.step("ruby with attributes", async () => {
-
     const actual = ruby(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<ruby>Content</ruby>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

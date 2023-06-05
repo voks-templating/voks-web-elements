@@ -12,8 +12,7 @@ export interface RubyElementOptions {
 export const ruby = (
   content: string | HTMLTemplate,
   { attributes, classes }: RubyElementOptions = {},
-) =>html`<ruby ${
-  attributeList<RubyAttributes>(attributes, classes)
-}>${content}</ruby>`;
-
-  
+) =>
+  html`<ruby ${
+    attributeList<RubyAttributes>(attributes, classes)
+  }>${content}</ruby>`;

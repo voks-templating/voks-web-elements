@@ -12,8 +12,7 @@ export interface WbrElementOptions {
 export const wbr = (
   content: string | HTMLTemplate,
   { attributes, classes }: WbrElementOptions = {},
-) =>html`<wbr ${
-  attributeList<WbrAttributes>(attributes, classes)
-}>${content}</wbr>`;
-
-  
+) =>
+  html`<wbr ${
+    attributeList<WbrAttributes>(attributes, classes)
+  }>${content}</wbr>`;

@@ -12,8 +12,5 @@ export interface DtElementOptions {
 export const dt = (
   content: string | HTMLTemplate,
   { attributes, classes }: DtElementOptions = {},
-) =>html`<dt ${
-  attributeList<DtAttributes>(attributes, classes)
-}>${content}</dt>`;
-
-  
+) =>
+  html`<dt ${attributeList<DtAttributes>(attributes, classes)}>${content}</dt>`;

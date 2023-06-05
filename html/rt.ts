@@ -12,8 +12,5 @@ export interface RtElementOptions {
 export const rt = (
   content: string | HTMLTemplate,
   { attributes, classes }: RtElementOptions = {},
-) =>html`<rt ${
-  attributeList<RtAttributes>(attributes, classes)
-}>${content}</rt>`;
-
-  
+) =>
+  html`<rt ${attributeList<RtAttributes>(attributes, classes)}>${content}</rt>`;

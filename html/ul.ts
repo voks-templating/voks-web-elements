@@ -12,8 +12,5 @@ export interface UlElementOptions {
 export const ul = (
   content: string | HTMLTemplate,
   { attributes, classes }: UlElementOptions = {},
-) =>html`<ul ${
-  attributeList<UlAttributes>(attributes, classes)
-}>${content}</ul>`;
-
-  
+) =>
+  html`<ul ${attributeList<UlAttributes>(attributes, classes)}>${content}</ul>`;

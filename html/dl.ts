@@ -12,8 +12,5 @@ export interface DlElementOptions {
 export const dl = (
   content: string | HTMLTemplate,
   { attributes, classes }: DlElementOptions = {},
-) =>html`<dl ${
-  attributeList<DlAttributes>(attributes, classes)
-}>${content}</dl>`;
-
-  
+) =>
+  html`<dl ${attributeList<DlAttributes>(attributes, classes)}>${content}</dl>`;

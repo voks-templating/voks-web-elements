@@ -12,8 +12,7 @@ export interface CodeElementOptions {
 export const code = (
   content: string | HTMLTemplate,
   { attributes, classes }: CodeElementOptions = {},
-) =>html`<code ${
-  attributeList<CodeAttributes>(attributes, classes)
-}>${content}</code>`;
-
-  
+) =>
+  html`<code ${
+    attributeList<CodeAttributes>(attributes, classes)
+  }>${content}</code>`;

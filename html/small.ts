@@ -12,8 +12,7 @@ export interface SmallElementOptions {
 export const small = (
   content: string | HTMLTemplate,
   { attributes, classes }: SmallElementOptions = {},
-) =>html`<small ${
-  attributeList<SmallAttributes>(attributes, classes)
-}>${content}</small>`;
-
-  
+) =>
+  html`<small ${
+    attributeList<SmallAttributes>(attributes, classes)
+  }>${content}</small>`;

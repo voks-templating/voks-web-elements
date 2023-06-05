@@ -5,7 +5,7 @@ import { dd } from "./dd.ts";
 Deno.test("dd tag element", async (t) => {
   await t.step("dd without attributes", async () => {
     const actual = dd("Content");
-    
+
     const expected = `<dd>Content</dd>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("dd tag element", async (t) => {
   });
 
   await t.step("dd with attributes", async () => {
-
     const actual = dd(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<dd>Content</dd>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

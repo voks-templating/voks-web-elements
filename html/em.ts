@@ -12,8 +12,5 @@ export interface EmElementOptions {
 export const em = (
   content: string | HTMLTemplate,
   { attributes, classes }: EmElementOptions = {},
-) =>html`<em ${
-  attributeList<EmAttributes>(attributes, classes)
-}>${content}</em>`;
-
-  
+) =>
+  html`<em ${attributeList<EmAttributes>(attributes, classes)}>${content}</em>`;

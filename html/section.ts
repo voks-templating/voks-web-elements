@@ -12,8 +12,7 @@ export interface SectionElementOptions {
 export const section = (
   content: string | HTMLTemplate,
   { attributes, classes }: SectionElementOptions = {},
-) =>html`<section ${
-  attributeList<SectionAttributes>(attributes, classes)
-}>${content}</section>`;
-
-  
+) =>
+  html`<section ${
+    attributeList<SectionAttributes>(attributes, classes)
+  }>${content}</section>`;

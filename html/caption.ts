@@ -12,8 +12,7 @@ export interface CaptionElementOptions {
 export const caption = (
   content: string | HTMLTemplate,
   { attributes, classes }: CaptionElementOptions = {},
-) =>html`<caption ${
-  attributeList<CaptionAttributes>(attributes, classes)
-}>${content}</caption>`;
-
-  
+) =>
+  html`<caption ${
+    attributeList<CaptionAttributes>(attributes, classes)
+  }>${content}</caption>`;

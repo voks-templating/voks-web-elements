@@ -12,8 +12,7 @@ export interface StrongElementOptions {
 export const strong = (
   content: string | HTMLTemplate,
   { attributes, classes }: StrongElementOptions = {},
-) =>html`<strong ${
-  attributeList<StrongAttributes>(attributes, classes)
-}>${content}</strong>`;
-
-  
+) =>
+  html`<strong ${
+    attributeList<StrongAttributes>(attributes, classes)
+  }>${content}</strong>`;
