@@ -2,7 +2,18 @@ import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
-export type FormAttributes = HTMLGlobalAttributes;
+export type FormAttributes = {
+  acceptCharset?: string;
+  action?: string;
+  autocapitalize?: string;
+  autocomplete?: string;
+  enctype?: string;
+  name?: string;
+  rel?: string;
+  target?: string;
+  method?: string;
+  novalidate?: boolean;
+} | HTMLGlobalAttributes;
 
 export interface FormElementOptions {
   classes?: string[];
