@@ -22,6 +22,7 @@ export * from "./html/colgroup.ts";
 export * from "./html/data.ts";
 export * from "./html/datalist.ts";
 export * from "./html/dd.ts";
+export * from "./html/del.ts";
 export * from "./html/global_attributes.ts";
 export * from "./html/input.ts";
 export * from "./html/input_attributes.ts";
