@@ -16,11 +16,16 @@ Deno.test("style tag element", async (t) => {
     const actual = style(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          media: "test",
+          nonce: "test",
+          title: "test",
+        },
       },
     );
 
-    const expected = `<style>Content</style>`;
+    const expected =
+      `<style media="test" nonce="test" title="test">Content</style>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
