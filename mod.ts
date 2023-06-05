@@ -70,3 +70,4 @@ export * from "./html/kbd.ts";
 export * from "./html/label.ts";
 export * from "./html/legend.ts";
 export * from "./html/li.ts";
+export * from "./html/link.ts";
