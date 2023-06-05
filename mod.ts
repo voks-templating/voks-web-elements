@@ -94,3 +94,4 @@ export * from "./html/tbody.ts";
 export * from "./html/td.ts";
 export * from "./html/template.ts";
 export * from "./html/textarea.ts";
+export * from "./html/tfoot.ts";
