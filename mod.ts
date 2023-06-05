@@ -36,3 +36,4 @@ export * from "./html/em.ts";
 export * from "./html/embed.ts";
 export * from "./html/fieldset.ts";
 export * from "./html/figcaption.ts";
+export * from "./html/figure.ts";
