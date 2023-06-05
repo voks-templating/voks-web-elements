@@ -44,3 +44,4 @@ export * from "./html/map.ts";
 export * from "./html/nav.ts";
 export * from "./html/rp.ts";
 export * from "./html/rt.ts";
+export * from "./html/ruby.ts";
