@@ -64,3 +64,4 @@ export * from "./html/var.ts";
 export * from "./html/video.ts";
 export * from "./html/wbr.ts";
 export * from "./html/iframe.ts";
+export * from "./html/img.ts";
