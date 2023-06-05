@@ -87,3 +87,4 @@ export * from "./html/pre.ts";
 export * from "./html/progress.ts";
 export * from "./html/q.ts";
 export * from "./html/noscript.ts";
+export * from "./html/summary.ts";
