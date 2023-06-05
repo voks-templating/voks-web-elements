@@ -9,6 +9,7 @@ export * from "./html/b.ts";
 export * from "./html/base.ts";
 export * from "./html/bdi.ts";
 export * from "./html/bdo.ts";
+export * from "./html/blockquote.ts";
 export * from "./html/global_attributes.ts";
 export * from "./html/input.ts";
 export * from "./html/input_attributes.ts";
