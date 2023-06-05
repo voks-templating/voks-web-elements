@@ -9,11 +9,10 @@ export interface VarElementOptions {
   attributes?: VarAttributes;
 }
 
-export const var = (
+export const variable = (
   content: string | HTMLTemplate,
   { attributes, classes }: VarElementOptions = {},
-) =>html`<var ${
-  attributeList<VarAttributes>(attributes, classes)
-}>${content}</var>`;
-
-  
+) =>
+  html`<var ${
+    attributeList<VarAttributes>(attributes, classes)
+  }>${content}</var>`;
