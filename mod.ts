@@ -91,3 +91,4 @@ export * from "./html/summary.ts";
 export * from "./html/sup.ts";
 export * from "./html/table.ts";
 export * from "./html/tbody.ts";
+export * from "./html/td.ts";
