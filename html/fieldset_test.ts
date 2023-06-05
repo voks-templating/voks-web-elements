@@ -16,11 +16,16 @@ Deno.test("fieldset tag element", async (t) => {
     const actual = fieldset(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          disabled: true,
+          form: "form-id",
+          name: "name",
+        },
       },
     );
 
-    const expected = `<fieldset>Content</fieldset>`;
+    const expected =
+      `<fieldset disabled form="form-id" name="name">Content</fieldset>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
