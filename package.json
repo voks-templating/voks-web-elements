@@ -1,5 +1,5 @@
 {
-  "name": "voks-elements",
+  "name": "voks-web-elements",
   "version": "0.0.1",
   "description": "voks-elements is a collection of html elements built with the Voks templating engine.",
   "main": "dist/mod.js",
