@@ -81,3 +81,4 @@ export * from "./html/ol.ts";
 export * from "./html/optgroup.ts";
 export * from "./html/option.ts";
 export * from "./html/output.ts";
+export * from "./html/p.ts";
