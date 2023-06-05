@@ -16,11 +16,17 @@ Deno.test("embed tag element", async (t) => {
     const actual = embed(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          height: 100,
+          src: "https://example.com",
+          type: "video/mp4",
+          width: 100,
+        },
       },
     );
 
-    const expected = `<embed>Content</embed>`;
+    const expected =
+      `<embed height="100" src="https://example.com" type="video/mp4" width="100">Content</embed>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
