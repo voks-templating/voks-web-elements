@@ -108,3 +108,4 @@ export * from "./html/h5.ts";
 export * from "./html/h6.ts";
 export * from "./html/header.ts";
 export * from "./html/hgroup.ts";
+export * from "./html/hr.ts";
