@@ -49,3 +49,4 @@ export * from "./html/s.ts";
 export * from "./html/samp.ts";
 export * from "./html/script.ts";
 export * from "./html/section.ts";
+export * from "./html/select.ts";
