@@ -99,3 +99,4 @@ export * from "./html/th.ts";
 export * from "./html/thead.ts";
 export * from "./html/track.ts";
 export * from "./html/u.ts";
+export * from "./html/head.ts";
