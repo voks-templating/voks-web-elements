@@ -17,6 +17,7 @@ export * from "./html/canvas.ts";
 export * from "./html/caption.ts";
 export * from "./html/cite.ts";
 export * from "./html/code.ts";
+export * from "./html/col.ts";
 export * from "./html/global_attributes.ts";
 export * from "./html/input.ts";
 export * from "./html/input_attributes.ts";
