@@ -57,3 +57,4 @@ export * from "./html/span.ts";
 export * from "./html/strong.ts";
 export * from "./html/style.ts";
 export * from "./html/sub.ts";
+export * from "./html/time.ts";
