@@ -1,4 +1,4 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -15,9 +15,5 @@ export interface MetaElementOptions {
 }
 
 export const meta = (
-  content: string | HTMLTemplate,
   { attributes, classes }: MetaElementOptions = {},
-) =>
-  html`<meta ${
-    attributeList<MetaAttributes>(attributes, classes)
-  }>${content}</meta>`;
+) => html`<meta ${attributeList<MetaAttributes>(attributes, classes)} />`;
