@@ -78,3 +78,4 @@ export * from "./html/meta.ts";
 export * from "./html/meter.ts";
 export * from "./html/object.ts";
 export * from "./html/ol.ts";
+export * from "./html/optgroup.ts";

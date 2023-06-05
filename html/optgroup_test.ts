@@ -1,0 +1,30 @@
+import { assertEquals } from "asserts";
+import { renderToString } from "../deps.ts";
+import { optgroup } from "./optgroup.ts";
+
+Deno.test("optgroup tag element", async (t) => {
+  await t.step("optgroup without attributes", async () => {
+    const actual = optgroup("Content");
+    
+    const expected = `<optgroup>Content</optgroup>`;
+
+    const rendered = await renderToString(actual, { minify: true });
+    assertEquals(rendered, expected);
+  });
+
+  await t.step("optgroup with attributes", async () => {
+
+    const actual = optgroup(
+    "Content",
+      {
+        attributes: {},
+      },
+    );
+
+    
+    const expected = `<optgroup>Content</optgroup>`;
+    const rendered = await renderToString(actual, { minify: true });
+    assertEquals(rendered, expected);
+  });
+});
+  
