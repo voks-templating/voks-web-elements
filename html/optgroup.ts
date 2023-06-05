@@ -2,7 +2,10 @@ import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
-export type OptgroupAttributes = HTMLGlobalAttributes;
+export type OptgroupAttributes = {
+  disabled?: boolean;
+  label?: string;
+} | HTMLGlobalAttributes;
 
 export interface OptgroupElementOptions {
   classes?: string[];
@@ -12,8 +15,7 @@ export interface OptgroupElementOptions {
 export const optgroup = (
   content: string | HTMLTemplate,
   { attributes, classes }: OptgroupElementOptions = {},
-) =>html`<optgroup ${
-  attributeList<OptgroupAttributes>(attributes, classes)
-}>${content}</optgroup>`;
-
-  
+) =>
+  html`<optgroup ${
+    attributeList<OptgroupAttributes>(attributes, classes)
+  }>${content}</optgroup>`;

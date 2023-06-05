@@ -5,7 +5,7 @@ import { optgroup } from "./optgroup.ts";
 Deno.test("optgroup tag element", async (t) => {
   await t.step("optgroup without attributes", async () => {
     const actual = optgroup("Content");
-    
+
     const expected = `<optgroup>Content</optgroup>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,18 @@ Deno.test("optgroup tag element", async (t) => {
   });
 
   await t.step("optgroup with attributes", async () => {
-
     const actual = optgroup(
-    "Content",
+      "Content",
       {
-        attributes: {},
+        attributes: {
+          disabled: true,
+          label: "label",
+        },
       },
     );
 
-    
-    const expected = `<optgroup>Content</optgroup>`;
+    const expected = `<optgroup disabled label="label">Content</optgroup>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  
