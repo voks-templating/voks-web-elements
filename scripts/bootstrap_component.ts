@@ -93,6 +93,15 @@ function testTemplate(
   import { ${name} } from "./${name}.ts";
 
   Deno.test("${name} tag element", async (t) => {
+    await t.step("${name} without attributes", async () => {
+      const actual = ${name}(${content ? `"Content"`: ""});
+      ${selfClosing ? `const expected = \`<${name} \\\\>\`;` : `
+      const expected = \`<${name}>${content ? "Content" : ""}</${name}>\`;`}
+
+      const rendered = await renderToString(actual, { minify: true });
+      assertEquals(rendered, expected);
+    });
+
     await t.step("${name} with attributes", async () => {
 
       const actual = ${name}(${content ? `
