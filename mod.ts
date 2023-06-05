@@ -98,3 +98,4 @@ export * from "./html/tfoot.ts";
 export * from "./html/th.ts";
 export * from "./html/thead.ts";
 export * from "./html/track.ts";
+export * from "./html/u.ts";
