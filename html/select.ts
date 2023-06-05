@@ -1,4 +1,3 @@
-import { Format } from "https://deno.land/x/esbuild@v0.17.19/mod.js";
 import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
