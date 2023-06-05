@@ -61,3 +61,4 @@ export * from "./html/time.ts";
 export * from "./html/title.ts";
 export * from "./html/ul.ts";
 export * from "./html/var.ts";
+export * from "./html/video.ts";
