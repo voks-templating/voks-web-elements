@@ -16,11 +16,13 @@ Deno.test("map tag element", async (t) => {
     const actual = map(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          name: "map",
+        },
       },
     );
 
-    const expected = `<map>Content</map>`;
+    const expected = `<map name="map">Content</map>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
