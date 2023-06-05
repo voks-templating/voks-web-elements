@@ -1,19 +1,21 @@
 import { parse } from "std/flags/mod.ts";
 import { join } from "std/path/mod.ts";
 
-type BootstrapOptions = { content?: boolean };
+type BootstrapOptions = { content?: boolean; selfClosing?: boolean };
 
 const flags = parse(Deno.args, {
-  boolean: ["content"],
+  boolean: ["content", "self-closing"],
   string: ["name"],
-  // default: { color: true },
 });
 
 if (!flags.name) {
   throw new Error("Please provide a name for the component.");
 }
 
-await bootstrap(flags.name, { content: flags.content });
+await bootstrap(flags.name, {
+  content: flags.content,
+  selfClosing: flags["self-closing"],
+});
 
 async function bootstrap(
   name: string,
@@ -49,7 +51,7 @@ async function bootstrap(
 
 function componentTemplate(
   name: string,
-  { content }: BootstrapOptions = {},
+  { content, selfClosing }: BootstrapOptions = {},
 ) {
   const capitalized = capitalize(name);
   // deno-fmt-ignore
@@ -71,14 +73,20 @@ export interface ${capitalized}ElementOptions {
 export const ${name} = (${content ? `
   content: string | HTMLTemplate,` : ""}
   { attributes, classes }: ${capitalized}ElementOptions = {},
-) =>
-  html\`<${name} \${
-    attributeList<${capitalized}Attributes>(attributes, classes)
-  }\>${content ? "${content}" : ""}\</${name}>\`;
+) =>${selfClosing ? `html\`<${name} \${
+  attributeList<${capitalized}Attributes>(attributes, classes)
+} \\\\>\`;`
+: `html\`<${name} \${
+  attributeList<${capitalized}Attributes>(attributes, classes)
+}\>${content ? "${content}" : ""}\</${name}>\`;`}
+
   `;
 }
 
-function testTemplate(name: string, { content }: BootstrapOptions = {}) {
+function testTemplate(
+  name: string,
+  { content, selfClosing }: BootstrapOptions = {},
+) {
   // deno-fmt-ignore
   return `import { assertEquals } from "asserts";
   import { renderToString } from "../deps.ts";
@@ -94,7 +102,8 @@ function testTemplate(name: string, { content }: BootstrapOptions = {}) {
         },
       );
 
-      const expected = \`<${name}>${content ? "Content" : ""}</${name}>\`;
+      ${selfClosing ? `const expected = \`<${name} \\\\>\`;` : `
+      const expected = \`<${name}>${content ? "Content" : ""}</${name}>\`;`}
       const rendered = await renderToString(actual, { minify: true });
       assertEquals(rendered, expected);
     });
