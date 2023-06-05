@@ -31,8 +31,15 @@ async function bootstrap(
     await Deno.writeTextFile(componentPath, component, {
       createNew: true,
     });
+
     await Deno.writeTextFile(testPath, test, {
       createNew: true,
+    });
+
+    // deno-fmt-ignore
+    await Deno.writeTextFile('./mod.ts', `export * from "./html/${name}.ts";
+`, {
+      append: true,
     });
   } catch (error) {
     if (error instanceof Deno.errors.AlreadyExists) {
@@ -46,6 +53,7 @@ async function bootstrap(
   console.log(`Component "${name}" created successfully.`);
   console.log(`\t${componentPath}`);
   console.log(`\t${testPath}`);
+  console.log(`\tadded import in mod.ts`);
   Deno.exit(0);
 }
 
