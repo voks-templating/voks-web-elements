@@ -30,3 +30,4 @@ export * from "./html/input_attributes.ts";
 export * from "./html/dfn.ts";
 export * from "./html/dialog.ts";
 export * from "./html/div.ts";
+export * from "./html/dl.ts";
