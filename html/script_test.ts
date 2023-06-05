@@ -16,11 +16,22 @@ Deno.test("script tag element", async (t) => {
     const actual = script(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          async: true,
+          defer: true,
+          crossorigin: "anonymous",
+          integrity: "integrity",
+          nomodule: true,
+          nonce: "nonce",
+          referrerpolicy: "no-referrer",
+          src: "src",
+          type: "module",
+        },
       },
     );
 
-    const expected = `<script>Content</script>`;
+    const expected =
+      `<script async defer crossorigin="anonymous" integrity="integrity" nomodule nonce="nonce" referrerpolicy="no-referrer" src="src" type="module">Content</script>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
