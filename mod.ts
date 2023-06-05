@@ -72,3 +72,4 @@ export * from "./html/legend.ts";
 export * from "./html/li.ts";
 export * from "./html/link.ts";
 export * from "./html/main.ts";
+export * from "./html/mark.ts";
