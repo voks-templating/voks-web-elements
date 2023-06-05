@@ -67,3 +67,4 @@ export * from "./html/iframe.ts";
 export * from "./html/img.ts";
 export * from "./html/ins.ts";
 export * from "./html/kbd.ts";
+export * from "./html/label.ts";
