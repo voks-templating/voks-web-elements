@@ -16,11 +16,13 @@ Deno.test("slot tag element", async (t) => {
     const actual = slot(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          name: "test",
+        },
       },
     );
 
-    const expected = `<slot>Content</slot>`;
+    const expected = `<slot name="test">Content</slot>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

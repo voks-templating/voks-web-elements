@@ -2,7 +2,7 @@ import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
-export type SlotAttributes = HTMLGlobalAttributes;
+export type SlotAttributes = { name?: string } | HTMLGlobalAttributes;
 
 export interface SlotElementOptions {
   classes?: string[];
