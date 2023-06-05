@@ -75,3 +75,4 @@ export * from "./html/main.ts";
 export * from "./html/mark.ts";
 export * from "./html/menu.ts";
 export * from "./html/meta.ts";
+export * from "./html/meter.ts";
