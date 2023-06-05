@@ -2,7 +2,22 @@ import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
-export type LinkAttributes = HTMLGlobalAttributes;
+export type LinkAttributes = {
+  href?: string;
+  hreflang?: string;
+  media?: string;
+  rel?: string;
+  sizes?: string;
+  type?: string;
+  crossorigin?: string;
+  integrity?: string;
+  referrerpolicy?: string;
+  as?: string;
+  disabled?: boolean;
+  imagesizes?: string;
+  imagesrcset?: string;
+  imagesrc?: string;
+} | HTMLGlobalAttributes;
 
 export interface LinkElementOptions {
   classes?: string[];
@@ -12,8 +27,7 @@ export interface LinkElementOptions {
 export const link = (
   content: string | HTMLTemplate,
   { attributes, classes }: LinkElementOptions = {},
-) =>html`<link ${
-  attributeList<LinkAttributes>(attributes, classes)
-}>${content}</link>`;
-
-  
+) =>
+  html`<link ${
+    attributeList<LinkAttributes>(attributes, classes)
+  }>${content}</link>`;
