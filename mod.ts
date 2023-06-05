@@ -39,7 +39,7 @@ export * from "./html/figcaption.ts";
 export * from "./html/figure.ts";
 export * from "./html/footer.ts";
 export * from "./html/form.ts";
-export * from "./html/deno.ts";
+export * from "./html/html.ts";
 export * from "./html/map.ts";
 export * from "./html/nav.ts";
 export * from "./html/rp.ts";
