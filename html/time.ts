@@ -2,7 +2,9 @@ import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
-export type TimeAttributes = HTMLGlobalAttributes;
+export type TimeAttributes = {
+  datetime?: string;
+} | HTMLGlobalAttributes;
 
 export interface TimeElementOptions {
   classes?: string[];

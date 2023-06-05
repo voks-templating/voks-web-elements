@@ -16,11 +16,13 @@ Deno.test("time tag element", async (t) => {
     const actual = time(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          datetime: "test",
+        },
       },
     );
 
-    const expected = `<time>Content</time>`;
+    const expected = `<time datetime="test">Content</time>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
