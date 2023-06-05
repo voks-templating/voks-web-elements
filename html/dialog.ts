@@ -2,7 +2,9 @@ import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
-export type DialogAttributes = HTMLGlobalAttributes;
+export type DialogAttributes = {
+  open?: boolean;
+} | Omit<HTMLGlobalAttributes, "tabindex">;
 
 export interface DialogElementOptions {
   classes?: string[];

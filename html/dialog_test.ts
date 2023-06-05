@@ -16,11 +16,13 @@ Deno.test("dialog tag element", async (t) => {
     const actual = dialog(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          open: true,
+        },
       },
     );
 
-    const expected = `<dialog>Content</dialog>`;
+    const expected = `<dialog open>Content</dialog>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
