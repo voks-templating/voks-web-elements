@@ -27,3 +27,4 @@ export * from "./html/details.ts";
 export * from "./html/global_attributes.ts";
 export * from "./html/input.ts";
 export * from "./html/input_attributes.ts";
+export * from "./html/dfn.ts";
