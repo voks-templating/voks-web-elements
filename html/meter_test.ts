@@ -5,7 +5,7 @@ import { meter } from "./meter.ts";
 Deno.test("meter tag element", async (t) => {
   await t.step("meter without attributes", async () => {
     const actual = meter("Content");
-    
+
     const expected = `<meter>Content</meter>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,23 @@ Deno.test("meter tag element", async (t) => {
   });
 
   await t.step("meter with attributes", async () => {
-
     const actual = meter(
-    "Content",
+      "Content",
       {
-        attributes: {},
+        attributes: {
+          value: 2,
+          min: 1,
+          max: 3,
+          low: 1.5,
+          high: 2.5,
+          optimum: 2,
+        },
       },
     );
 
-    
-    const expected = `<meter>Content</meter>`;
+    const expected =
+      `<meter value="2" min="1" max="3" low="1.5" high="2.5" optimum="2">Content</meter>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  
