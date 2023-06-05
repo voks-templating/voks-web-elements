@@ -12,8 +12,7 @@ export interface TemplateElementOptions {
 export const template = (
   content: string | HTMLTemplate,
   { attributes, classes }: TemplateElementOptions = {},
-) =>html`<template ${
-  attributeList<TemplateAttributes>(attributes, classes)
-}>${content}</template>`;
-
-  
+) =>
+  html`<template ${
+    attributeList<TemplateAttributes>(attributes, classes)
+  }>${content}</template>`;

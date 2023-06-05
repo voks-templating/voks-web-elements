@@ -5,7 +5,7 @@ import { hgroup } from "./hgroup.ts";
 Deno.test("hgroup tag element", async (t) => {
   await t.step("hgroup without attributes", async () => {
     const actual = hgroup("Content");
-    
+
     const expected = `<hgroup>Content</hgroup>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("hgroup tag element", async (t) => {
   });
 
   await t.step("hgroup with attributes", async () => {
-
     const actual = hgroup(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<hgroup>Content</hgroup>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

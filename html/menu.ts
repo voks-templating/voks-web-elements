@@ -12,8 +12,7 @@ export interface MenuElementOptions {
 export const menu = (
   content: string | HTMLTemplate,
   { attributes, classes }: MenuElementOptions = {},
-) =>html`<menu ${
-  attributeList<MenuAttributes>(attributes, classes)
-}>${content}</menu>`;
-
-  
+) =>
+  html`<menu ${
+    attributeList<MenuAttributes>(attributes, classes)
+  }>${content}</menu>`;

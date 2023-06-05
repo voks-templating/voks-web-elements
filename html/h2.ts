@@ -12,8 +12,5 @@ export interface H2ElementOptions {
 export const h2 = (
   content: string | HTMLTemplate,
   { attributes, classes }: H2ElementOptions = {},
-) =>html`<h2 ${
-  attributeList<H2Attributes>(attributes, classes)
-}>${content}</h2>`;
-
-  
+) =>
+  html`<h2 ${attributeList<H2Attributes>(attributes, classes)}>${content}</h2>`;

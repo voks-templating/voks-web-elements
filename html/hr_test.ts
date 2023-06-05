@@ -12,7 +12,6 @@ Deno.test("hr tag element", async (t) => {
   });
 
   await t.step("hr with attributes", async () => {
-
     const actual = hr(
       {
         attributes: {},
@@ -24,4 +23,3 @@ Deno.test("hr tag element", async (t) => {
     assertEquals(rendered, expected);
   });
 });
-  

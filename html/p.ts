@@ -12,8 +12,4 @@ export interface PElementOptions {
 export const p = (
   content: string | HTMLTemplate,
   { attributes, classes }: PElementOptions = {},
-) =>html`<p ${
-  attributeList<PAttributes>(attributes, classes)
-}>${content}</p>`;
-
-  
+) => html`<p ${attributeList<PAttributes>(attributes, classes)}>${content}</p>`;

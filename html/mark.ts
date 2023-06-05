@@ -12,8 +12,7 @@ export interface MarkElementOptions {
 export const mark = (
   content: string | HTMLTemplate,
   { attributes, classes }: MarkElementOptions = {},
-) =>html`<mark ${
-  attributeList<MarkAttributes>(attributes, classes)
-}>${content}</mark>`;
-
-  
+) =>
+  html`<mark ${
+    attributeList<MarkAttributes>(attributes, classes)
+  }>${content}</mark>`;

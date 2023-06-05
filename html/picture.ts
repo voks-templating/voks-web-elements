@@ -12,8 +12,7 @@ export interface PictureElementOptions {
 export const picture = (
   content: string | HTMLTemplate,
   { attributes, classes }: PictureElementOptions = {},
-) =>html`<picture ${
-  attributeList<PictureAttributes>(attributes, classes)
-}>${content}</picture>`;
-
-  
+) =>
+  html`<picture ${
+    attributeList<PictureAttributes>(attributes, classes)
+  }>${content}</picture>`;

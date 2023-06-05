@@ -12,8 +12,5 @@ export interface H5ElementOptions {
 export const h5 = (
   content: string | HTMLTemplate,
   { attributes, classes }: H5ElementOptions = {},
-) =>html`<h5 ${
-  attributeList<H5Attributes>(attributes, classes)
-}>${content}</h5>`;
-
-  
+) =>
+  html`<h5 ${attributeList<H5Attributes>(attributes, classes)}>${content}</h5>`;

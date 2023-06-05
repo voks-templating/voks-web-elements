@@ -12,8 +12,4 @@ export interface UElementOptions {
 export const u = (
   content: string | HTMLTemplate,
   { attributes, classes }: UElementOptions = {},
-) =>html`<u ${
-  attributeList<UAttributes>(attributes, classes)
-}>${content}</u>`;
-
-  
+) => html`<u ${attributeList<UAttributes>(attributes, classes)}>${content}</u>`;

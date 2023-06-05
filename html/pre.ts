@@ -12,8 +12,7 @@ export interface PreElementOptions {
 export const pre = (
   content: string | HTMLTemplate,
   { attributes, classes }: PreElementOptions = {},
-) =>html`<pre ${
-  attributeList<PreAttributes>(attributes, classes)
-}>${content}</pre>`;
-
-  
+) =>
+  html`<pre ${
+    attributeList<PreAttributes>(attributes, classes)
+  }>${content}</pre>`;

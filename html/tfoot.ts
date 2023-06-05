@@ -12,8 +12,7 @@ export interface TfootElementOptions {
 export const tfoot = (
   content: string | HTMLTemplate,
   { attributes, classes }: TfootElementOptions = {},
-) =>html`<tfoot ${
-  attributeList<TfootAttributes>(attributes, classes)
-}>${content}</tfoot>`;
-
-  
+) =>
+  html`<tfoot ${
+    attributeList<TfootAttributes>(attributes, classes)
+  }>${content}</tfoot>`;

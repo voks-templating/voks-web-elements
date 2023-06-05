@@ -12,8 +12,7 @@ export interface SummaryElementOptions {
 export const summary = (
   content: string | HTMLTemplate,
   { attributes, classes }: SummaryElementOptions = {},
-) =>html`<summary ${
-  attributeList<SummaryAttributes>(attributes, classes)
-}>${content}</summary>`;
-
-  
+) =>
+  html`<summary ${
+    attributeList<SummaryAttributes>(attributes, classes)
+  }>${content}</summary>`;

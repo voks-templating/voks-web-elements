@@ -12,8 +12,7 @@ export interface KbdElementOptions {
 export const kbd = (
   content: string | HTMLTemplate,
   { attributes, classes }: KbdElementOptions = {},
-) =>html`<kbd ${
-  attributeList<KbdAttributes>(attributes, classes)
-}>${content}</kbd>`;
-
-  
+) =>
+  html`<kbd ${
+    attributeList<KbdAttributes>(attributes, classes)
+  }>${content}</kbd>`;

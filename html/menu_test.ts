@@ -5,7 +5,7 @@ import { menu } from "./menu.ts";
 Deno.test("menu tag element", async (t) => {
   await t.step("menu without attributes", async () => {
     const actual = menu("Content");
-    
+
     const expected = `<menu>Content</menu>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("menu tag element", async (t) => {
   });
 
   await t.step("menu with attributes", async () => {
-
     const actual = menu(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<menu>Content</menu>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

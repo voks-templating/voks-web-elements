@@ -11,8 +11,4 @@ export interface TrElementOptions {
 
 export const tr = (
   { attributes, classes }: TrElementOptions = {},
-) =>html`<tr ${
-  attributeList<TrAttributes>(attributes, classes)
-} \\>`;
-
-  
+) => html`<tr ${attributeList<TrAttributes>(attributes, classes)} \\>`;

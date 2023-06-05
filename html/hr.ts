@@ -11,8 +11,4 @@ export interface HrElementOptions {
 
 export const hr = (
   { attributes, classes }: HrElementOptions = {},
-) =>html`<hr ${
-  attributeList<HrAttributes>(attributes, classes)
-} \\>`;
-
-  
+) => html`<hr ${attributeList<HrAttributes>(attributes, classes)} \\>`;

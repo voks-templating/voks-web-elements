@@ -5,7 +5,7 @@ import { summary } from "./summary.ts";
 Deno.test("summary tag element", async (t) => {
   await t.step("summary without attributes", async () => {
     const actual = summary("Content");
-    
+
     const expected = `<summary>Content</summary>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("summary tag element", async (t) => {
   });
 
   await t.step("summary with attributes", async () => {
-
     const actual = summary(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<summary>Content</summary>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

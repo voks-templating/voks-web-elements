@@ -12,8 +12,7 @@ export interface MainElementOptions {
 export const main = (
   content: string | HTMLTemplate,
   { attributes, classes }: MainElementOptions = {},
-) =>html`<main ${
-  attributeList<MainAttributes>(attributes, classes)
-}>${content}</main>`;
-
-  
+) =>
+  html`<main ${
+    attributeList<MainAttributes>(attributes, classes)
+  }>${content}</main>`;

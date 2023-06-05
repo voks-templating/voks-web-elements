@@ -11,8 +11,4 @@ export interface IElementOptions {
 
 export const i = (
   { attributes, classes }: IElementOptions = {},
-) =>html`<i ${
-  attributeList<IAttributes>(attributes, classes)
-} \\>`;
-
-  
+) => html`<i ${attributeList<IAttributes>(attributes, classes)} \\>`;

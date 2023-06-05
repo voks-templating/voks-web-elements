@@ -12,8 +12,7 @@ export interface TableElementOptions {
 export const table = (
   content: string | HTMLTemplate,
   { attributes, classes }: TableElementOptions = {},
-) =>html`<table ${
-  attributeList<TableAttributes>(attributes, classes)
-}>${content}</table>`;
-
-  
+) =>
+  html`<table ${
+    attributeList<TableAttributes>(attributes, classes)
+  }>${content}</table>`;

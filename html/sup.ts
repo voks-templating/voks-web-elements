@@ -12,8 +12,7 @@ export interface SupElementOptions {
 export const sup = (
   content: string | HTMLTemplate,
   { attributes, classes }: SupElementOptions = {},
-) =>html`<sup ${
-  attributeList<SupAttributes>(attributes, classes)
-}>${content}</sup>`;
-
-  
+) =>
+  html`<sup ${
+    attributeList<SupAttributes>(attributes, classes)
+  }>${content}</sup>`;

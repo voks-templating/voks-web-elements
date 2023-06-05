@@ -12,7 +12,6 @@ Deno.test("i tag element", async (t) => {
   });
 
   await t.step("i with attributes", async () => {
-
     const actual = i(
       {
         attributes: {},
@@ -24,4 +23,3 @@ Deno.test("i tag element", async (t) => {
     assertEquals(rendered, expected);
   });
 });
-  

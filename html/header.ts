@@ -12,8 +12,7 @@ export interface HeaderElementOptions {
 export const header = (
   content: string | HTMLTemplate,
   { attributes, classes }: HeaderElementOptions = {},
-) =>html`<header ${
-  attributeList<HeaderAttributes>(attributes, classes)
-}>${content}</header>`;
-
-  
+) =>
+  html`<header ${
+    attributeList<HeaderAttributes>(attributes, classes)
+  }>${content}</header>`;

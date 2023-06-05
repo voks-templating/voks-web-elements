@@ -12,8 +12,7 @@ export interface TbodyElementOptions {
 export const tbody = (
   content: string | HTMLTemplate,
   { attributes, classes }: TbodyElementOptions = {},
-) =>html`<tbody ${
-  attributeList<TbodyAttributes>(attributes, classes)
-}>${content}</tbody>`;
-
-  
+) =>
+  html`<tbody ${
+    attributeList<TbodyAttributes>(attributes, classes)
+  }>${content}</tbody>`;

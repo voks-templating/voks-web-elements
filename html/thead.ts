@@ -12,8 +12,7 @@ export interface TheadElementOptions {
 export const thead = (
   content: string | HTMLTemplate,
   { attributes, classes }: TheadElementOptions = {},
-) =>html`<thead ${
-  attributeList<TheadAttributes>(attributes, classes)
-}>${content}</thead>`;
-
-  
+) =>
+  html`<thead ${
+    attributeList<TheadAttributes>(attributes, classes)
+  }>${content}</thead>`;

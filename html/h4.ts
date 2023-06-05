@@ -12,8 +12,5 @@ export interface H4ElementOptions {
 export const h4 = (
   content: string | HTMLTemplate,
   { attributes, classes }: H4ElementOptions = {},
-) =>html`<h4 ${
-  attributeList<H4Attributes>(attributes, classes)
-}>${content}</h4>`;
-
-  
+) =>
+  html`<h4 ${attributeList<H4Attributes>(attributes, classes)}>${content}</h4>`;

@@ -12,8 +12,5 @@ export interface H3ElementOptions {
 export const h3 = (
   content: string | HTMLTemplate,
   { attributes, classes }: H3ElementOptions = {},
-) =>html`<h3 ${
-  attributeList<H3Attributes>(attributes, classes)
-}>${content}</h3>`;
-
-  
+) =>
+  html`<h3 ${attributeList<H3Attributes>(attributes, classes)}>${content}</h3>`;

@@ -12,8 +12,7 @@ export interface LegendElementOptions {
 export const legend = (
   content: string | HTMLTemplate,
   { attributes, classes }: LegendElementOptions = {},
-) =>html`<legend ${
-  attributeList<LegendAttributes>(attributes, classes)
-}>${content}</legend>`;
-
-  
+) =>
+  html`<legend ${
+    attributeList<LegendAttributes>(attributes, classes)
+  }>${content}</legend>`;

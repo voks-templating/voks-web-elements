@@ -12,8 +12,5 @@ export interface H6ElementOptions {
 export const h6 = (
   content: string | HTMLTemplate,
   { attributes, classes }: H6ElementOptions = {},
-) =>html`<h6 ${
-  attributeList<H6Attributes>(attributes, classes)
-}>${content}</h6>`;
-
-  
+) =>
+  html`<h6 ${attributeList<H6Attributes>(attributes, classes)}>${content}</h6>`;

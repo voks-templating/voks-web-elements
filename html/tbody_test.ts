@@ -5,7 +5,7 @@ import { tbody } from "./tbody.ts";
 Deno.test("tbody tag element", async (t) => {
   await t.step("tbody without attributes", async () => {
     const actual = tbody("Content");
-    
+
     const expected = `<tbody>Content</tbody>`;
 
     const rendered = await renderToString(actual, { minify: true });
@@ -13,18 +13,15 @@ Deno.test("tbody tag element", async (t) => {
   });
 
   await t.step("tbody with attributes", async () => {
-
     const actual = tbody(
-    "Content",
+      "Content",
       {
         attributes: {},
       },
     );
 
-    
     const expected = `<tbody>Content</tbody>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
 });
-  

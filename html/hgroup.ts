@@ -12,8 +12,7 @@ export interface HgroupElementOptions {
 export const hgroup = (
   content: string | HTMLTemplate,
   { attributes, classes }: HgroupElementOptions = {},
-) =>html`<hgroup ${
-  attributeList<HgroupAttributes>(attributes, classes)
-}>${content}</hgroup>`;
-
-  
+) =>
+  html`<hgroup ${
+    attributeList<HgroupAttributes>(attributes, classes)
+  }>${content}</hgroup>`;
