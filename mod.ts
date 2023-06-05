@@ -38,3 +38,4 @@ export * from "./html/fieldset.ts";
 export * from "./html/figcaption.ts";
 export * from "./html/figure.ts";
 export * from "./html/footer.ts";
+export * from "./html/form.ts";
