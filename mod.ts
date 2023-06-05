@@ -74,3 +74,4 @@ export * from "./html/link.ts";
 export * from "./html/main.ts";
 export * from "./html/mark.ts";
 export * from "./html/menu.ts";
+export * from "./html/meta.ts";
