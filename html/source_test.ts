@@ -16,11 +16,20 @@ Deno.test("source tag element", async (t) => {
     const actual = source(
       "Content",
       {
-        attributes: {},
+        attributes: {
+          type: "test",
+          src: "test",
+          srcset: "test",
+          sizes: "test",
+          media: "test",
+          height: 100,
+          width: 100,
+        },
       },
     );
 
-    const expected = `<source>Content</source>`;
+    const expected =
+      `<source type="test" src="test" srcset="test" sizes="test" media="test" height="100" width="100">Content</source>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
