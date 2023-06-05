@@ -41,3 +41,4 @@ export * from "./html/footer.ts";
 export * from "./html/form.ts";
 export * from "./html/deno.ts";
 export * from "./html/map.ts";
+export * from "./html/nav.ts";
