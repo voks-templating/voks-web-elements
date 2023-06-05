@@ -2,7 +2,12 @@ import { html, HTMLTemplate } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
-export type OptionAttributes = HTMLGlobalAttributes;
+export type OptionAttributes = {
+  disabled?: boolean;
+  label?: string;
+  selected?: boolean;
+  value?: string | number;
+} | HTMLGlobalAttributes;
 
 export interface OptionElementOptions {
   classes?: string[];
@@ -12,8 +17,7 @@ export interface OptionElementOptions {
 export const option = (
   content: string | HTMLTemplate,
   { attributes, classes }: OptionElementOptions = {},
-) =>html`<option ${
-  attributeList<OptionAttributes>(attributes, classes)
-}>${content}</option>`;
-
-  
+) =>
+  html`<option ${
+    attributeList<OptionAttributes>(attributes, classes)
+  }>${content}</option>`;
