@@ -95,3 +95,4 @@ export * from "./html/td.ts";
 export * from "./html/template.ts";
 export * from "./html/textarea.ts";
 export * from "./html/tfoot.ts";
+export * from "./html/th.ts";
