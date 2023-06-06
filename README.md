@@ -3,8 +3,9 @@
 [![deno.land/x version](https://shield.deno.dev/x/voks_web_elements)](https://deno.land/x/voks_web_elements)
 [![npm version](https://img.shields.io/npm/v/@voks/voks-web-elements)](https://www.npmjs.com/package/@voks/voks-web-elements)
 
-Voks Web Elements is a list of atomic components, reflecting every standard HTML
-Element tag as described at the
+Voks Web Elements is a list of atomic
+[voks](https://github.com/voks-templating/voks) components, reflecting every
+standard HTML Element tag as described at the
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). It does not
 include deprecated (and yet) no experimental tags.
 
