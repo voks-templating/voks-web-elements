@@ -4,4 +4,4 @@ export {
   html,
   type HTMLTemplate,
   renderToString,
-} from "https://deno.land/x/voks@1.0.11/mod.ts";
+} from "https://deno.land/x/voks@1.0.12/mod.ts";

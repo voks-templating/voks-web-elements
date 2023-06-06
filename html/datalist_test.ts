@@ -27,7 +27,7 @@ Deno.test("datalist tag element", async (t) => {
     );
 
     const expected =
-      `<datalist id="browsers"><option value="Chrome"></option> <option value="Firefox"></option> <option value="Opera"></option> <option value="Safari"></option> <option value="Microsoft Edge"></option></datalist>`;
+      `<datalist id="browsers"><option value="Chrome"></option><option value="Firefox"></option><option value="Opera"></option><option value="Safari"></option><option value="Microsoft Edge"></option></datalist>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
