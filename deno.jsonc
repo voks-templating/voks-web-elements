@@ -2,7 +2,8 @@
   "tasks": {
     "check": "deno lint && deno check *.ts **/*.ts",
     "build:node": "deno run -A ./scripts/build.node.ts",
-    "bootstrap": "deno run --allow-write=html,mod.ts ./scripts/bootstrap_component.ts"
+    "bootstrap": "deno run --allow-write=html,mod.ts ./scripts/bootstrap_component.ts",
+    "example:simple": "deno run ./examples/simple.ts"
   },
   "imports": {
     "std/": "https://deno.land/std@0.190.0/",
