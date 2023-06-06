@@ -58,3 +58,11 @@ const template = htmlElement(html`
 
 await renderToString(template);
 ```
+
+## Development
+
+### Testing
+
+```
+deno test
+```
