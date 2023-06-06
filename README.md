@@ -8,6 +8,8 @@ Element tag as described at the
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). It does not
 include deprecated (and yet) no experimental tags.
 
+**API Docs**: https://deno.land/x/voks_web_elements@1.5.1/mod.ts
+
 ## [Deno](https://deno.land/x/voks_web_elements)
 
 ```typescript
