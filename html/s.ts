@@ -4,12 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type SAttributes = HTMLGlobalAttributes;
 
-export interface SElementOptions {
-  classes?: string[];
-  attributes?: SAttributes;
-}
-
 export const s = (
   content: string | HTMLTemplate,
-  { attributes, classes }: SElementOptions = {},
-) => html`<s ${attributeList<SAttributes>(attributes, classes)}>${content}</s>`;
+  attributes: SAttributes = {},
+) => html`<s ${attributeList<SAttributes>(attributes)}>${content}</s>`;

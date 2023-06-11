@@ -14,22 +14,20 @@ Deno.test("img tag element", async (t) => {
   await t.step("img with attributes", async () => {
     const actual = img(
       {
-        attributes: {
-          alt: "Image",
-          src: "image.png",
-          crossorigin: "anonymous",
-          decoding: "async",
-          elementtiming: "example",
-          fetchpriority: "low",
-          height: 100,
-          width: 100,
-          ismap: true,
-          loading: "lazy",
-          referrerpolicy: "no-referrer",
-          sizes: "100vw",
-          srcset: "image.png",
-          usemap: "#map",
-        },
+        alt: "Image",
+        src: "image.png",
+        crossorigin: "anonymous",
+        decoding: "async",
+        elementtiming: "example",
+        fetchpriority: "low",
+        height: 100,
+        width: 100,
+        ismap: true,
+        loading: "lazy",
+        referrerpolicy: "no-referrer",
+        sizes: "100vw",
+        srcset: "image.png",
+        usemap: "#map",
       },
     );
 

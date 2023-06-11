@@ -16,15 +16,8 @@ export type VideoAttributes = {
   width?: number;
 } | HTMLGlobalAttributes;
 
-export interface VideoElementOptions {
-  classes?: string[];
-  attributes?: VideoAttributes;
-}
-
 export const video = (
   content: string | HTMLTemplate,
-  { attributes, classes }: VideoElementOptions = {},
+  attributes: VideoAttributes = {},
 ) =>
-  html`<video ${
-    attributeList<VideoAttributes>(attributes, classes)
-  }>${content}</video>`;
+  html`<video ${attributeList<VideoAttributes>(attributes)}>${content}</video>`;

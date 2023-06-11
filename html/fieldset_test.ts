@@ -16,11 +16,9 @@ Deno.test("fieldset tag element", async (t) => {
     const actual = fieldset(
       "Content",
       {
-        attributes: {
-          disabled: true,
-          form: "form-id",
-          name: "name",
-        },
+        disabled: true,
+        form: "form-id",
+        name: "name",
       },
     );
 

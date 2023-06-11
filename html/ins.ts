@@ -7,15 +7,7 @@ export type InsAttributes = {
   datetime?: string;
 } | HTMLGlobalAttributes;
 
-export interface InsElementOptions {
-  classes?: string[];
-  attributes?: InsAttributes;
-}
-
 export const ins = (
   content: string | HTMLTemplate,
-  { attributes, classes }: InsElementOptions = {},
-) =>
-  html`<ins ${
-    attributeList<InsAttributes>(attributes, classes)
-  }>${content}</ins>`;
+  attributes: InsAttributes = {},
+) => html`<ins ${attributeList<InsAttributes>(attributes)}>${content}</ins>`;

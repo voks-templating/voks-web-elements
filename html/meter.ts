@@ -11,15 +11,8 @@ export type MeterAttributes = {
   optimum?: number;
 } | HTMLGlobalAttributes;
 
-export interface MeterElementOptions {
-  classes?: string[];
-  attributes?: MeterAttributes;
-}
-
 export const meter = (
   content: string | HTMLTemplate,
-  { attributes, classes }: MeterElementOptions = {},
+  attributes: MeterAttributes = {},
 ) =>
-  html`<meter ${
-    attributeList<MeterAttributes>(attributes, classes)
-  }>${content}</meter>`;
+  html`<meter ${attributeList<MeterAttributes>(attributes)}>${content}</meter>`;

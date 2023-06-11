@@ -10,13 +10,7 @@ export type ThAttributes = {
   scope?: string;
 } | HTMLGlobalAttributes;
 
-export interface ThElementOptions {
-  classes?: string[];
-  attributes?: ThAttributes;
-}
-
 export const th = (
   content: string | HTMLTemplate,
-  { attributes, classes }: ThElementOptions = {},
-) =>
-  html`<th ${attributeList<ThAttributes>(attributes, classes)}>${content}</th>`;
+  attributes: ThAttributes = {},
+) => html`<th ${attributeList<ThAttributes>(attributes)}>${content}</th>`;

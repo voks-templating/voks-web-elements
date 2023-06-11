@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type StrongAttributes = HTMLGlobalAttributes;
 
-export interface StrongElementOptions {
-  classes?: string[];
-  attributes?: StrongAttributes;
-}
-
 export const strong = (
   content: string | HTMLTemplate,
-  { attributes, classes }: StrongElementOptions = {},
+  attributes: StrongAttributes = {},
 ) =>
   html`<strong ${
-    attributeList<StrongAttributes>(attributes, classes)
+    attributeList<StrongAttributes>(attributes)
   }>${content}</strong>`;

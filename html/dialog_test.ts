@@ -16,9 +16,7 @@ Deno.test("dialog tag element", async (t) => {
     const actual = dialog(
       "Content",
       {
-        attributes: {
-          open: true,
-        },
+        open: true,
       },
     );
 

@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type CodeAttributes = HTMLGlobalAttributes;
 
-export interface CodeElementOptions {
-  classes?: string[];
-  attributes?: CodeAttributes;
-}
-
 export const code = (
   content: string | HTMLTemplate,
-  { attributes, classes }: CodeElementOptions = {},
-) =>
-  html`<code ${
-    attributeList<CodeAttributes>(attributes, classes)
-  }>${content}</code>`;
+  attributes: CodeAttributes = {},
+) => html`<code ${attributeList<CodeAttributes>(attributes)}>${content}</code>`;

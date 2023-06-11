@@ -20,9 +20,7 @@ Deno.test("datalist tag element", async (t) => {
     <option value="Safari"></option>
     <option value="Microsoft Edge"></option>`,
       {
-        attributes: {
-          id: "browsers", // id is a global attribute
-        },
+        id: "browsers", // id is a global attribute
       },
     );
 

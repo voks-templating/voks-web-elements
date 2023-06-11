@@ -6,10 +6,8 @@ Deno.test("base tag element", async (t) => {
   await t.step("base with attributes", async () => {
     const actual = base(
       {
-        attributes: {
-          href: "https://example.com/",
-          target: "_blank",
-        },
+        href: "https://example.com/",
+        target: "_blank",
       },
     );
 

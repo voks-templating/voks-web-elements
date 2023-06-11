@@ -8,15 +8,10 @@ export type FieldsetAttributes = {
   name?: string;
 } | HTMLGlobalAttributes;
 
-export interface FieldsetElementOptions {
-  classes?: string[];
-  attributes?: FieldsetAttributes;
-}
-
 export const fieldset = (
   content: string | HTMLTemplate,
-  { attributes, classes }: FieldsetElementOptions = {},
+  attributes: FieldsetAttributes = {},
 ) =>
   html`<fieldset ${
-    attributeList<FieldsetAttributes>(attributes, classes)
+    attributeList<FieldsetAttributes>(attributes)
   }>${content}</fieldset>`;

@@ -16,12 +16,10 @@ Deno.test("embed tag element", async (t) => {
     const actual = embed(
       "Content",
       {
-        attributes: {
-          height: 100,
-          src: "https://example.com",
-          type: "video/mp4",
-          width: 100,
-        },
+        height: 100,
+        src: "https://example.com",
+        type: "video/mp4",
+        width: 100,
       },
     );
 

@@ -15,12 +15,10 @@ Deno.test("meta tag element", async (t) => {
   await t.step("meta with attributes", async () => {
     const actual = meta(
       {
-        attributes: {
-          charset: "utf-8",
-          content: "text/html",
-          httpEquiv: "Content-Type",
-          name: "viewport",
-        },
+        charset: "utf-8",
+        content: "text/html",
+        httpEquiv: "Content-Type",
+        name: "viewport",
       },
     );
 

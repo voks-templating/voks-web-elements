@@ -13,9 +13,7 @@ Deno.test("tr tag element", async (t) => {
 
   await t.step("tr with attributes", async () => {
     const actual = tr(
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<tr \\>`;

@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type MainAttributes = HTMLGlobalAttributes;
 
-export interface MainElementOptions {
-  classes?: string[];
-  attributes?: MainAttributes;
-}
-
 export const main = (
   content: string | HTMLTemplate,
-  { attributes, classes }: MainElementOptions = {},
-) =>
-  html`<main ${
-    attributeList<MainAttributes>(attributes, classes)
-  }>${content}</main>`;
+  attributes: MainAttributes = {},
+) => html`<main ${attributeList<MainAttributes>(attributes)}>${content}</main>`;

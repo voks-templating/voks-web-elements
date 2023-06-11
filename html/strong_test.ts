@@ -15,9 +15,7 @@ Deno.test("strong tag element", async (t) => {
   await t.step("strong with attributes", async () => {
     const actual = strong(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<strong>Content</strong>`;

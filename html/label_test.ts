@@ -16,9 +16,7 @@ Deno.test("label tag element", async (t) => {
     const actual = label(
       "Content",
       {
-        attributes: {
-          for: "#id",
-        },
+        for: "#id",
       },
     );
 

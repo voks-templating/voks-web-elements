@@ -15,9 +15,7 @@ Deno.test("title tag element", async (t) => {
   await t.step("title with attributes", async () => {
     const actual = title(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<title>Content</title>`;

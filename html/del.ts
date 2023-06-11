@@ -7,15 +7,7 @@ export type DelAttributes = {
   datetime?: string;
 } | HTMLGlobalAttributes;
 
-export interface DelElementOptions {
-  classes?: string[];
-  attributes?: DelAttributes;
-}
-
 export const del = (
   content: string | HTMLTemplate,
-  { attributes, classes }: DelElementOptions = {},
-) =>
-  html`<del ${
-    attributeList<DelAttributes>(attributes, classes)
-  }>${content}</del>`;
+  attributes: DelAttributes = {},
+) => html`<del ${attributeList<DelAttributes>(attributes)}>${content}</del>`;

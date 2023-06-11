@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type HeaderAttributes = HTMLGlobalAttributes;
 
-export interface HeaderElementOptions {
-  classes?: string[];
-  attributes?: HeaderAttributes;
-}
-
 export const header = (
   content: string | HTMLTemplate,
-  { attributes, classes }: HeaderElementOptions = {},
+  attributes: HeaderAttributes = {},
 ) =>
   html`<header ${
-    attributeList<HeaderAttributes>(attributes, classes)
+    attributeList<HeaderAttributes>(attributes)
   }>${content}</header>`;

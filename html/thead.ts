@@ -4,15 +4,8 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type TheadAttributes = HTMLGlobalAttributes;
 
-export interface TheadElementOptions {
-  classes?: string[];
-  attributes?: TheadAttributes;
-}
-
 export const thead = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TheadElementOptions = {},
+  attributes: TheadAttributes = {},
 ) =>
-  html`<thead ${
-    attributeList<TheadAttributes>(attributes, classes)
-  }>${content}</thead>`;
+  html`<thead ${attributeList<TheadAttributes>(attributes)}>${content}</thead>`;

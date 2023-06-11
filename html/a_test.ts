@@ -7,16 +7,14 @@ Deno.test("anchor tag element", async (t) => {
     const actual = a(
       "anchor",
       {
-        attributes: {
-          download: "filename.txt",
-          href: "https://example.com",
-          hreflang: "en",
-          ping: "https://example.com",
-          refererPolicy: "no-referrer",
-          rel: "noopener",
-          target: "_blank",
-          type: "text/html",
-        },
+        download: "filename.txt",
+        href: "https://example.com",
+        hreflang: "en",
+        ping: "https://example.com",
+        refererPolicy: "no-referrer",
+        rel: "noopener",
+        target: "_blank",
+        type: "text/html",
       },
     );
 
@@ -30,9 +28,7 @@ Deno.test("anchor tag element", async (t) => {
     const actual = a(
       html`<span>anchor</span>`,
       {
-        attributes: {
-          download: "filename.txt",
-        },
+        download: "filename.txt",
       },
     );
 

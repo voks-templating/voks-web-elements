@@ -15,9 +15,7 @@ Deno.test("ruby tag element", async (t) => {
   await t.step("ruby with attributes", async () => {
     const actual = ruby(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<ruby>Content</ruby>`;

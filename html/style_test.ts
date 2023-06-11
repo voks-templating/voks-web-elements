@@ -16,11 +16,9 @@ Deno.test("style tag element", async (t) => {
     const actual = style(
       "Content",
       {
-        attributes: {
-          media: "test",
-          nonce: "test",
-          title: "test",
-        },
+        media: "test",
+        nonce: "test",
+        title: "test",
       },
     );
 

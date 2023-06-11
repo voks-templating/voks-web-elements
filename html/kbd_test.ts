@@ -15,9 +15,7 @@ Deno.test("kbd tag element", async (t) => {
   await t.step("kbd with attributes", async () => {
     const actual = kbd(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<kbd>Content</kbd>`;

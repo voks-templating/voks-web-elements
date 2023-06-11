@@ -15,9 +15,7 @@ Deno.test("head tag element", async (t) => {
   await t.step("head with attributes", async () => {
     const actual = head(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<head>Content</head>`;

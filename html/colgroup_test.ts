@@ -16,9 +16,7 @@ Deno.test("colgroup tag element", async (t) => {
     const actual = colgroup(
       "Content",
       {
-        attributes: {
-          span: 2,
-        },
+        span: 2,
       },
     );
 

@@ -16,19 +16,17 @@ Deno.test("video tag element", async (t) => {
     const actual = video(
       "Content",
       {
-        attributes: {
-          autoplay: true,
-          controls: true,
-          crossorigin: "anonymous",
-          height: 100,
-          loop: true,
-          muted: true,
-          playsinline: true,
-          poster: "test",
-          preload: "auto",
-          src: "test",
-          width: 100,
-        },
+        autoplay: true,
+        controls: true,
+        crossorigin: "anonymous",
+        height: 100,
+        loop: true,
+        muted: true,
+        playsinline: true,
+        poster: "test",
+        preload: "auto",
+        src: "test",
+        width: 100,
       },
     );
 

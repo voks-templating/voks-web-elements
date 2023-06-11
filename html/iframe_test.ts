@@ -16,19 +16,17 @@ Deno.test("iframe tag element", async (t) => {
     const actual = iframe(
       "Content",
       {
-        attributes: {
-          allow: "autoplay",
-          allowfullscreen: true,
-          height: 100,
-          width: 100,
-          loading: "lazy",
-          name: "name",
-          referrerpolicy: "no-referrer",
-          sandbox:
-            "allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts",
-          src: "https://example.com",
-          srcdoc: "srcdoc",
-        },
+        allow: "autoplay",
+        allowfullscreen: true,
+        height: 100,
+        width: 100,
+        loading: "lazy",
+        name: "name",
+        referrerpolicy: "no-referrer",
+        sandbox:
+          "allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts",
+        src: "https://example.com",
+        srcdoc: "srcdoc",
       },
     );
 

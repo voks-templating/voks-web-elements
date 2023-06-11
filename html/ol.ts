@@ -8,13 +8,7 @@ export type OlAttributes = {
   type?: string;
 } | HTMLGlobalAttributes;
 
-export interface OlElementOptions {
-  classes?: string[];
-  attributes?: OlAttributes;
-}
-
 export const ol = (
   content: string | HTMLTemplate,
-  { attributes, classes }: OlElementOptions = {},
-) =>
-  html`<ol ${attributeList<OlAttributes>(attributes, classes)}>${content}</ol>`;
+  attributes: OlAttributes = {},
+) => html`<ol ${attributeList<OlAttributes>(attributes)}>${content}</ol>`;

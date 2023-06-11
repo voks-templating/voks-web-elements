@@ -6,15 +6,7 @@ export type TimeAttributes = {
   datetime?: string;
 } | HTMLGlobalAttributes;
 
-export interface TimeElementOptions {
-  classes?: string[];
-  attributes?: TimeAttributes;
-}
-
 export const time = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TimeElementOptions = {},
-) =>
-  html`<time ${
-    attributeList<TimeAttributes>(attributes, classes)
-  }>${content}</time>`;
+  attributes: TimeAttributes = {},
+) => html`<time ${attributeList<TimeAttributes>(attributes)}>${content}</time>`;

@@ -4,14 +4,9 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type DataAttributes = { value: string | number } | HTMLGlobalAttributes;
 
-export interface DataElementOptions {
-  classes?: string[];
-  attributes?: DataAttributes;
-}
-
 export const data = (
-  contentOrOptions: string | HTMLTemplate | DataElementOptions,
-  optionsOrNothing: DataElementOptions = {},
+  contentOrOptions: string | HTMLTemplate | DataAttributes,
+  optionsOrNothing: DataAttributes = {},
 ) => {
   const content = isTypeOfDataElementOptions(contentOrOptions)
     ? undefined
@@ -21,18 +16,16 @@ export const data = (
     ? contentOrOptions
     : optionsOrNothing;
 
-  const { attributes, classes } = options;
+  const attributes = options;
 
   return content
-    ? html`<data ${
-      attributeList<DataAttributes>(attributes, classes)
-    }>${content}</data>`
-    : html`<data ${attributeList<DataAttributes>(attributes, classes)}>`;
+    ? html`<data ${attributeList<DataAttributes>(attributes)}>${content}</data>`
+    : html`<data ${attributeList<DataAttributes>(attributes)}>`;
 };
 
 function isTypeOfDataElementOptions(
-  contentOrOptions: string | HTMLTemplate | DataElementOptions,
-): contentOrOptions is DataElementOptions {
+  contentOrOptions: string | HTMLTemplate | DataAttributes,
+): contentOrOptions is DataAttributes {
   return typeof contentOrOptions === "object" &&
-    (contentOrOptions as DataElementOptions).attributes !== undefined;
+    (contentOrOptions as DataAttributes) !== undefined;
 }

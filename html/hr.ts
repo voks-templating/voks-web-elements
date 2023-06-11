@@ -4,11 +4,6 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type HrAttributes = HTMLGlobalAttributes;
 
-export interface HrElementOptions {
-  classes?: string[];
-  attributes?: HrAttributes;
-}
-
 export const hr = (
-  { attributes, classes }: HrElementOptions = {},
-) => html`<hr ${attributeList<HrAttributes>(attributes, classes)} \\>`;
+  attributes: HrAttributes = {},
+) => html`<hr ${attributeList<HrAttributes>(attributes)} \\>`;

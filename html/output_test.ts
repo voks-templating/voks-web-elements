@@ -16,11 +16,9 @@ Deno.test("output tag element", async (t) => {
     const actual = output(
       "Content",
       {
-        attributes: {
-          for: "id",
-          form: "form",
-          name: "name",
-        },
+        for: "id",
+        form: "form",
+        name: "name",
       },
     );
 

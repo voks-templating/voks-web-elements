@@ -6,15 +6,10 @@ export type DetailsAttributes = {
   open?: boolean;
 } | HTMLGlobalAttributes;
 
-export interface DetailsElementOptions {
-  classes?: string[];
-  attributes?: DetailsAttributes;
-}
-
 export const details = (
   content: string | HTMLTemplate,
-  { attributes, classes }: DetailsElementOptions = {},
+  attributes: DetailsAttributes = {},
 ) =>
   html`<details ${
-    attributeList<DetailsAttributes>(attributes, classes)
+    attributeList<DetailsAttributes>(attributes)
   }>${content}</details>`;

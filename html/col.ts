@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type ColAttributes = { span?: number } | HTMLGlobalAttributes;
 
-export interface ColElementOptions {
-  classes?: string[];
-  attributes?: ColAttributes;
-}
-
 export const col = (
   content: string | HTMLTemplate,
-  { attributes, classes }: ColElementOptions = {},
-) =>
-  html`<col ${
-    attributeList<ColAttributes>(attributes, classes)
-  }>${content}</col>`;
+  attributes: ColAttributes = {},
+) => html`<col ${attributeList<ColAttributes>(attributes)}>${content}</col>`;

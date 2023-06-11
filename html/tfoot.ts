@@ -4,15 +4,8 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type TfootAttributes = HTMLGlobalAttributes;
 
-export interface TfootElementOptions {
-  classes?: string[];
-  attributes?: TfootAttributes;
-}
-
 export const tfoot = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TfootElementOptions = {},
+  attributes: TfootAttributes = {},
 ) =>
-  html`<tfoot ${
-    attributeList<TfootAttributes>(attributes, classes)
-  }>${content}</tfoot>`;
+  html`<tfoot ${attributeList<TfootAttributes>(attributes)}>${content}</tfoot>`;

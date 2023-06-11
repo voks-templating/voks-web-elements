@@ -4,13 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type RpAttributes = HTMLGlobalAttributes;
 
-export interface RpElementOptions {
-  classes?: string[];
-  attributes?: RpAttributes;
-}
-
 export const rp = (
   content: string | HTMLTemplate,
-  { attributes, classes }: RpElementOptions = {},
-) =>
-  html`<rp ${attributeList<RpAttributes>(attributes, classes)}>${content}</rp>`;
+  attributes: RpAttributes = {},
+) => html`<rp ${attributeList<RpAttributes>(attributes)}>${content}</rp>`;

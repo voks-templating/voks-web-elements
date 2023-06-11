@@ -4,13 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type DdAttributes = HTMLGlobalAttributes;
 
-export interface DdElementOptions {
-  classes?: string[];
-  attributes?: DdAttributes;
-}
-
 export const dd = (
   content: string | HTMLTemplate,
-  { attributes, classes }: DdElementOptions = {},
-) =>
-  html`<dd ${attributeList<DdAttributes>(attributes, classes)}>${content}</dd>`;
+  attributes: DdAttributes = {},
+) => html`<dd ${attributeList<DdAttributes>(attributes)}>${content}</dd>`;

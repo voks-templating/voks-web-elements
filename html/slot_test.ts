@@ -16,9 +16,7 @@ Deno.test("slot tag element", async (t) => {
     const actual = slot(
       "Content",
       {
-        attributes: {
-          name: "test",
-        },
+        name: "test",
       },
     );
 

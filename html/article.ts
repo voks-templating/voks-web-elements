@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type ArticleAttributes = HTMLGlobalAttributes;
 
-export interface ArticleElementOptions {
-  classes?: string[];
-  attributes?: ArticleAttributes;
-}
-
 export const article = (
   content: HTMLTemplate,
-  { attributes, classes }: ArticleElementOptions = {},
+  attributes: ArticleAttributes = {},
 ) =>
   html`<article ${
-    attributeList<ArticleAttributes>(attributes, classes)
+    attributeList<ArticleAttributes>(attributes)
   }>${content}</article>`;

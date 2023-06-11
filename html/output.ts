@@ -8,15 +8,10 @@ export type OutputAttributes = {
   name: string;
 } | HTMLGlobalAttributes;
 
-export interface OutputElementOptions {
-  classes?: string[];
-  attributes?: OutputAttributes;
-}
-
 export const output = (
   content: string | HTMLTemplate,
-  { attributes, classes }: OutputElementOptions = {},
+  attributes: OutputAttributes = {},
 ) =>
   html`<output ${
-    attributeList<OutputAttributes>(attributes, classes)
+    attributeList<OutputAttributes>(attributes)
   }>${content}</output>`;

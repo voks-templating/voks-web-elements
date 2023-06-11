@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type SectionAttributes = HTMLGlobalAttributes;
 
-export interface SectionElementOptions {
-  classes?: string[];
-  attributes?: SectionAttributes;
-}
-
 export const section = (
   content: string | HTMLTemplate,
-  { attributes, classes }: SectionElementOptions = {},
+  attributes: SectionAttributes = {},
 ) =>
   html`<section ${
-    attributeList<SectionAttributes>(attributes, classes)
+    attributeList<SectionAttributes>(attributes)
   }>${content}</section>`;

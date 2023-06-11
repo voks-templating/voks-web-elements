@@ -9,15 +9,8 @@ export type EmbedAttributes = {
   type?: string;
 } | HTMLGlobalAttributes;
 
-export interface EmbedElementOptions {
-  classes?: string[];
-  attributes?: EmbedAttributes;
-}
-
 export const embed = (
   content: string | HTMLTemplate,
-  { attributes, classes }: EmbedElementOptions = {},
+  attributes: EmbedAttributes = {},
 ) =>
-  html`<embed ${
-    attributeList<EmbedAttributes>(attributes, classes)
-  }>${content}</embed>`;
+  html`<embed ${attributeList<EmbedAttributes>(attributes)}>${content}</embed>`;

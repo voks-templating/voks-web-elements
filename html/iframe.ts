@@ -15,15 +15,10 @@ export type IframeAttributes = {
   referrerpolicy?: string;
 } | HTMLGlobalAttributes;
 
-export interface IframeElementOptions {
-  classes?: string[];
-  attributes?: IframeAttributes;
-}
-
 export const iframe = (
   content: string | HTMLTemplate,
-  { attributes, classes }: IframeElementOptions = {},
+  attributes: IframeAttributes = {},
 ) =>
   html`<iframe ${
-    attributeList<IframeAttributes>(attributes, classes)
+    attributeList<IframeAttributes>(attributes)
   }>${content}</iframe>`;

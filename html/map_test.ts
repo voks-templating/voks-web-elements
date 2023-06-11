@@ -16,9 +16,7 @@ Deno.test("map tag element", async (t) => {
     const actual = map(
       "Content",
       {
-        attributes: {
-          name: "map",
-        },
+        name: "map",
       },
     );
 

@@ -6,12 +6,7 @@ export type QAttributes = {
   cite?: string;
 } | HTMLGlobalAttributes;
 
-export interface QElementOptions {
-  classes?: string[];
-  attributes?: QAttributes;
-}
-
 export const q = (
   content: string | HTMLTemplate,
-  { attributes, classes }: QElementOptions = {},
-) => html`<q ${attributeList<QAttributes>(attributes, classes)}>${content}</q>`;
+  attributes: QAttributes = {},
+) => html`<q ${attributeList<QAttributes>(attributes)}>${content}</q>`;

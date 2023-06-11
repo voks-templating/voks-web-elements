@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type SlotAttributes = { name?: string } | HTMLGlobalAttributes;
 
-export interface SlotElementOptions {
-  classes?: string[];
-  attributes?: SlotAttributes;
-}
-
 export const slot = (
   content: string | HTMLTemplate,
-  { attributes, classes }: SlotElementOptions = {},
-) =>
-  html`<slot ${
-    attributeList<SlotAttributes>(attributes, classes)
-  }>${content}</slot>`;
+  attributes: SlotAttributes = {},
+) => html`<slot ${attributeList<SlotAttributes>(attributes)}>${content}</slot>`;

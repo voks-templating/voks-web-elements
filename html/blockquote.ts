@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type BlockquoteAttributes = { cite?: string } | HTMLGlobalAttributes;
 
-export interface BlockquoteElementOptions {
-  classes?: string[];
-  attributes?: BlockquoteAttributes;
-}
-
 export const blockquote = (
   content: string | HTMLTemplate,
-  { attributes, classes }: BlockquoteElementOptions = {},
+  attributes: BlockquoteAttributes = {},
 ) =>
   html`<blockquote ${
-    attributeList<BlockquoteAttributes>(attributes, classes)
+    attributeList<BlockquoteAttributes>(attributes)
   }>${content}</blockquote>`;

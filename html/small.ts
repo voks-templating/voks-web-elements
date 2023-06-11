@@ -4,15 +4,8 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type SmallAttributes = HTMLGlobalAttributes;
 
-export interface SmallElementOptions {
-  classes?: string[];
-  attributes?: SmallAttributes;
-}
-
 export const small = (
   content: string | HTMLTemplate,
-  { attributes, classes }: SmallElementOptions = {},
+  attributes: SmallAttributes = {},
 ) =>
-  html`<small ${
-    attributeList<SmallAttributes>(attributes, classes)
-  }>${content}</small>`;
+  html`<small ${attributeList<SmallAttributes>(attributes)}>${content}</small>`;

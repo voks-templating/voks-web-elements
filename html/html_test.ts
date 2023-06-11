@@ -16,9 +16,7 @@ Deno.test("html tag element", async (t) => {
     const actual = htmlElement(
       "Content",
       {
-        attributes: {
-          xmlns: "http://www.w3.org/1999/xhtml",
-        },
+        xmlns: "http://www.w3.org/1999/xhtml",
       },
     );
 

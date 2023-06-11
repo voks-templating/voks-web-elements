@@ -16,9 +16,7 @@ Deno.test("li tag element", async (t) => {
     const actual = li(
       "Content",
       {
-        attributes: {
-          value: 1,
-        },
+        value: 1,
       },
     );
 

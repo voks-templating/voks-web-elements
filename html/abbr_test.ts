@@ -7,9 +7,7 @@ Deno.test("abbr tag element", async (t) => {
     const actual = abbr(
       "HTML",
       {
-        attributes: {
-          title: "HyperText Markup Language",
-        },
+        title: "HyperText Markup Language",
       },
     );
 

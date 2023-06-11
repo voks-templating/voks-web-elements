@@ -4,15 +4,8 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type TbodyAttributes = HTMLGlobalAttributes;
 
-export interface TbodyElementOptions {
-  classes?: string[];
-  attributes?: TbodyAttributes;
-}
-
 export const tbody = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TbodyElementOptions = {},
+  attributes: TbodyAttributes = {},
 ) =>
-  html`<tbody ${
-    attributeList<TbodyAttributes>(attributes, classes)
-  }>${content}</tbody>`;
+  html`<tbody ${attributeList<TbodyAttributes>(attributes)}>${content}</tbody>`;

@@ -13,9 +13,7 @@ Deno.test("hr tag element", async (t) => {
 
   await t.step("hr with attributes", async () => {
     const actual = hr(
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<hr \\>`;

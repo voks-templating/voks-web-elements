@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type NoscriptAttributes = HTMLGlobalAttributes;
 
-export interface NoscriptElementOptions {
-  classes?: string[];
-  attributes?: NoscriptAttributes;
-}
-
 export const noscript = (
   content: string | HTMLTemplate,
-  { attributes, classes }: NoscriptElementOptions = {},
+  attributes: NoscriptAttributes = {},
 ) =>
   html`<noscript ${
-    attributeList<NoscriptAttributes>(attributes, classes)
+    attributeList<NoscriptAttributes>(attributes)
   }>${content}</noscript>`;

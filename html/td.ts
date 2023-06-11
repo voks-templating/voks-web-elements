@@ -8,13 +8,7 @@ export type TdAttributes = {
   rowspan?: number;
 } | HTMLGlobalAttributes;
 
-export interface TdElementOptions {
-  classes?: string[];
-  attributes?: TdAttributes;
-}
-
 export const td = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TdElementOptions = {},
-) =>
-  html`<td ${attributeList<TdAttributes>(attributes, classes)}>${content}</td>`;
+  attributes: TdAttributes = {},
+) => html`<td ${attributeList<TdAttributes>(attributes)}>${content}</td>`;

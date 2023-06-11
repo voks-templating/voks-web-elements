@@ -16,18 +16,16 @@ Deno.test("form tag element", async (t) => {
     const actual = form(
       "Content",
       {
-        attributes: {
-          acceptCharset: "UTF-8",
-          autocapitalize: "none",
-          autocomplete: "off",
-          name: "name",
-          rel: "nofollow",
-          action: "/publish",
-          method: "post",
-          enctype: "multipart/form-data",
-          novalidate: true,
-          target: "_blank",
-        },
+        acceptCharset: "UTF-8",
+        autocapitalize: "none",
+        autocomplete: "off",
+        name: "name",
+        rel: "nofollow",
+        action: "/publish",
+        method: "post",
+        enctype: "multipart/form-data",
+        novalidate: true,
+        target: "_blank",
       },
     );
 

@@ -6,15 +6,10 @@ export type DialogAttributes = {
   open?: boolean;
 } | Omit<HTMLGlobalAttributes, "tabindex">;
 
-export interface DialogElementOptions {
-  classes?: string[];
-  attributes?: DialogAttributes;
-}
-
 export const dialog = (
   content: string | HTMLTemplate,
-  { attributes, classes }: DialogElementOptions = {},
+  attributes: DialogAttributes = {},
 ) =>
   html`<dialog ${
-    attributeList<DialogAttributes>(attributes, classes)
+    attributeList<DialogAttributes>(attributes)
   }>${content}</dialog>`;

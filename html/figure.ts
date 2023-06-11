@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type FigureAttributes = HTMLGlobalAttributes;
 
-export interface FigureElementOptions {
-  classes?: string[];
-  attributes?: FigureAttributes;
-}
-
 export const figure = (
   content: string | HTMLTemplate,
-  { attributes, classes }: FigureElementOptions = {},
+  attributes: FigureAttributes = {},
 ) =>
   html`<figure ${
-    attributeList<FigureAttributes>(attributes, classes)
+    attributeList<FigureAttributes>(attributes)
   }>${content}</figure>`;

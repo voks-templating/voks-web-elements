@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type KbdAttributes = HTMLGlobalAttributes;
 
-export interface KbdElementOptions {
-  classes?: string[];
-  attributes?: KbdAttributes;
-}
-
 export const kbd = (
   content: string | HTMLTemplate,
-  { attributes, classes }: KbdElementOptions = {},
-) =>
-  html`<kbd ${
-    attributeList<KbdAttributes>(attributes, classes)
-  }>${content}</kbd>`;
+  attributes: KbdAttributes = {},
+) => html`<kbd ${attributeList<KbdAttributes>(attributes)}>${content}</kbd>`;

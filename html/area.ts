@@ -15,11 +15,6 @@ export type AreaAttributes = {
   target?: string;
 } & HTMLGlobalAttributes;
 
-export interface AreaElementOptions {
-  classes?: string[];
-  attributes?: AreaAttributes;
-}
-
 export const area = (
-  { attributes, classes }: AreaElementOptions = {},
-) => html`<area ${attributeList<AreaAttributes>(attributes, classes)}>`;
+  attributes: AreaAttributes = {},
+) => html`<area ${attributeList<AreaAttributes>(attributes)}>`;

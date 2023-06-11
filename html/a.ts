@@ -15,15 +15,7 @@ export type AnchorAttributes =
   }
   | HTMLGlobalAttributes;
 
-export interface AnchorElementOptions {
-  classes?: string[];
-  attributes?: AnchorAttributes;
-}
-
 export const a = (
   content: string | HTMLTemplate,
-  { attributes, classes }: AnchorElementOptions = {},
-) =>
-  html`<a ${
-    attributeList<AnchorAttributes>(attributes, classes)
-  }>${content}</a>`;
+  attributes: AnchorAttributes = {},
+) => html`<a ${attributeList<AnchorAttributes>(attributes)}>${content}</a>`;

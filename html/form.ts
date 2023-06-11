@@ -15,15 +15,7 @@ export type FormAttributes = {
   novalidate?: boolean;
 } | HTMLGlobalAttributes;
 
-export interface FormElementOptions {
-  classes?: string[];
-  attributes?: FormAttributes;
-}
-
 export const form = (
   content: string | HTMLTemplate,
-  { attributes, classes }: FormElementOptions = {},
-) =>
-  html`<form ${
-    attributeList<FormAttributes>(attributes, classes)
-  }>${content}</form>`;
+  attributes: FormAttributes = {},
+) => html`<form ${attributeList<FormAttributes>(attributes)}>${content}</form>`;

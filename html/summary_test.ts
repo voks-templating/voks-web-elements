@@ -15,9 +15,7 @@ Deno.test("summary tag element", async (t) => {
   await t.step("summary with attributes", async () => {
     const actual = summary(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<summary>Content</summary>`;

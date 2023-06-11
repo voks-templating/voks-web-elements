@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type LegendAttributes = HTMLGlobalAttributes;
 
-export interface LegendElementOptions {
-  classes?: string[];
-  attributes?: LegendAttributes;
-}
-
 export const legend = (
   content: string | HTMLTemplate,
-  { attributes, classes }: LegendElementOptions = {},
+  attributes: LegendAttributes = {},
 ) =>
   html`<legend ${
-    attributeList<LegendAttributes>(attributes, classes)
+    attributeList<LegendAttributes>(attributes)
   }>${content}</legend>`;

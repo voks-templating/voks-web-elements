@@ -7,11 +7,6 @@ export type BaseAttributes = {
   target?: string;
 } | HTMLGlobalAttributes;
 
-export interface BaseElementOptions {
-  classes?: string[];
-  attributes?: BaseAttributes;
-}
-
 export const base = (
-  { attributes, classes }: BaseElementOptions = {},
-) => html`<base ${attributeList<BaseAttributes>(attributes, classes)} />`;
+  attributes: BaseAttributes = {},
+) => html`<base ${attributeList<BaseAttributes>(attributes)} />`;

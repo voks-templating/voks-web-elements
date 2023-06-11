@@ -6,15 +6,7 @@ export type HtmlAttributes = {
   xmlns?: string;
 } | HTMLGlobalAttributes;
 
-export interface HtmlElementOptions {
-  classes?: string[];
-  attributes?: HtmlAttributes;
-}
-
 export const htmlElement = (
   content: string | HTMLTemplate,
-  { attributes, classes }: HtmlElementOptions = {},
-) =>
-  html`<html ${
-    attributeList<HtmlAttributes>(attributes, classes)
-  }>${content}</html>`;
+  attributes: HtmlAttributes = {},
+) => html`<html ${attributeList<HtmlAttributes>(attributes)}>${content}</html>`;

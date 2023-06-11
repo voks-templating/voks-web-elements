@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type RubyAttributes = HTMLGlobalAttributes;
 
-export interface RubyElementOptions {
-  classes?: string[];
-  attributes?: RubyAttributes;
-}
-
 export const ruby = (
   content: string | HTMLTemplate,
-  { attributes, classes }: RubyElementOptions = {},
-) =>
-  html`<ruby ${
-    attributeList<RubyAttributes>(attributes, classes)
-  }>${content}</ruby>`;
+  attributes: RubyAttributes = {},
+) => html`<ruby ${attributeList<RubyAttributes>(attributes)}>${content}</ruby>`;

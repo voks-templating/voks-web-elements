@@ -16,9 +16,7 @@ Deno.test("time tag element", async (t) => {
     const actual = time(
       "Content",
       {
-        attributes: {
-          datetime: "test",
-        },
+        datetime: "test",
       },
     );
 

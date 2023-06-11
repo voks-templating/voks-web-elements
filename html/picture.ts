@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type PictureAttributes = HTMLGlobalAttributes;
 
-export interface PictureElementOptions {
-  classes?: string[];
-  attributes?: PictureAttributes;
-}
-
 export const picture = (
   content: string | HTMLTemplate,
-  { attributes, classes }: PictureElementOptions = {},
+  attributes: PictureAttributes = {},
 ) =>
   html`<picture ${
-    attributeList<PictureAttributes>(attributes, classes)
+    attributeList<PictureAttributes>(attributes)
   }>${content}</picture>`;

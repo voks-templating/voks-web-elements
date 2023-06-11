@@ -6,13 +6,7 @@ export type LiAttributes = {
   value?: number;
 } | HTMLGlobalAttributes;
 
-export interface LiElementOptions {
-  classes?: string[];
-  attributes?: LiAttributes;
-}
-
 export const li = (
   content: string | HTMLTemplate,
-  { attributes, classes }: LiElementOptions = {},
-) =>
-  html`<li ${attributeList<LiAttributes>(attributes, classes)}>${content}</li>`;
+  attributes: LiAttributes = {},
+) => html`<li ${attributeList<LiAttributes>(attributes)}>${content}</li>`;

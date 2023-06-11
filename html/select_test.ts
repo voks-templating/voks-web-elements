@@ -16,16 +16,14 @@ Deno.test("select tag element", async (t) => {
     const actual = select(
       "Content",
       {
-        attributes: {
-          autocomplete: "on",
-          autofocus: true,
-          disabled: true,
-          form: "form",
-          multiple: true,
-          name: "name",
-          required: true,
-          size: 1,
-        },
+        autocomplete: "on",
+        autofocus: true,
+        disabled: true,
+        form: "form",
+        multiple: true,
+        name: "name",
+        required: true,
+        size: 1,
       },
     );
 

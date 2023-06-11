@@ -7,17 +7,15 @@ Deno.test("audio tag element", async (t) => {
     const actual = audio(
       "Content",
       {
-        attributes: {
-          autoplay: true,
-          controls: true,
-          controlslist: "nodownload",
-          anonymous: true,
-          useCredentials: true,
-          disableremoteplayback: true,
-          loop: true,
-          muted: true,
-          preload: "auto",
-        },
+        autoplay: true,
+        controls: true,
+        controlslist: "nodownload",
+        anonymous: true,
+        useCredentials: true,
+        disableremoteplayback: true,
+        loop: true,
+        muted: true,
+        preload: "auto",
       },
     );
 

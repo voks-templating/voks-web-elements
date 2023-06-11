@@ -15,9 +15,7 @@ Deno.test("legend tag element", async (t) => {
   await t.step("legend with attributes", async () => {
     const actual = legend(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<legend>Content</legend>`;

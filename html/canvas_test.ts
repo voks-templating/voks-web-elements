@@ -16,10 +16,8 @@ Deno.test("canvas tag element", async (t) => {
     const actual = canvas(
       "Content",
       {
-        attributes: {
-          height: 100,
-          width: 100,
-        },
+        height: 100,
+        width: 100,
       },
     );
 

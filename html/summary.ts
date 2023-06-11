@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type SummaryAttributes = HTMLGlobalAttributes;
 
-export interface SummaryElementOptions {
-  classes?: string[];
-  attributes?: SummaryAttributes;
-}
-
 export const summary = (
   content: string | HTMLTemplate,
-  { attributes, classes }: SummaryElementOptions = {},
+  attributes: SummaryAttributes = {},
 ) =>
   html`<summary ${
-    attributeList<SummaryAttributes>(attributes, classes)
+    attributeList<SummaryAttributes>(attributes)
   }>${content}</summary>`;

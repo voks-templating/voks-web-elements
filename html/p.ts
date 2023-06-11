@@ -4,12 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type PAttributes = HTMLGlobalAttributes;
 
-export interface PElementOptions {
-  classes?: string[];
-  attributes?: PAttributes;
-}
-
 export const p = (
   content: string | HTMLTemplate,
-  { attributes, classes }: PElementOptions = {},
-) => html`<p ${attributeList<PAttributes>(attributes, classes)}>${content}</p>`;
+  attributes: PAttributes = {},
+) => html`<p ${attributeList<PAttributes>(attributes)}>${content}</p>`;

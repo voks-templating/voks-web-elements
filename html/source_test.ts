@@ -16,15 +16,13 @@ Deno.test("source tag element", async (t) => {
     const actual = source(
       "Content",
       {
-        attributes: {
-          type: "test",
-          src: "test",
-          srcset: "test",
-          sizes: "test",
-          media: "test",
-          height: 100,
-          width: 100,
-        },
+        type: "test",
+        src: "test",
+        srcset: "test",
+        sizes: "test",
+        media: "test",
+        height: 100,
+        width: 100,
       },
     );
 

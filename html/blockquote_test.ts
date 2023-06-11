@@ -7,10 +7,8 @@ Deno.test("blockquote tag element", async (t) => {
     const actual = blockquote(
       "Content",
       {
-        attributes: {
-          cite:
-            "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote",
-        },
+        cite:
+          "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote",
       },
     );
 

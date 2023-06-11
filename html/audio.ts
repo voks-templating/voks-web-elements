@@ -16,15 +16,8 @@ export type AudioAttributes =
   }
   | HTMLGlobalAttributes;
 
-export interface AudioElementOptions {
-  classes?: string[];
-  attributes?: AudioAttributes;
-}
-
 export const audio = (
   content: string | HTMLTemplate,
-  { attributes, classes }: AudioElementOptions = {},
+  attributes: AudioAttributes = {},
 ) =>
-  html`<audio ${
-    attributeList<AudioAttributes>(attributes, classes)
-  }>${content}</audio>`;
+  html`<audio ${attributeList<AudioAttributes>(attributes)}>${content}</audio>`;

@@ -16,9 +16,7 @@ Deno.test("q tag element", async (t) => {
     const actual = q(
       "Content",
       {
-        attributes: {
-          cite: "cite",
-        },
+        cite: "cite",
       },
     );
 

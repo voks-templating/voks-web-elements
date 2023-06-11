@@ -16,17 +16,15 @@ Deno.test("textarea tag element", async (t) => {
     const actual = textarea(
       "Content",
       {
-        attributes: {
-          autocomplete: "test",
-          autofocus: true,
-          cols: 100,
-          disabled: true,
-          form: "test",
-          maxlength: 100,
-          minlength: 100,
-          name: "test",
-          placeholder: "test",
-        },
+        autocomplete: "test",
+        autofocus: true,
+        cols: 100,
+        disabled: true,
+        form: "test",
+        maxlength: 100,
+        minlength: 100,
+        name: "test",
+        placeholder: "test",
       },
     );
 

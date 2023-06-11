@@ -15,9 +15,7 @@ Deno.test("hgroup tag element", async (t) => {
   await t.step("hgroup with attributes", async () => {
     const actual = hgroup(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<hgroup>Content</hgroup>`;

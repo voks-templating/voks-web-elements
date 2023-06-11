@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type DatalistAttributes = HTMLGlobalAttributes;
 
-export interface DatalistElementOptions {
-  classes?: string[];
-  attributes?: DatalistAttributes;
-}
-
 export const datalist = (
   content: string | HTMLTemplate,
-  { attributes, classes }: DatalistElementOptions = {},
+  attributes: DatalistAttributes = {},
 ) =>
   html`<datalist ${
-    attributeList<DatalistAttributes>(attributes, classes)
+    attributeList<DatalistAttributes>(attributes)
   }>${content}</datalist>`;

@@ -16,13 +16,11 @@ Deno.test("track tag element", async (t) => {
     const actual = track(
       "Content",
       {
-        attributes: {
-          default: true,
-          kind: "subtitles",
-          description: "test",
-          chapters: "test",
-          metadata: "test",
-        },
+        default: true,
+        kind: "subtitles",
+        description: "test",
+        chapters: "test",
+        metadata: "test",
       },
     );
 

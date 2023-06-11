@@ -4,13 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type H3Attributes = HTMLGlobalAttributes;
 
-export interface H3ElementOptions {
-  classes?: string[];
-  attributes?: H3Attributes;
-}
-
 export const h3 = (
   content: string | HTMLTemplate,
-  { attributes, classes }: H3ElementOptions = {},
-) =>
-  html`<h3 ${attributeList<H3Attributes>(attributes, classes)}>${content}</h3>`;
+  attributes: H3Attributes = {},
+) => html`<h3 ${attributeList<H3Attributes>(attributes)}>${content}</h3>`;

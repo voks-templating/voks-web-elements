@@ -16,10 +16,8 @@ Deno.test("ins tag element", async (t) => {
     const actual = ins(
       "Content",
       {
-        attributes: {
-          cite: "https://deno.land",
-          datetime: "2021-05-27T01:02:03Z",
-        },
+        cite: "https://deno.land",
+        datetime: "2021-05-27T01:02:03Z",
       },
     );
 

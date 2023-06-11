@@ -12,15 +12,10 @@ export type SourceAttributes = {
   width?: number;
 } | HTMLGlobalAttributes;
 
-export interface SourceElementOptions {
-  classes?: string[];
-  attributes?: SourceAttributes;
-}
-
 export const source = (
   content: string | HTMLTemplate,
-  { attributes, classes }: SourceElementOptions = {},
+  attributes: SourceAttributes = {},
 ) =>
   html`<source ${
-    attributeList<SourceAttributes>(attributes, classes)
+    attributeList<SourceAttributes>(attributes)
   }>${content}</source>`;

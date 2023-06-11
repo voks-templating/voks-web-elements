@@ -16,17 +16,15 @@ Deno.test("script tag element", async (t) => {
     const actual = script(
       "Content",
       {
-        attributes: {
-          async: true,
-          defer: true,
-          crossorigin: "anonymous",
-          integrity: "integrity",
-          nomodule: true,
-          nonce: "nonce",
-          referrerpolicy: "no-referrer",
-          src: "src",
-          type: "module",
-        },
+        async: true,
+        defer: true,
+        crossorigin: "anonymous",
+        integrity: "integrity",
+        nomodule: true,
+        nonce: "nonce",
+        referrerpolicy: "no-referrer",
+        src: "src",
+        type: "module",
       },
     );
 

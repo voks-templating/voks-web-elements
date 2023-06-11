@@ -8,15 +8,8 @@ export type StyleAttributes = {
   title?: string;
 } | HTMLGlobalAttributes;
 
-export interface StyleElementOptions {
-  classes?: string[];
-  attributes?: StyleAttributes;
-}
-
 export const style = (
   content: string | HTMLTemplate,
-  { attributes, classes }: StyleElementOptions = {},
+  attributes: StyleAttributes = {},
 ) =>
-  html`<style ${
-    attributeList<StyleAttributes>(attributes, classes)
-  }>${content}</style>`;
+  html`<style ${attributeList<StyleAttributes>(attributes)}>${content}</style>`;

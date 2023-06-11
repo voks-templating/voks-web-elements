@@ -15,9 +15,7 @@ Deno.test("sup tag element", async (t) => {
   await t.step("sup with attributes", async () => {
     const actual = sup(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<sup>Content</sup>`;

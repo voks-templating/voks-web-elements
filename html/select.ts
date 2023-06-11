@@ -22,15 +22,10 @@ export type SelectAttributes =
   | SizeAttribute
   | HTMLGlobalAttributes;
 
-export interface SelectElementOptions {
-  classes?: string[];
-  attributes?: SelectAttributes;
-}
-
 export const select = (
   content: string | HTMLTemplate,
-  { attributes, classes }: SelectElementOptions = {},
+  attributes: SelectAttributes = {},
 ) =>
   html`<select ${
-    attributeList<SelectAttributes>(attributes, classes)
+    attributeList<SelectAttributes>(attributes)
   }>${content}</select>`;

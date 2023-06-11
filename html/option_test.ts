@@ -16,12 +16,10 @@ Deno.test("option tag element", async (t) => {
     const actual = option(
       "Content",
       {
-        attributes: {
-          disabled: true,
-          label: "label",
-          selected: true,
-          value: "value",
-        },
+        disabled: true,
+        label: "label",
+        selected: true,
+        value: "value",
       },
     );
 

@@ -15,9 +15,7 @@ Deno.test("small tag element", async (t) => {
   await t.step("small with attributes", async () => {
     const actual = small(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<small>Content</small>`;

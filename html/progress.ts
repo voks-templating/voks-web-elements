@@ -7,15 +7,10 @@ export type ProgressAttributes = {
   value?: number;
 } | HTMLGlobalAttributes;
 
-export interface ProgressElementOptions {
-  classes?: string[];
-  attributes?: ProgressAttributes;
-}
-
 export const progress = (
   content: string | HTMLTemplate,
-  { attributes, classes }: ProgressElementOptions = {},
+  attributes: ProgressAttributes = {},
 ) =>
   html`<progress ${
-    attributeList<ProgressAttributes>(attributes, classes)
+    attributeList<ProgressAttributes>(attributes)
   }>${content}</progress>`;

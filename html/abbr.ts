@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type AbbrAttributes = HTMLGlobalAttributes;
 
-export interface AbbrElementOptions {
-  classes?: string[];
-  attributes?: AbbrAttributes;
-}
-
 export const abbr = (
   content: string | HTMLTemplate,
-  { attributes, classes }: AbbrElementOptions = {},
-) =>
-  html`<abbr ${
-    attributeList<AbbrAttributes>(attributes, classes)
-  }>${content}</abbr>`;
+  attributes: AbbrAttributes = {},
+) => html`<abbr ${attributeList<AbbrAttributes>(attributes)}>${content}</abbr>`;

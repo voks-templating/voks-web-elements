@@ -15,9 +15,7 @@ Deno.test("span tag element", async (t) => {
   await t.step("span with attributes", async () => {
     const actual = span(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<span>Content</span>`;

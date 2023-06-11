@@ -7,9 +7,7 @@ Deno.test("data tag element", async (t) => {
     const actual = data(
       "Content",
       {
-        attributes: {
-          value: 2,
-        },
+        value: 2,
       },
     );
 
@@ -21,9 +19,7 @@ Deno.test("data tag element", async (t) => {
   await t.step("data without content, just with attributes", async () => {
     const actual = data(
       {
-        attributes: {
-          value: 2,
-        },
+        value: 2,
       },
     );
 

@@ -16,10 +16,8 @@ Deno.test("optgroup tag element", async (t) => {
     const actual = optgroup(
       "Content",
       {
-        attributes: {
-          disabled: true,
-          label: "label",
-        },
+        disabled: true,
+        label: "label",
       },
     );
 

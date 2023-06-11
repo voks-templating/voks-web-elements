@@ -16,11 +16,9 @@ Deno.test("td tag element", async (t) => {
     const actual = td(
       "Content",
       {
-        attributes: {
-          colspan: 2,
-          rowspan: 2,
-          headers: "#foo #bar",
-        },
+        colspan: 2,
+        rowspan: 2,
+        headers: "#foo #bar",
       },
     );
 

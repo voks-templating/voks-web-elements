@@ -4,12 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type BAttributes = HTMLGlobalAttributes;
 
-export interface BElementOptions {
-  classes?: string[];
-  attributes?: BAttributes;
-}
-
 export const b = (
   content: string | HTMLTemplate,
-  { attributes, classes }: BElementOptions = {},
-) => html`<b ${attributeList<BAttributes>(attributes, classes)}>${content}</b>`;
+  attributes: BAttributes = {},
+) => html`<b ${attributeList<BAttributes>(attributes)}>${content}</b>`;

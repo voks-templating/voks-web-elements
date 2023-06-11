@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type VarAttributes = HTMLGlobalAttributes;
 
-export interface VarElementOptions {
-  classes?: string[];
-  attributes?: VarAttributes;
-}
-
 export const variable = (
   content: string | HTMLTemplate,
-  { attributes, classes }: VarElementOptions = {},
-) =>
-  html`<var ${
-    attributeList<VarAttributes>(attributes, classes)
-  }>${content}</var>`;
+  attributes: VarAttributes = {},
+) => html`<var ${attributeList<VarAttributes>(attributes)}>${content}</var>`;

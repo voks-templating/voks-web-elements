@@ -22,15 +22,7 @@ export type BodyAttributes = {
   onunload?: string;
 } | HTMLGlobalAttributes;
 
-export interface BodyElementOptions {
-  classes?: string[];
-  attributes?: BodyAttributes;
-}
-
 export const body = (
   content: string | HTMLTemplate,
-  { attributes, classes }: BodyElementOptions = {},
-) =>
-  html`<body ${
-    attributeList<BodyAttributes>(attributes, classes)
-  }>${content}</body>`;
+  attributes: BodyAttributes = {},
+) => html`<body ${attributeList<BodyAttributes>(attributes)}>${content}</body>`;

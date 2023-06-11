@@ -10,15 +10,8 @@ export type TrackAttributes = {
   metadata?: string;
 } | HTMLGlobalAttributes;
 
-export interface TrackElementOptions {
-  classes?: string[];
-  attributes?: TrackAttributes;
-}
-
 export const track = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TrackElementOptions = {},
+  attributes: TrackAttributes = {},
 ) =>
-  html`<track ${
-    attributeList<TrackAttributes>(attributes, classes)
-  }>${content}</track>`;
+  html`<track ${attributeList<TrackAttributes>(attributes)}>${content}</track>`;

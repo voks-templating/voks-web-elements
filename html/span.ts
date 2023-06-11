@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type SpanAttributes = HTMLGlobalAttributes;
 
-export interface SpanElementOptions {
-  classes?: string[];
-  attributes?: SpanAttributes;
-}
-
 export const span = (
   content: string | HTMLTemplate,
-  { attributes, classes }: SpanElementOptions = {},
-) =>
-  html`<span ${
-    attributeList<SpanAttributes>(attributes, classes)
-  }>${content}</span>`;
+  attributes: SpanAttributes = {},
+) => html`<span ${attributeList<SpanAttributes>(attributes)}>${content}</span>`;

@@ -16,10 +16,8 @@ Deno.test("progress tag element", async (t) => {
     const actual = progress(
       "Content",
       {
-        attributes: {
-          max: 100,
-          value: 50,
-        },
+        max: 100,
+        value: 50,
       },
     );
 

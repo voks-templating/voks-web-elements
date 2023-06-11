@@ -7,9 +7,7 @@ Deno.test("bdo tag element", async (t) => {
     const actual = bdo(
       "Content",
       {
-        attributes: {
-          dir: "rtl",
-        },
+        dir: "rtl",
       },
     );
 

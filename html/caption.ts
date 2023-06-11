@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type CaptionAttributes = HTMLGlobalAttributes;
 
-export interface CaptionElementOptions {
-  classes?: string[];
-  attributes?: CaptionAttributes;
-}
-
 export const caption = (
   content: string | HTMLTemplate,
-  { attributes, classes }: CaptionElementOptions = {},
+  attributes: CaptionAttributes = {},
 ) =>
   html`<caption ${
-    attributeList<CaptionAttributes>(attributes, classes)
+    attributeList<CaptionAttributes>(attributes)
   }>${content}</caption>`;

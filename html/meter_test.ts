@@ -16,14 +16,12 @@ Deno.test("meter tag element", async (t) => {
     const actual = meter(
       "Content",
       {
-        attributes: {
-          value: 2,
-          min: 1,
-          max: 3,
-          low: 1.5,
-          high: 2.5,
-          optimum: 2,
-        },
+        value: 2,
+        min: 1,
+        max: 3,
+        low: 1.5,
+        high: 2.5,
+        optimum: 2,
       },
     );
 

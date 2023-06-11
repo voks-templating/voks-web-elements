@@ -7,15 +7,10 @@ export type CanvasAttributes = {
   width?: number;
 } | HTMLGlobalAttributes;
 
-export interface CanvasElementOptions {
-  classes?: string[];
-  attributes?: CanvasAttributes;
-}
-
 export const canvas = (
   content: string | HTMLTemplate,
-  { attributes, classes }: CanvasElementOptions = {},
+  attributes: CanvasAttributes = {},
 ) =>
   html`<canvas ${
-    attributeList<CanvasAttributes>(attributes, classes)
+    attributeList<CanvasAttributes>(attributes)
   }>${content}</canvas>`;

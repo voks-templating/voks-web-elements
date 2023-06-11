@@ -19,15 +19,10 @@ export type ObjectAttributes =
     | HTMLGlobalAttributes
   );
 
-export interface ObjectElementOptions {
-  classes?: string[];
-  attributes?: ObjectAttributes;
-}
-
 export const object = (
   content: string | HTMLTemplate,
-  { attributes, classes }: ObjectElementOptions = {},
+  attributes: ObjectAttributes,
 ) =>
   html`<object ${
-    attributeList<ObjectAttributes>(attributes, classes)
+    attributeList<ObjectAttributes>(attributes)
   }>${content}</object>`;

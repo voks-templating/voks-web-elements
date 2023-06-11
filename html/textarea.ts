@@ -20,15 +20,10 @@ export type TextareaAttributes =
   | PlaceholderAttribute
   | HTMLGlobalAttributes;
 
-export interface TextareaElementOptions {
-  classes?: string[];
-  attributes?: TextareaAttributes;
-}
-
 export const textarea = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TextareaElementOptions = {},
+  attributes: TextareaAttributes = {},
 ) =>
   html`<textarea ${
-    attributeList<TextareaAttributes>(attributes, classes)
+    attributeList<TextareaAttributes>(attributes)
   }>${content}</textarea>`;

@@ -19,11 +19,6 @@ export type ImgAttributes = {
   fetchpriority?: string;
 } | HTMLGlobalAttributes;
 
-export interface ImgElementOptions {
-  classes?: string[];
-  attributes?: ImgAttributes;
-}
-
 export const img = (
-  { attributes, classes }: ImgElementOptions = {},
-) => html`<img ${attributeList<ImgAttributes>(attributes, classes)} \\>`;
+  attributes: ImgAttributes = {},
+) => html`<img ${attributeList<ImgAttributes>(attributes)} \\>`;

@@ -14,15 +14,10 @@ export type ScriptAttributes = {
   referrerpolicy?: string;
 } | HTMLGlobalAttributes;
 
-export interface ScriptElementOptions {
-  classes?: string[];
-  attributes?: ScriptAttributes;
-}
-
 export const script = (
   content: string | HTMLTemplate,
-  { attributes, classes }: ScriptElementOptions = {},
+  attributes: ScriptAttributes = {},
 ) =>
   html`<script ${
-    attributeList<ScriptAttributes>(attributes, classes)
+    attributeList<ScriptAttributes>(attributes)
   }>${content}</script>`;

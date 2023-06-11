@@ -15,9 +15,7 @@ Deno.test("caption tag element", async (t) => {
   await t.step("caption with attributes", async () => {
     const actual = caption(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<caption>Content</caption>`;

@@ -7,15 +7,10 @@ export type OptgroupAttributes = {
   label?: string;
 } | HTMLGlobalAttributes;
 
-export interface OptgroupElementOptions {
-  classes?: string[];
-  attributes?: OptgroupAttributes;
-}
-
 export const optgroup = (
   content: string | HTMLTemplate,
-  { attributes, classes }: OptgroupElementOptions = {},
+  attributes: OptgroupAttributes = {},
 ) =>
   html`<optgroup ${
-    attributeList<OptgroupAttributes>(attributes, classes)
+    attributeList<OptgroupAttributes>(attributes)
   }>${content}</optgroup>`;

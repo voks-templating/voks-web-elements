@@ -15,9 +15,7 @@ Deno.test("picture tag element", async (t) => {
   await t.step("picture with attributes", async () => {
     const actual = picture(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<picture>Content</picture>`;

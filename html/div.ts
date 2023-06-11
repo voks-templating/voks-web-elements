@@ -4,15 +4,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type DivAttributes = HTMLGlobalAttributes;
 
-export interface DivElementOptions {
-  classes?: string[];
-  attributes?: DivAttributes;
-}
-
 export const div = (
   content: string | HTMLTemplate,
-  { attributes, classes }: DivElementOptions = {},
-) =>
-  html`<div ${
-    attributeList<DivAttributes>(attributes, classes)
-  }>${content}</div>`;
+  attributes: DivAttributes = {},
+) => html`<div ${attributeList<DivAttributes>(attributes)}>${content}</div>`;

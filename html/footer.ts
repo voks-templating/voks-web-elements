@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type FooterAttributes = HTMLGlobalAttributes;
 
-export interface FooterElementOptions {
-  classes?: string[];
-  attributes?: FooterAttributes;
-}
-
 export const footer = (
   content: string | HTMLTemplate,
-  { attributes, classes }: FooterElementOptions = {},
+  attributes: FooterAttributes = {},
 ) =>
   html`<footer ${
-    attributeList<FooterAttributes>(attributes, classes)
+    attributeList<FooterAttributes>(attributes)
   }>${content}</footer>`;

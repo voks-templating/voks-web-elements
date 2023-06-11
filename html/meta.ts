@@ -9,11 +9,6 @@ export type MetaAttributes = {
   name?: string;
 } | HTMLGlobalAttributes;
 
-export interface MetaElementOptions {
-  classes?: string[];
-  attributes?: MetaAttributes;
-}
-
 export const meta = (
-  { attributes, classes }: MetaElementOptions = {},
-) => html`<meta ${attributeList<MetaAttributes>(attributes, classes)} />`;
+  attributes: MetaAttributes = {},
+) => html`<meta ${attributeList<MetaAttributes>(attributes)} />`;

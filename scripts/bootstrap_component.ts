@@ -73,19 +73,16 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type ${capitalized}Attributes = HTMLGlobalAttributes;
 
-export interface ${capitalized}ElementOptions {
-  classes?: string[];
-  attributes?: ${capitalized}Attributes;
-}
+
 
 export const ${name} = (${content ? `
   content: string | HTMLTemplate,` : ""}
-  { attributes, classes }: ${capitalized}ElementOptions = {},
+  attributes: ${capitalized}Attributes = {},
 ) =>${selfClosing ? `html\`<${name} \${
-  attributeList<${capitalized}Attributes>(attributes, classes)
+  attributeList<${capitalized}Attributes>(attributes)
 } \\\\>\`;`
 : `html\`<${name} \${
-  attributeList<${capitalized}Attributes>(attributes, classes)
+  attributeList<${capitalized}Attributes>(attributes)
 }\>${content ? "${content}" : ""}\</${name}>\`;`}
 
   `;
@@ -115,7 +112,7 @@ Deno.test("${name} tag element", async (t) => {
     const actual = ${name}(${content ? `
     "Content",`: ""}
       {
-        attributes: {},
+
       },
     );
 

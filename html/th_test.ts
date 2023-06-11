@@ -16,13 +16,11 @@ Deno.test("th tag element", async (t) => {
     const actual = th(
       "Content",
       {
-        attributes: {
-          abbr: "test",
-          colspan: 2,
-          rowspan: 2,
-          headers: "#foo #bar",
-          scope: "test",
-        },
+        abbr: "test",
+        colspan: 2,
+        rowspan: 2,
+        headers: "#foo #bar",
+        scope: "test",
       },
     );
 

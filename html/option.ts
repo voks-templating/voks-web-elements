@@ -9,15 +9,10 @@ export type OptionAttributes = {
   value?: string | number;
 } | HTMLGlobalAttributes;
 
-export interface OptionElementOptions {
-  classes?: string[];
-  attributes?: OptionAttributes;
-}
-
 export const option = (
   content: string | HTMLTemplate,
-  { attributes, classes }: OptionElementOptions = {},
+  attributes: OptionAttributes = {},
 ) =>
   html`<option ${
-    attributeList<OptionAttributes>(attributes, classes)
+    attributeList<OptionAttributes>(attributes)
   }>${content}</option>`;

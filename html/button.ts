@@ -32,15 +32,10 @@ export type ButtonAttributes =
   }
   | HTMLGlobalAttributes;
 
-export interface ButtonElementOptions {
-  classes?: string[];
-  attributes?: ButtonAttributes;
-}
-
 export const button = (
   content: string | HTMLTemplate,
-  { attributes, classes }: ButtonElementOptions = {},
+  attributes: ButtonAttributes = {},
 ) =>
   html`<button ${
-    attributeList<ButtonAttributes>(attributes, classes)
+    attributeList<ButtonAttributes>(attributes)
   }>${content}</button>`;

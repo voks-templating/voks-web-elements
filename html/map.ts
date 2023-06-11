@@ -6,15 +6,7 @@ export type MapAttributes = {
   name?: string;
 } | HTMLGlobalAttributes;
 
-export interface MapElementOptions {
-  classes?: string[];
-  attributes?: MapAttributes;
-}
-
 export const map = (
   content: string | HTMLTemplate,
-  { attributes, classes }: MapElementOptions = {},
-) =>
-  html`<map ${
-    attributeList<MapAttributes>(attributes, classes)
-  }>${content}</map>`;
+  attributes: MapAttributes = {},
+) => html`<map ${attributeList<MapAttributes>(attributes)}>${content}</map>`;

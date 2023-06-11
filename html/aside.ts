@@ -4,15 +4,8 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type AsideAttributes = HTMLGlobalAttributes;
 
-export interface AsideElementOptions {
-  classes?: string[];
-  attributes?: AsideAttributes;
-}
-
 export const aside = (
   content: string | HTMLTemplate,
-  { attributes, classes }: AsideElementOptions = {},
+  attributes: AsideAttributes = {},
 ) =>
-  html`<aside ${
-    attributeList<AsideAttributes>(attributes, classes)
-  }>${content}</aside>`;
+  html`<aside ${attributeList<AsideAttributes>(attributes)}>${content}</aside>`;

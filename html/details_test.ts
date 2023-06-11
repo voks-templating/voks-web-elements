@@ -16,9 +16,7 @@ Deno.test("details tag element", async (t) => {
     const actual = details(
       "Content",
       {
-        attributes: {
-          open: true,
-        },
+        open: true,
       },
     );
 

@@ -4,15 +4,8 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type TableAttributes = HTMLGlobalAttributes;
 
-export interface TableElementOptions {
-  classes?: string[];
-  attributes?: TableAttributes;
-}
-
 export const table = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TableElementOptions = {},
+  attributes: TableAttributes = {},
 ) =>
-  html`<table ${
-    attributeList<TableAttributes>(attributes, classes)
-  }>${content}</table>`;
+  html`<table ${attributeList<TableAttributes>(attributes)}>${content}</table>`;

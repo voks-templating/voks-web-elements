@@ -6,15 +6,8 @@ export type LabelAttributes = {
   for?: string;
 } | HTMLGlobalAttributes;
 
-export interface LabelElementOptions {
-  classes?: string[];
-  attributes?: LabelAttributes;
-}
-
 export const label = (
   content: string | HTMLTemplate,
-  { attributes, classes }: LabelElementOptions = {},
+  attributes: LabelAttributes = {},
 ) =>
-  html`<label ${
-    attributeList<LabelAttributes>(attributes, classes)
-  }>${content}</label>`;
+  html`<label ${attributeList<LabelAttributes>(attributes)}>${content}</label>`;

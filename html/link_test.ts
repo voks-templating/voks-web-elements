@@ -16,20 +16,18 @@ Deno.test("link tag element", async (t) => {
     const actual = link(
       "Content",
       {
-        attributes: {
-          as: "script",
-          crossorigin: "anonymous",
-          href: "https://deno.land/x",
-          hreflang: "en",
-          imagesizes: "100vw",
-          imagesrcset: "https://deno.land/x",
-          integrity: "sha256-1234567890",
-          media: "screen",
-          referrerpolicy: "no-referrer",
-          rel: "preload",
-          title: "Deno",
-          type: "text/javascript",
-        },
+        as: "script",
+        crossorigin: "anonymous",
+        href: "https://deno.land/x",
+        hreflang: "en",
+        imagesizes: "100vw",
+        imagesrcset: "https://deno.land/x",
+        integrity: "sha256-1234567890",
+        media: "screen",
+        referrerpolicy: "no-referrer",
+        rel: "preload",
+        title: "Deno",
+        type: "text/javascript",
       },
     );
 

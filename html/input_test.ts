@@ -30,10 +30,8 @@ import {
 Deno.test("input", async (t) => {
   await t.step("input[type=button]", async () => {
     const actual = buttonInput({
-      attributes: {
-        name: "name",
-        value: "Click me!",
-      },
+      name: "name",
+      value: "Click me!",
     });
 
     const expected = `<input type="button" name="name" value="Click me!" />`;
@@ -43,11 +41,9 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=checkbox]", async () => {
     const actual = checkboxInput({
-      attributes: {
-        name: "name",
-        value: "7",
-        checked: true,
-      },
+      name: "name",
+      value: "7",
+      checked: true,
     });
 
     const expected = `<input type="checkbox" checked name="name" value="7" />`;
@@ -57,12 +53,10 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=color]", async () => {
     const actual = colorInput({
-      attributes: {
-        name: "name",
-        autocomplete: "given-name",
-        list: "#some-list",
-        value: "#ff0000",
-      },
+      name: "name",
+      autocomplete: "given-name",
+      list: "#some-list",
+      value: "#ff0000",
     });
 
     const expected =
@@ -73,13 +67,11 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=date]", async () => {
     const actual = dateInput({
-      attributes: {
-        name: "name",
-        autocomplete: "given-name",
-        list: "#some-list",
-        readonly: true,
-        step: 1,
-      },
+      name: "name",
+      autocomplete: "given-name",
+      list: "#some-list",
+      readonly: true,
+      step: 1,
     });
 
     const expected =
@@ -90,13 +82,11 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=datetime-local]", async () => {
     const actual = datetimeLocalInput({
-      attributes: {
-        name: "name",
-        autocomplete: "given-name",
-        list: "#some-list",
-        readonly: true,
-        step: 1,
-      },
+      name: "name",
+      autocomplete: "given-name",
+      list: "#some-list",
+      readonly: true,
+      step: 1,
     });
 
     const expected =
@@ -107,19 +97,17 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=email]", async () => {
     const actual = emailInput({
-      attributes: {
-        name: "name",
-        autocomplete: "given-name",
-        list: "#some-list",
-        maxlength: 255,
-        minlength: 3,
-        multiple: true,
-        pattern: ".*",
-        placeholder: "Enter your email",
-        readonly: true,
-        required: true,
-        size: 20,
-      },
+      name: "name",
+      autocomplete: "given-name",
+      list: "#some-list",
+      maxlength: 255,
+      minlength: 3,
+      multiple: true,
+      pattern: ".*",
+      placeholder: "Enter your email",
+      readonly: true,
+      required: true,
+      size: 20,
     });
 
     const expected =
@@ -130,12 +118,10 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=file]", async () => {
     const actual = fileInput({
-      attributes: {
-        name: "name",
-        accept: ".json",
-        capture: "user",
-        multiple: true,
-      },
+      name: "name",
+      accept: ".json",
+      capture: "user",
+      multiple: true,
     });
 
     const expected =
@@ -146,10 +132,8 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=hidden]", async () => {
     const actual = hiddenInput({
-      attributes: {
-        name: "givenName",
-        autocomplete: "given-name",
-      },
+      name: "givenName",
+      autocomplete: "given-name",
     });
 
     const expected =
@@ -160,18 +144,16 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=image]", async () => {
     const actual = imageInput({
-      attributes: {
-        name: "avatar",
-        alt: "an avatar to show your inner self",
-        src: "/images/avatar.png",
-        width: 100,
-        height: 100,
-        formaction: "/upload",
-        formenctype: "multipart/form-data",
-        formmethod: "post",
-        formnovalidate: true,
-        formtarget: "_blank",
-      },
+      name: "avatar",
+      alt: "an avatar to show your inner self",
+      src: "/images/avatar.png",
+      width: 100,
+      height: 100,
+      formaction: "/upload",
+      formenctype: "multipart/form-data",
+      formmethod: "post",
+      formnovalidate: true,
+      formtarget: "_blank",
     });
 
     const expected =
@@ -182,12 +164,10 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=month]", async () => {
     const actual = monthInput({
-      attributes: {
-        name: "month",
-        autocomplete: "month",
-        list: "#some-list",
-        step: 1,
-      },
+      name: "month",
+      autocomplete: "month",
+      list: "#some-list",
+      step: 1,
     });
 
     const expected =
@@ -198,13 +178,11 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=number]", async () => {
     const actual = numberInput({
-      attributes: {
-        name: "name",
-        autocomplete: "month",
-        list: "#some-list",
-        placeholder: "placeholder",
-        readonly: true,
-      },
+      name: "name",
+      autocomplete: "month",
+      list: "#some-list",
+      placeholder: "placeholder",
+      readonly: true,
     });
 
     const expected =
@@ -215,19 +193,17 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=password]", async () => {
     const actual = passwordInput({
-      attributes: {
-        name: "name",
-        autocomplete: "current-password",
-        inputmode: "verbatim",
-        maxlength: 255,
-        minlength: 3,
-        pattern: ".*",
-        placeholder: "Enter your password",
-        readonly: true,
-        required: true,
-        size: 20,
-        value: "secret",
-      },
+      name: "name",
+      autocomplete: "current-password",
+      inputmode: "verbatim",
+      maxlength: 255,
+      minlength: 3,
+      pattern: ".*",
+      placeholder: "Enter your password",
+      readonly: true,
+      required: true,
+      size: 20,
+      value: "secret",
     });
 
     const expected =
@@ -238,12 +214,10 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=radio]", async () => {
     const actual = radioInput({
-      attributes: {
-        name: "name",
-        checked: true,
-        required: true,
-        value: "true",
-      },
+      name: "name",
+      checked: true,
+      required: true,
+      value: "true",
     });
 
     const expected =
@@ -254,15 +228,13 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=range]", async () => {
     const actual = rangeInput({
-      attributes: {
-        name: "name",
-        autocomplete: "some-range",
-        list: "#some-list",
-        min: 0,
-        max: 100,
-        step: 1,
-        value: 10,
-      },
+      name: "name",
+      autocomplete: "some-range",
+      list: "#some-list",
+      min: 0,
+      max: 100,
+      step: 1,
+      value: 10,
     });
 
     const expected =
@@ -273,10 +245,8 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=reset]", async () => {
     const actual = resetInput({
-      attributes: {
-        name: "name",
-        value: "reset",
-      },
+      name: "name",
+      value: "reset",
     });
 
     const expected = `<input type="reset" name="name" value="reset" />`;
@@ -286,18 +256,16 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=search]", async () => {
     const actual = searchInput({
-      attributes: {
-        name: "name",
-        autocomplete: "search",
-        list: "#some-list",
-        maxlength: 255,
-        minlength: 3,
-        pattern: ".*",
-        placeholder: "Enter your search",
-        required: true,
-        size: 20,
-        value: "reset",
-      },
+      name: "name",
+      autocomplete: "search",
+      list: "#some-list",
+      maxlength: 255,
+      minlength: 3,
+      pattern: ".*",
+      placeholder: "Enter your search",
+      required: true,
+      size: 20,
+      value: "reset",
     });
 
     const expected =
@@ -308,10 +276,8 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=submit]", async () => {
     const actual = submitInput({
-      attributes: {
-        name: "name",
-        value: "submit",
-      },
+      name: "name",
+      value: "submit",
     });
 
     const expected = `<input type="submit" name="name" value="submit" />`;
@@ -321,18 +287,16 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=tel]", async () => {
     const actual = telInput({
-      attributes: {
-        name: "name",
-        autocomplete: "tel",
-        list: "#some-list",
-        maxlength: 255,
-        minlength: 3,
-        pattern: ".*",
-        placeholder: "Enter your phone number",
-        readonly: true,
-        size: 20,
-        value: "00497789",
-      },
+      name: "name",
+      autocomplete: "tel",
+      list: "#some-list",
+      maxlength: 255,
+      minlength: 3,
+      pattern: ".*",
+      placeholder: "Enter your phone number",
+      readonly: true,
+      size: 20,
+      value: "00497789",
     });
 
     const expected =
@@ -343,18 +307,16 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=text]", async () => {
     const actual = textInput({
-      attributes: {
-        name: "name",
-        autocomplete: "given-name",
-        list: "#some-list",
-        maxlength: 255,
-        minlength: 3,
-        pattern: ".*",
-        placeholder: "Enter your phone number",
-        readonly: true,
-        required: true,
-        value: "John Doe",
-      },
+      name: "name",
+      autocomplete: "given-name",
+      list: "#some-list",
+      maxlength: 255,
+      minlength: 3,
+      pattern: ".*",
+      placeholder: "Enter your phone number",
+      readonly: true,
+      required: true,
+      value: "John Doe",
     });
 
     const expected =
@@ -365,14 +327,12 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=time]", async () => {
     const actual = timeInput({
-      attributes: {
-        name: "name",
-        autocomplete: "time",
-        list: "#some-list",
-        readonly: true,
-        step: 1,
-        value: "John Doe",
-      },
+      name: "name",
+      autocomplete: "time",
+      list: "#some-list",
+      readonly: true,
+      step: 1,
+      value: "John Doe",
     });
 
     const expected =
@@ -383,19 +343,17 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=url]", async () => {
     const actual = urlInput({
-      attributes: {
-        name: "name",
-        autocomplete: "website",
-        list: "#some-list",
-        maxlength: 255,
-        minlength: 3,
-        pattern: ".*",
-        placeholder: "Enter your phone number",
-        readonly: true,
-        required: true,
-        size: 30,
-        value: "http://example.com",
-      },
+      name: "name",
+      autocomplete: "website",
+      list: "#some-list",
+      maxlength: 255,
+      minlength: 3,
+      pattern: ".*",
+      placeholder: "Enter your phone number",
+      readonly: true,
+      required: true,
+      size: 30,
+      value: "http://example.com",
     });
 
     const expected =
@@ -406,13 +364,11 @@ Deno.test("input", async (t) => {
 
   await t.step("input[type=week]", async () => {
     const actual = weekInput({
-      attributes: {
-        name: "name",
-        autocomplete: "website",
-        list: "#some-list",
-        step: 1,
-        value: "1",
-      },
+      name: "name",
+      autocomplete: "website",
+      list: "#some-list",
+      step: 1,
+      value: "1",
     });
 
     const expected =
@@ -425,11 +381,9 @@ Deno.test("input", async (t) => {
 Deno.test("input data attributes", async (t) => {
   await t.step("input with data-* attributes", async () => {
     const actual = input({
-      attributes: {
-        type: "text",
-        dataFubar: "fubar",
-        ["data-fabula"]: "fabula",
-      },
+      type: "text",
+      dataFubar: "fubar",
+      ["data-fabula"]: "fabula",
     });
 
     const expected =
@@ -442,27 +396,11 @@ Deno.test("input data attributes", async (t) => {
 Deno.test("input with global attributes", async (t) => {
   await t.step("input class attribute", async () => {
     const actual = input({
-      attributes: {
-        type: "text",
-        class: "fubar fabula",
-      },
+      type: "text",
+      class: "fubar fabula",
     });
 
     const expected = `<input type="text" class="fubar fabula" />`;
-    const rendered = await renderToString(actual, { minify: true });
-    assertEquals(rendered, expected);
-  });
-
-  await t.step("input class attribute and classes params", async () => {
-    const actual = input({
-      attributes: {
-        type: "text",
-        class: "fubar fabula",
-      },
-      classes: ["foo", "bar"],
-    });
-
-    const expected = `<input type="text" class="foo bar fubar fabula" />`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

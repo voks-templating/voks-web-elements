@@ -4,15 +4,8 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type TitleAttributes = HTMLGlobalAttributes;
 
-export interface TitleElementOptions {
-  classes?: string[];
-  attributes?: TitleAttributes;
-}
-
 export const title = (
   content: string | HTMLTemplate,
-  { attributes, classes }: TitleElementOptions = {},
+  attributes: TitleAttributes = {},
 ) =>
-  html`<title ${
-    attributeList<TitleAttributes>(attributes, classes)
-  }>${content}</title>`;
+  html`<title ${attributeList<TitleAttributes>(attributes)}>${content}</title>`;

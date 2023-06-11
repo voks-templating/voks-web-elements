@@ -16,11 +16,9 @@ Deno.test("ol tag element", async (t) => {
     const actual = ol(
       "Content",
       {
-        attributes: {
-          reversed: true,
-          start: 2,
-          type: "a",
-        },
+        reversed: true,
+        start: 2,
+        type: "a",
       },
     );
 

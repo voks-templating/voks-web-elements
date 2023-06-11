@@ -16,9 +16,7 @@ Deno.test("col tag element", async (t) => {
     const actual = col(
       "Content",
       {
-        attributes: {
-          span: 2,
-        },
+        span: 2,
       },
     );
 

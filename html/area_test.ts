@@ -6,18 +6,16 @@ Deno.test("area tag element", async (t) => {
   await t.step("area", async () => {
     const actual = area(
       {
-        attributes: {
-          alt: "alternate text",
-          coords: "0,0,82,126",
-          download: "map.json",
-          href: "https://example.com/map.json",
-          hreflang: "en",
-          ping: "https://example.com",
-          referrerpolicy: "no-referrer",
-          rel: "noopener",
-          shape: "rect",
-          target: "_blank",
-        },
+        alt: "alternate text",
+        coords: "0,0,82,126",
+        download: "map.json",
+        href: "https://example.com/map.json",
+        hreflang: "en",
+        ping: "https://example.com",
+        referrerpolicy: "no-referrer",
+        rel: "noopener",
+        shape: "rect",
+        target: "_blank",
       },
     );
 

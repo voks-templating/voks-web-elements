@@ -4,15 +4,10 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type AddressAttributes = HTMLGlobalAttributes;
 
-export interface AddressElementOptions {
-  classes?: string[];
-  attributes?: AddressAttributes;
-}
-
 export const address = (
   content: string | HTMLTemplate,
-  { attributes, classes }: AddressElementOptions = {},
+  attributes: AddressAttributes = {},
 ) =>
   html`<address ${
-    attributeList<AddressAttributes>(attributes, classes)
+    attributeList<AddressAttributes>(attributes)
   }>${content}</address>`;

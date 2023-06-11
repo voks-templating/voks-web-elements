@@ -15,9 +15,7 @@ Deno.test("template tag element", async (t) => {
   await t.step("template with attributes", async () => {
     const actual = template(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<template>Content</template>`;

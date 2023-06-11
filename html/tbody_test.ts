@@ -15,9 +15,7 @@ Deno.test("tbody tag element", async (t) => {
   await t.step("tbody with attributes", async () => {
     const actual = tbody(
       "Content",
-      {
-        attributes: {},
-      },
+      {},
     );
 
     const expected = `<tbody>Content</tbody>`;
