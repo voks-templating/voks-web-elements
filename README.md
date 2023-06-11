@@ -11,9 +11,13 @@ include deprecated (and yet) no experimental tags.
 
 **API Docs**: https://deno.land/x/voks_web_elements/mod.ts
 
-All elements provide an `attributes` option, that is typed to include all
+All elements provide an attributes parameter, that is typed to include all
 [global HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
 as well as the specific attributes for each element.
+
+---
+NOTE!: please be aware, that attributes are no longer passed via `attributes` sub-property. Instead, they are passed directly to the element function.
+---
 
 ## [Deno](https://deno.land/x/voks_web_elements)
 
