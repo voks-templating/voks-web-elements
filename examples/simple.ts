@@ -12,14 +12,14 @@ import {
 
 const documentHead = head(html`
   ${title("Simple")}
-  ${meta({ attributes: { charset: "utf-8" } })}
+  ${meta({ charset: "utf-8" })}
 `);
 
 // deno-fmt-ignore
 const searchForm = html`
   ${form(html`
-    ${textInput({ attributes: { name: "q" } })}
-  `, { attributes: { action: "/search", method: "GET" } })}
+    ${textInput({ name: "q" })}
+  `, { action: "/search", method: "GET" })}
 `
 // deno-fmt-ignore
 const document = htmlElement(

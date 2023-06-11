@@ -30,7 +30,7 @@ import {
 const template = htmlElement(html`
   ${head()}
   ${body(html`
-    ${h1("Hello World!", { attributes: { class: "title" } })}
+    ${h1("Hello World!", { class: "title" })}
   `)}
 `)
 
@@ -52,7 +52,7 @@ import { body, h1, head, htmlElement } from "@voks/voks-web-elements";
 const template = htmlElement(html`
   ${head()}
   ${body(html`
-    ${h1("Hello World!", { attributes: { class: "title" } })}
+    ${h1("Hello World!", { class: "title" })}
   `)}
 `)
 
