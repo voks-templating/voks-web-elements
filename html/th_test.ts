@@ -25,7 +25,7 @@ Deno.test("th tag element", async (t) => {
     );
 
     const expected =
-      `<th abbr="test" colspan="2" rowspan="2" headers="#foo #bar" scope="test">Content</th>`;
+      `<th abbr="test" colspan="2" headers="#foo #bar" rowspan="2" scope="test">Content</th>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

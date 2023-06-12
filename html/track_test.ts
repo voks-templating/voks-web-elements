@@ -25,7 +25,7 @@ Deno.test("track tag element", async (t) => {
     );
 
     const expected =
-      `<track default kind="subtitles" description="test" chapters="test" metadata="test">Content</track>`;
+      `<track chapters="test" default description="test" kind="subtitles" metadata="test">Content</track>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

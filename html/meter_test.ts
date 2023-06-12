@@ -26,7 +26,7 @@ Deno.test("meter tag element", async (t) => {
     );
 
     const expected =
-      `<meter value="2" min="1" max="3" low="1.5" high="2.5" optimum="2">Content</meter>`;
+      `<meter high="2.5" low="1.5" max="3" min="1" optimum="2" value="2">Content</meter>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

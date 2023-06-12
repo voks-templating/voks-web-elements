@@ -29,7 +29,7 @@ Deno.test("script tag element", async (t) => {
     );
 
     const expected =
-      `<script async defer crossorigin="anonymous" integrity="integrity" nomodule nonce="nonce" referrerpolicy="no-referrer" src="src" type="module">Content</script>`;
+      `<script async crossorigin="anonymous" defer integrity="integrity" nomodule nonce="nonce" referrerpolicy="no-referrer" src="src" type="module">Content</script>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

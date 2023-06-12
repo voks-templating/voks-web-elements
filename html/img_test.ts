@@ -32,7 +32,7 @@ Deno.test("img tag element", async (t) => {
     );
 
     const expected =
-      `<img alt="Image" src="image.png" crossorigin="anonymous" decoding="async" elementtiming="example" fetchpriority="low" height="100" width="100" ismap loading="lazy" referrerpolicy="no-referrer" sizes="100vw" srcset="image.png" usemap="#map" \\>`;
+      `<img alt="Image" crossorigin="anonymous" decoding="async" elementtiming="example" fetchpriority="low" height="100" ismap loading="lazy" referrerpolicy="no-referrer" sizes="100vw" src="image.png" srcset="image.png" usemap="#map" width="100" \\>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

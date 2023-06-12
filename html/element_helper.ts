@@ -8,11 +8,12 @@ export const attributeList = <T>(
 
   return (options.prioritySort
     ? Object.entries(attributes)
-      .sort(([a], [b]) => {
+      .sort(([a], [b]) => a.localeCompare(b))
+      .sort(([a], [b]) => { // always start with priority attribute!
         if (a === options.prioritySort) return -1;
         else if (b === options.prioritySort) return 1;
-        return a.localeCompare(b);
+        return 0;
       })
-    : Object.entries(attributes)) // always start with type attribute!
+    : Object.entries(attributes).sort(([a], [b]) => a.localeCompare(b)))
     .map(([attribute, value]) => attr(attribute, value as AttributeValue));
 };

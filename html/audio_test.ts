@@ -20,7 +20,7 @@ Deno.test("audio tag element", async (t) => {
     );
 
     const expected =
-      `<audio autoplay controls controlslist="nodownload" anonymous use-credentials disableremoteplayback loop muted preload="auto">Content</audio>`;
+      `<audio anonymous autoplay controls controlslist="nodownload" disableremoteplayback loop muted preload="auto" use-credentials>Content</audio>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });

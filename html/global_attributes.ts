@@ -5,6 +5,9 @@ type CapitalizedLetter = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "
 type DataAttribute = `data${CapitalizedLetter}${string}`;
 type DashedDataAttribute = `data-${string}`;
 
+type ariaAttribute = `aria${CapitalizedLetter}${string}`;
+type DashedAriaAttribute = `aria-${string}`;
+
 export interface HTMLGlobalAttributes {
   accesskey?: string;
   autocapitalize?: string;
@@ -38,6 +41,12 @@ export interface HTMLGlobalAttributes {
   translate?: string;
   virtualkeyboardpolicy?: string;
   [k: DataAttribute | DashedDataAttribute]:
+    | string
+    | number
+    | boolean
+    | undefined;
+  // TODO: can be improved by allowing only the allowed attributes per element
+  [k: ariaAttribute | DashedAriaAttribute]:
     | string
     | number
     | boolean

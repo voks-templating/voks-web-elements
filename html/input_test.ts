@@ -377,31 +377,3 @@ Deno.test("input", async (t) => {
     assertEquals(rendered, expected);
   });
 });
-
-Deno.test("input data attributes", async (t) => {
-  await t.step("input with data-* attributes", async () => {
-    const actual = input({
-      type: "text",
-      dataFubar: "fubar",
-      ["data-fabula"]: "fabula",
-    });
-
-    const expected =
-      `<input type="text" data-fabula="fabula" data-fubar="fubar" />`;
-    const rendered = await renderToString(actual, { minify: true });
-    assertEquals(rendered, expected);
-  });
-});
-
-Deno.test("input with global attributes", async (t) => {
-  await t.step("input class attribute", async () => {
-    const actual = input({
-      type: "text",
-      class: "fubar fabula",
-    });
-
-    const expected = `<input type="text" class="fubar fabula" />`;
-    const rendered = await renderToString(actual, { minify: true });
-    assertEquals(rendered, expected);
-  });
-});

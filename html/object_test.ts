@@ -18,7 +18,7 @@ Deno.test("object tag element", async (t) => {
     );
 
     const expected =
-      `<object data="https://example.com" form="form-id" height="100" width="100" name="object-name" type="video/mp4" usemap="#map-id">Content</object>`;
+      `<object data="https://example.com" form="form-id" height="100" name="object-name" type="video/mp4" usemap="#map-id" width="100">Content</object>`;
     const rendered = await renderToString(actual, { minify: true });
     assertEquals(rendered, expected);
   });
