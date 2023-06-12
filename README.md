@@ -13,11 +13,12 @@ include deprecated (and yet) no experimental tags.
 
 All elements provide an attributes parameter, that is typed to include all
 [global HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
-as well as the specific attributes for each element.
+as well as the specific attributes for each element. Also data-* attributes (in
+the form of `dataXyz: true` or `"data-xyz": true`) and aria-* attributes (also
+in kebap and camel case) are supported.
 
----
-NOTE!: please be aware, that attributes are no longer passed via `attributes` sub-property. Instead, they are passed directly to the element function.
----
+**NOTE!: please be aware, that attributes are no longer passed via `attributes`
+sub-property. Instead, they are passed directly to the element function.**
 
 ## [Deno](https://deno.land/x/voks_web_elements)
 
