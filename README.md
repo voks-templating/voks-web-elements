@@ -71,3 +71,7 @@ await renderToString(template);
 ```
 deno test
 ```
+
+## License
+
+[Apache-2.0](./LICENSE)
