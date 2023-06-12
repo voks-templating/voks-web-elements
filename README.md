@@ -11,7 +11,7 @@ include deprecated (and yet) no experimental tags.
 
 ## Release History
 
-https://github.com/voks-templating/voks/releases
+https://github.com/voks-templating/voks-web-elements/releases
 
 ## API
 
