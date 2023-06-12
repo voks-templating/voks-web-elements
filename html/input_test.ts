@@ -11,7 +11,6 @@ import {
   fileInput,
   hiddenInput,
   imageInput,
-  input,
   monthInput,
   numberInput,
   passwordInput,
