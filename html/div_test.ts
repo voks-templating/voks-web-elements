@@ -48,3 +48,18 @@ Deno.test("input with global attributes", async (t) => {
     assertEquals(rendered, expected);
   });
 });
+
+Deno.test("input with aria attributes", async (t) => {
+  await t.step("div with aria attributes", async () => {
+    const actual = div("", {
+      ariaValuenow: "75",
+      "aria-valuemin": "0",
+      "aria-valuemax": "100",
+    });
+
+    const expected =
+      `<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75"></div>`;
+    const rendered = await renderToString(actual, { minify: true });
+    assertEquals(rendered, expected);
+  });
+});
