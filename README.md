@@ -9,7 +9,15 @@ standard HTML Element tag as described at the
 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). It does not
 include deprecated (and yet) no experimental tags.
 
-**API Docs**: https://deno.land/x/voks_web_elements/mod.ts
+## Release History
+
+https://github.com/voks-templating/voks/releases
+
+## API
+
+https://deno.land/x/voks_web_elements/mod.ts
+
+## Attributes
 
 All elements provide an attributes parameter, that is typed to include all
 [global HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
@@ -20,7 +28,9 @@ in kebap and camel case) are supported.
 **NOTE!: please be aware, that attributes are no longer passed via `attributes`
 sub-property. Instead, they are passed directly to the element function.**
 
-## [Deno](https://deno.land/x/voks_web_elements)
+## Usage
+
+### [Deno](https://deno.land/x/voks_web_elements)
 
 ```typescript
 import { html, renderToString } from "https://deno.land/x/voks/mod.ts";
@@ -42,7 +52,7 @@ const template = htmlElement(html`
 await renderToString(template);
 ```
 
-## [npm](https://www.npmjs.com/package/@voks/voks-web-elements)
+### [npm](https://www.npmjs.com/package/@voks/voks-web-elements)
 
 ```shell
 npm i @voks/voks
