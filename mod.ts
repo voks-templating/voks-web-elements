@@ -111,3 +111,4 @@ export * from "./html/hgroup.ts";
 export * from "./html/hr.ts";
 export * from "./html/i.ts";
 export * from "./html/tr.ts";
+export * from "./html/doctype.ts";
