@@ -20,6 +20,5 @@ export type LinkAttributes = {
 } | HTMLGlobalAttributes;
 
 export const link = (
-  content: string | HTMLTemplate,
   attributes: LinkAttributes = {},
-) => html`<link ${attributeList<LinkAttributes>(attributes)}>${content}</link>`;
+) => html`<link ${attributeList<LinkAttributes>(attributes)} />`;
