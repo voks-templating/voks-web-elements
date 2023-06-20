@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { abbr } from "./abbr.ts";
 
 Deno.test("abbr tag element", async (t) => {
@@ -12,7 +12,7 @@ Deno.test("abbr tag element", async (t) => {
     );
 
     const expected = `<abbr title="HyperText Markup Language">HTML</abbr>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

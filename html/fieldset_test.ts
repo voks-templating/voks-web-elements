@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { fieldset } from "./fieldset.ts";
 
 Deno.test("fieldset tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("fieldset tag element", async (t) => {
 
     const expected = `<fieldset>Content</fieldset>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -24,7 +24,7 @@ Deno.test("fieldset tag element", async (t) => {
 
     const expected =
       `<fieldset disabled form="form-id" name="name">Content</fieldset>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

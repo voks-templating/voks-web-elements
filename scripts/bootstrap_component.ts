@@ -94,7 +94,7 @@ function testTemplate(
 ) {
   // deno-fmt-ignore
   return `import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { ${name} } from "./${name}.ts";
 
 Deno.test("${name} tag element", async (t) => {
@@ -103,7 +103,7 @@ Deno.test("${name} tag element", async (t) => {
     ${selfClosing ? `const expected = \`<${name} \\\\>\`;` : `
     const expected = \`<${name}>${content ? "Content" : ""}</${name}>\`;`}
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -118,7 +118,7 @@ Deno.test("${name} tag element", async (t) => {
 
     ${selfClosing ? `const expected = \`<${name} \\\\>\`;` : `
     const expected = \`<${name}>${content ? "Content" : ""}</${name}>\`;`}
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

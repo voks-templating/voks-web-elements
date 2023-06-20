@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { img } from "./img.ts";
 
 Deno.test("img tag element", async (t) => {
@@ -7,7 +7,7 @@ Deno.test("img tag element", async (t) => {
     const actual = img();
     const expected = `<img \\>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -33,7 +33,7 @@ Deno.test("img tag element", async (t) => {
 
     const expected =
       `<img alt="Image" crossorigin="anonymous" decoding="async" elementtiming="example" fetchpriority="low" height="100" ismap loading="lazy" referrerpolicy="no-referrer" sizes="100vw" src="image.png" srcset="image.png" usemap="#map" width="100" \\>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

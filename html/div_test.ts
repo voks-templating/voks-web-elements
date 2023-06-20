@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { div } from "./div.ts";
 
 Deno.test("div tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("div tag element", async (t) => {
 
     const expected = `<div>Content</div>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -19,7 +19,7 @@ Deno.test("div tag element", async (t) => {
     );
 
     const expected = `<div>Content</div>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });
@@ -32,7 +32,7 @@ Deno.test("div data attributes", async (t) => {
     });
 
     const expected = `<div data-fabula="fabula" data-fubar="fubar"></div>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });
@@ -44,7 +44,7 @@ Deno.test("input with global attributes", async (t) => {
     });
 
     const expected = `<div class="fubar fabula"></div>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });
@@ -59,7 +59,7 @@ Deno.test("input with aria attributes", async (t) => {
 
     const expected =
       `<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75"></div>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

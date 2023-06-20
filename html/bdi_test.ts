@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { bdi } from "./bdi.ts";
 
 Deno.test("bdi tag element", async (t) => {
@@ -10,7 +10,7 @@ Deno.test("bdi tag element", async (t) => {
     );
 
     const expected = `<bdi>Content</bdi>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

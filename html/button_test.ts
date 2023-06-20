@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { button } from "./button.ts";
 
 Deno.test("button tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("button tag element", async (t) => {
 
     const expected = `<button>Content</button>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -34,7 +34,7 @@ Deno.test("button tag element", async (t) => {
 
     const expected =
       `<button autofocus disabled form="form-id" formaction="https://deno.land" formenctype="multipart/form-data" formmethod="get" formnovalidate formtarget="_blank" name="button-name" popovertarget="target-id" popovertargetaction="hide" type="submit" value="button-value">Content</button>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

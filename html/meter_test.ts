@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { meter } from "./meter.ts";
 
 Deno.test("meter tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("meter tag element", async (t) => {
 
     const expected = `<meter>Content</meter>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -27,7 +27,7 @@ Deno.test("meter tag element", async (t) => {
 
     const expected =
       `<meter high="2.5" low="1.5" max="3" min="1" optimum="2" value="2">Content</meter>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { embed } from "./embed.ts";
 
 Deno.test("embed tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("embed tag element", async (t) => {
 
     const expected = `<embed>Content</embed>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -25,7 +25,7 @@ Deno.test("embed tag element", async (t) => {
 
     const expected =
       `<embed height="100" src="https://example.com" type="video/mp4" width="100">Content</embed>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

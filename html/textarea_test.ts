@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { textarea } from "./textarea.ts";
 
 Deno.test("textarea tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("textarea tag element", async (t) => {
 
     const expected = `<textarea>Content</textarea>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -30,7 +30,7 @@ Deno.test("textarea tag element", async (t) => {
 
     const expected =
       `<textarea autocomplete="test" autofocus cols="100" disabled form="test" maxlength="100" minlength="100" name="test" placeholder="test">Content</textarea>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

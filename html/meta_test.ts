@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { meta } from "./meta.ts";
 
 Deno.test("meta tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("meta tag element", async (t) => {
 
     const expected = `<meta />`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -24,7 +24,7 @@ Deno.test("meta tag element", async (t) => {
 
     const expected =
       `<meta charset="utf-8" content="text/html" http-equiv="Content-Type" name="viewport" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

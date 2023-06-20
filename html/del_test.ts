@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { del } from "./del.ts";
 
 Deno.test("del tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("del tag element", async (t) => {
 
     const expected = `<del>Content</del>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -23,7 +23,7 @@ Deno.test("del tag element", async (t) => {
 
     const expected =
       `<del cite="https://deno.land/" datetime="2021-05-27T01:02:03Z">Content</del>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

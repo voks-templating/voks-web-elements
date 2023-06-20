@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { bdo } from "./bdo.ts";
 
 Deno.test("bdo tag element", async (t) => {
@@ -12,7 +12,7 @@ Deno.test("bdo tag element", async (t) => {
     );
 
     const expected = `<bdo dir="rtl">Content</bdo>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

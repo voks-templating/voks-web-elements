@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { base } from "./base.ts";
 
 Deno.test("base tag element", async (t) => {
@@ -12,7 +12,7 @@ Deno.test("base tag element", async (t) => {
     );
 
     const expected = `<base href="https://example.com/" target="_blank" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

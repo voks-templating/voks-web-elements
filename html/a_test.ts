@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { html, renderToString } from "../deps.ts";
+import { html, minify, renderToString } from "../deps.ts";
 import { a } from "./a.ts";
 
 Deno.test("anchor tag element", async (t) => {
@@ -20,7 +20,7 @@ Deno.test("anchor tag element", async (t) => {
 
     const expected =
       `<a download="filename.txt" href="https://example.com" hreflang="en" ping="https://example.com" referer-policy="no-referrer" rel="noopener" target="_blank" type="text/html">anchor</a>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -33,7 +33,7 @@ Deno.test("anchor tag element", async (t) => {
     );
 
     const expected = `<a download="filename.txt"><span>anchor</span></a>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { html, renderToString } from "../deps.ts";
+import { html, minify, renderToString } from "../deps.ts";
 import { datalist } from "./datalist.ts";
 
 Deno.test("datalist tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("datalist tag element", async (t) => {
 
     const expected = `<datalist>Content</datalist>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -26,7 +26,7 @@ Deno.test("datalist tag element", async (t) => {
 
     const expected =
       `<datalist id="browsers"><option value="Chrome"></option><option value="Firefox"></option><option value="Opera"></option><option value="Safari"></option><option value="Microsoft Edge"></option></datalist>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

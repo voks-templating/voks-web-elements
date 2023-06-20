@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { select } from "./select.ts";
 
 Deno.test("select tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("select tag element", async (t) => {
 
     const expected = `<select>Content</select>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -29,7 +29,7 @@ Deno.test("select tag element", async (t) => {
 
     const expected =
       `<select autocomplete="on" autofocus disabled form="form" multiple name="name" required size="1">Content</select>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { form } from "./form.ts";
 
 Deno.test("form tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("form tag element", async (t) => {
 
     const expected = `<form>Content</form>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -31,7 +31,7 @@ Deno.test("form tag element", async (t) => {
 
     const expected =
       `<form accept-charset="UTF-8" action="/publish" autocapitalize="none" autocomplete="off" enctype="multipart/form-data" method="post" name="name" novalidate rel="nofollow" target="_blank">Content</form>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

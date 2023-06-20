@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { q } from "./q.ts";
 
 Deno.test("q tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("q tag element", async (t) => {
 
     const expected = `<q>Content</q>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -21,7 +21,7 @@ Deno.test("q tag element", async (t) => {
     );
 
     const expected = `<q cite="cite">Content</q>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -31,5 +31,5 @@ const document = htmlElement(
   `,
 );
 
-const rendered = await renderToString(document, { minify: true });
+const rendered = await renderToString(document);
 console.log(rendered);

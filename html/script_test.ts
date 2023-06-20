@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { script } from "./script.ts";
 
 Deno.test("script tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("script tag element", async (t) => {
 
     const expected = `<script>Content</script>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -30,7 +30,7 @@ Deno.test("script tag element", async (t) => {
 
     const expected =
       `<script async crossorigin="anonymous" defer integrity="integrity" nomodule nonce="nonce" referrerpolicy="no-referrer" src="src" type="module">Content</script>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { track } from "./track.ts";
 
 Deno.test("track tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("track tag element", async (t) => {
 
     const expected = `<track>Content</track>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -26,7 +26,7 @@ Deno.test("track tag element", async (t) => {
 
     const expected =
       `<track chapters="test" default description="test" kind="subtitles" metadata="test">Content</track>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { colgroup } from "./colgroup.ts";
 
 Deno.test("colgroup tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("colgroup tag element", async (t) => {
 
     const expected = `<colgroup>Content</colgroup>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -21,7 +21,7 @@ Deno.test("colgroup tag element", async (t) => {
     );
 
     const expected = `<colgroup span="2">Content</colgroup>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

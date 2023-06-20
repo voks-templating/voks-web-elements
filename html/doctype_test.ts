@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { doctype } from "./doctype.ts";
 
 Deno.test("doctype tag element", async (t) => {
@@ -7,7 +7,7 @@ Deno.test("doctype tag element", async (t) => {
     const actual = doctype();
     const expected = `<!DOCTYPE html>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

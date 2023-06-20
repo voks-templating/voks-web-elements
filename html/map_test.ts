@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { map } from "./map.ts";
 
 Deno.test("map tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("map tag element", async (t) => {
 
     const expected = `<map>Content</map>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -21,7 +21,7 @@ Deno.test("map tag element", async (t) => {
     );
 
     const expected = `<map name="map">Content</map>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

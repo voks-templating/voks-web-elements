@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { ol } from "./ol.ts";
 
 Deno.test("ol tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("ol tag element", async (t) => {
 
     const expected = `<ol>Content</ol>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -23,7 +23,7 @@ Deno.test("ol tag element", async (t) => {
     );
 
     const expected = `<ol reversed start="2" type="a">Content</ol>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

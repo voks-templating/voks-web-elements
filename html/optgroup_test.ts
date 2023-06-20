@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { optgroup } from "./optgroup.ts";
 
 Deno.test("optgroup tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("optgroup tag element", async (t) => {
 
     const expected = `<optgroup>Content</optgroup>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -22,7 +22,7 @@ Deno.test("optgroup tag element", async (t) => {
     );
 
     const expected = `<optgroup disabled label="label">Content</optgroup>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

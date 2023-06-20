@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { option } from "./option.ts";
 
 Deno.test("option tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("option tag element", async (t) => {
 
     const expected = `<option>Content</option>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -25,7 +25,7 @@ Deno.test("option tag element", async (t) => {
 
     const expected =
       `<option disabled label="label" selected value="value">Content</option>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

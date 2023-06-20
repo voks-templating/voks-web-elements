@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { dialog } from "./dialog.ts";
 
 Deno.test("dialog tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("dialog tag element", async (t) => {
 
     const expected = `<dialog>Content</dialog>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -21,7 +21,7 @@ Deno.test("dialog tag element", async (t) => {
     );
 
     const expected = `<dialog open>Content</dialog>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { area } from "./area.ts";
 
 Deno.test("area tag element", async (t) => {
@@ -21,7 +21,7 @@ Deno.test("area tag element", async (t) => {
 
     const expected =
       `<area alt="alternate text" coords="0,0,82,126" download="map.json" href="https://example.com/map.json" hreflang="en" ping="https://example.com" referrerpolicy="no-referrer" rel="noopener" shape="rect" target="_blank">`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

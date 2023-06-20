@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { audio } from "./audio.ts";
 
 Deno.test("audio tag element", async (t) => {
@@ -21,7 +21,7 @@ Deno.test("audio tag element", async (t) => {
 
     const expected =
       `<audio anonymous autoplay controls controlslist="nodownload" disableremoteplayback loop muted preload="auto" use-credentials>Content</audio>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

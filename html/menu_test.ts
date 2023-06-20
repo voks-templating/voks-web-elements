@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { menu } from "./menu.ts";
 
 Deno.test("menu tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("menu tag element", async (t) => {
 
     const expected = `<menu>Content</menu>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -19,7 +19,7 @@ Deno.test("menu tag element", async (t) => {
     );
 
     const expected = `<menu>Content</menu>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { progress } from "./progress.ts";
 
 Deno.test("progress tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("progress tag element", async (t) => {
 
     const expected = `<progress>Content</progress>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -22,7 +22,7 @@ Deno.test("progress tag element", async (t) => {
     );
 
     const expected = `<progress max="100" value="50">Content</progress>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

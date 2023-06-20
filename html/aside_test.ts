@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { html, renderToString } from "../deps.ts";
+import { html, minify, renderToString } from "../deps.ts";
 import { aside } from "./aside.ts";
 
 Deno.test("aside tag element", async (t) => {
@@ -11,7 +11,7 @@ Deno.test("aside tag element", async (t) => {
 
     const expected =
       `<aside><p>The movie earned $87 million during its initial release.</p></aside>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { iframe } from "./iframe.ts";
 
 Deno.test("iframe tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("iframe tag element", async (t) => {
 
     const expected = `<iframe>Content</iframe>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -32,7 +32,7 @@ Deno.test("iframe tag element", async (t) => {
 
     const expected =
       `<iframe allow="autoplay" allowfullscreen height="100" loading="lazy" name="name" referrerpolicy="no-referrer" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" src="https://example.com" srcdoc="srcdoc" width="100">Content</iframe>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

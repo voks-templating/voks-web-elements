@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { rt } from "./rt.ts";
 
 Deno.test("rt tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("rt tag element", async (t) => {
 
     const expected = `<rt>Content</rt>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -19,7 +19,7 @@ Deno.test("rt tag element", async (t) => {
     );
 
     const expected = `<rt>Content</rt>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

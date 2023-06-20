@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 
 import {
   buttonInput,
@@ -34,7 +34,7 @@ Deno.test("input", async (t) => {
     });
 
     const expected = `<input type="button" name="name" value="Click me!" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -46,7 +46,7 @@ Deno.test("input", async (t) => {
     });
 
     const expected = `<input type="checkbox" checked name="name" value="7" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -60,7 +60,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="color" autocomplete="given-name" list="#some-list" name="name" value="#ff0000" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -75,7 +75,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="date" autocomplete="given-name" list="#some-list" name="name" readonly step="1" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -90,7 +90,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="datetime-local" autocomplete="given-name" list="#some-list" name="name" readonly step="1" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -111,7 +111,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="email" autocomplete="given-name" list="#some-list" maxlength="255" minlength="3" multiple name="name" pattern=".*" placeholder="Enter your email" readonly required size="20" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -125,7 +125,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="file" accept=".json" capture="user" multiple name="name" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -137,7 +137,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="hidden" autocomplete="given-name" name="givenName" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -157,7 +157,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="image" alt="an avatar to show your inner self" formaction="/upload" formenctype="multipart/form-data" formmethod="post" formnovalidate formtarget="_blank" height="100" name="avatar" src="/images/avatar.png" width="100" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -171,7 +171,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="month" autocomplete="month" list="#some-list" name="month" step="1" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -186,7 +186,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="number" autocomplete="month" list="#some-list" name="name" placeholder="placeholder" readonly />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -207,7 +207,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="password" autocomplete="current-password" inputmode="verbatim" maxlength="255" minlength="3" name="name" pattern=".*" placeholder="Enter your password" readonly required size="20" value="secret" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -221,7 +221,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="radio" checked name="name" required value="true" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -238,7 +238,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="range" autocomplete="some-range" list="#some-list" max="100" min="0" name="name" step="1" value="10" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -249,7 +249,7 @@ Deno.test("input", async (t) => {
     });
 
     const expected = `<input type="reset" name="name" value="reset" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -269,7 +269,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="search" autocomplete="search" list="#some-list" maxlength="255" minlength="3" name="name" pattern=".*" placeholder="Enter your search" required size="20" value="reset" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -280,7 +280,7 @@ Deno.test("input", async (t) => {
     });
 
     const expected = `<input type="submit" name="name" value="submit" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -300,7 +300,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="tel" autocomplete="tel" list="#some-list" maxlength="255" minlength="3" name="name" pattern=".*" placeholder="Enter your phone number" readonly size="20" value="00497789" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -320,7 +320,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="text" autocomplete="given-name" list="#some-list" maxlength="255" minlength="3" name="name" pattern=".*" placeholder="Enter your phone number" readonly required value="John Doe" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -336,7 +336,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="time" autocomplete="time" list="#some-list" name="name" readonly step="1" value="John Doe" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -357,7 +357,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="url" autocomplete="website" list="#some-list" maxlength="255" minlength="3" name="name" pattern=".*" placeholder="Enter your phone number" readonly required size="30" value="http://example.com" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -372,7 +372,7 @@ Deno.test("input", async (t) => {
 
     const expected =
       `<input type="week" autocomplete="website" list="#some-list" name="name" step="1" value="1" />`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });

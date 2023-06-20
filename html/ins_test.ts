@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString } from "../deps.ts";
+import { renderToString, minify } from "../deps.ts";
 import { ins } from "./ins.ts";
 
 Deno.test("ins tag element", async (t) => {
@@ -8,7 +8,7 @@ Deno.test("ins tag element", async (t) => {
 
     const expected = `<ins>Content</ins>`;
 
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 
@@ -23,7 +23,7 @@ Deno.test("ins tag element", async (t) => {
 
     const expected =
       `<ins cite="https://deno.land" datetime="2021-05-27T01:02:03Z">Content</ins>`;
-    const rendered = await renderToString(actual, { minify: true });
+    const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
 });
