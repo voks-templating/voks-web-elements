@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { fieldset } from "./fieldset.ts";
 
 Deno.test("fieldset tag element", async (t) => {

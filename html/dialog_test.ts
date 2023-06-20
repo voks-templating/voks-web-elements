@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { dialog } from "./dialog.ts";
 
 Deno.test("dialog tag element", async (t) => {

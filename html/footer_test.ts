@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { footer } from "./footer.ts";
 
 Deno.test("footer tag element", async (t) => {

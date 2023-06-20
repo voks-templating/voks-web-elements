@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { doctype } from "./doctype.ts";
 
 Deno.test("doctype tag element", async (t) => {

@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { blockquote } from "./blockquote.ts";
 
 Deno.test("blockquote tag element", async (t) => {

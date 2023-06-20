@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { hgroup } from "./hgroup.ts";
 
 Deno.test("hgroup tag element", async (t) => {

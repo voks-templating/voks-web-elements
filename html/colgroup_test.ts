@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { colgroup } from "./colgroup.ts";
 
 Deno.test("colgroup tag element", async (t) => {

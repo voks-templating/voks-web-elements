@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { textarea } from "./textarea.ts";
 
 Deno.test("textarea tag element", async (t) => {

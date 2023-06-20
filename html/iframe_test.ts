@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { renderToString, minify } from "../deps.ts";
+import { minify, renderToString } from "../deps.ts";
 import { iframe } from "./iframe.ts";
 
 Deno.test("iframe tag element", async (t) => {
