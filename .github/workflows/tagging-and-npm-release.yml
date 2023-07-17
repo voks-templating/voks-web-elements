@@ -22,5 +22,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: deno run --allow-env --allow-read npm:semantic-release
+        run: deno run --allow-env --allow-read --allow-run --allow-sys npm:semantic-release
 
