@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 import {
@@ -22,10 +23,20 @@ export type SelectAttributes =
   | SizeAttribute
   | HTMLGlobalAttributes;
 
-export const select = (
+export function select(
+  attributes: SelectAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function select(
   content: string | HTMLTemplate,
-  attributes: SelectAttributes = {},
-) =>
-  html`<select ${
+): HTMLTemplateGenerator;
+
+export function select(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    SelectAttributes
+  >(...args);
+  return html`<select ${
     attributeList<SelectAttributes>(attributes)
   }>${content}</select>`;
+}

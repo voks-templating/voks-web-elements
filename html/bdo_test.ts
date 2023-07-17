@@ -5,10 +5,10 @@ import { bdo } from "./bdo.ts";
 Deno.test("bdo tag element", async (t) => {
   await t.step("bdo with attributes", async () => {
     const actual = bdo(
-      "Content",
       {
         dir: "rtl",
       },
+      "Content",
     );
 
     const expected = `<bdo dir="rtl">Content</bdo>`;

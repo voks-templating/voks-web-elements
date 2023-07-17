@@ -15,7 +15,6 @@ Deno.test("div tag element", async (t) => {
   await t.step("div with attributes", async () => {
     const actual = div(
       "Content",
-      {},
     );
 
     const expected = `<div>Content</div>`;
@@ -26,7 +25,7 @@ Deno.test("div tag element", async (t) => {
 
 Deno.test("div data attributes", async (t) => {
   await t.step("div with data-* attributes", async () => {
-    const actual = div("", {
+    const actual = div({
       dataFubar: "fubar",
       "data-fabula": "fabula",
     });
@@ -39,7 +38,7 @@ Deno.test("div data attributes", async (t) => {
 
 Deno.test("input with global attributes", async (t) => {
   await t.step("input class attribute", async () => {
-    const actual = div("", {
+    const actual = div({
       class: "fubar fabula",
     });
 
@@ -51,7 +50,7 @@ Deno.test("input with global attributes", async (t) => {
 
 Deno.test("input with aria attributes", async (t) => {
   await t.step("div with aria attributes", async () => {
-    const actual = div("", {
+    const actual = div({
       ariaValuenow: "75",
       "aria-valuemin": "0",
       "aria-valuemax": "100",

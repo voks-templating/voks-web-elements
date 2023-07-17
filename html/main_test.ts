@@ -15,7 +15,6 @@ Deno.test("main tag element", async (t) => {
   await t.step("main with attributes", async () => {
     const actual = main(
       "Content",
-      {},
     );
 
     const expected = `<main>Content</main>`;

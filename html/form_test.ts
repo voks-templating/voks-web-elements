@@ -14,7 +14,6 @@ Deno.test("form tag element", async (t) => {
 
   await t.step("form with attributes", async () => {
     const actual = form(
-      "Content",
       {
         acceptCharset: "UTF-8",
         autocapitalize: "none",
@@ -27,6 +26,7 @@ Deno.test("form tag element", async (t) => {
         novalidate: true,
         target: "_blank",
       },
+      "Content",
     );
 
     const expected =

@@ -1,11 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type TbodyAttributes = HTMLGlobalAttributes;
 
-export const tbody = (
+export function tbody(
+  attributes: TbodyAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function tbody(
   content: string | HTMLTemplate,
-  attributes: TbodyAttributes = {},
-) =>
-  html`<tbody ${attributeList<TbodyAttributes>(attributes)}>${content}</tbody>`;
+): HTMLTemplateGenerator;
+
+export function tbody(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    TbodyAttributes
+  >(...args);
+  return html`<tbody ${
+    attributeList<TbodyAttributes>(attributes)
+  }>${content}</tbody>`;
+}

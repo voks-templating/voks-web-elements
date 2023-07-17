@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -7,10 +8,20 @@ export type OptgroupAttributes = {
   label?: string;
 } | HTMLGlobalAttributes;
 
-export const optgroup = (
+export function optgroup(
+  attributes: OptgroupAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function optgroup(
   content: string | HTMLTemplate,
-  attributes: OptgroupAttributes = {},
-) =>
-  html`<optgroup ${
+): HTMLTemplateGenerator;
+
+export function optgroup(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    OptgroupAttributes
+  >(...args);
+  return html`<optgroup ${
     attributeList<OptgroupAttributes>(attributes)
   }>${content}</optgroup>`;
+}

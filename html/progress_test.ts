@@ -14,11 +14,11 @@ Deno.test("progress tag element", async (t) => {
 
   await t.step("progress with attributes", async () => {
     const actual = progress(
-      "Content",
       {
         max: 100,
         value: 50,
       },
+      "Content",
     );
 
     const expected = `<progress max="100" value="50">Content</progress>`;

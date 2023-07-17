@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -10,7 +11,18 @@ export type ThAttributes = {
   scope?: string;
 } | HTMLGlobalAttributes;
 
-export const th = (
+export function th(
+  attributes: ThAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function th(
   content: string | HTMLTemplate,
-  attributes: ThAttributes = {},
-) => html`<th ${attributeList<ThAttributes>(attributes)}>${content}</th>`;
+): HTMLTemplateGenerator;
+
+export function th(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    ThAttributes
+  >(...args);
+  return html`<th ${attributeList<ThAttributes>(attributes)}>${content}</th>`;
+}

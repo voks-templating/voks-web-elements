@@ -14,12 +14,12 @@ Deno.test("style tag element", async (t) => {
 
   await t.step("style with attributes", async () => {
     const actual = style(
-      "Content",
       {
         media: "test",
         nonce: "test",
         title: "test",
       },
+      "Content",
     );
 
     const expected =

@@ -14,7 +14,6 @@ Deno.test("script tag element", async (t) => {
 
   await t.step("script with attributes", async () => {
     const actual = script(
-      "Content",
       {
         async: true,
         defer: true,
@@ -26,6 +25,7 @@ Deno.test("script tag element", async (t) => {
         src: "src",
         type: "module",
       },
+      "Content",
     );
 
     const expected =

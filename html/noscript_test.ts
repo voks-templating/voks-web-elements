@@ -15,7 +15,6 @@ Deno.test("noscript tag element", async (t) => {
   await t.step("noscript with attributes", async () => {
     const actual = noscript(
       "Content",
-      {},
     );
 
     const expected = `<noscript>Content</noscript>`;

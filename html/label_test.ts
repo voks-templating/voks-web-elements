@@ -14,10 +14,10 @@ Deno.test("label tag element", async (t) => {
 
   await t.step("label with attributes", async () => {
     const actual = label(
-      "Content",
       {
         for: "#id",
       },
+      "Content",
     );
 
     const expected = `<label for="#id">Content</label>`;

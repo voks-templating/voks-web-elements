@@ -14,7 +14,6 @@ Deno.test("th tag element", async (t) => {
 
   await t.step("th with attributes", async () => {
     const actual = th(
-      "Content",
       {
         abbr: "test",
         colspan: 2,
@@ -22,6 +21,7 @@ Deno.test("th tag element", async (t) => {
         headers: "#foo #bar",
         scope: "test",
       },
+      "Content",
     );
 
     const expected =

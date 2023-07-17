@@ -14,7 +14,6 @@ Deno.test("source tag element", async (t) => {
 
   await t.step("source with attributes", async () => {
     const actual = source(
-      "Content",
       {
         type: "test",
         src: "test",
@@ -24,6 +23,7 @@ Deno.test("source tag element", async (t) => {
         height: 100,
         width: 100,
       },
+      "Content",
     );
 
     const expected =

@@ -15,7 +15,6 @@ Deno.test("dfn tag element", async (t) => {
   await t.step("dfn with attributes", async () => {
     const actual = dfn(
       "Content",
-      {},
     );
 
     const expected = `<dfn>Content</dfn>`;

@@ -1,10 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type MarkAttributes = HTMLGlobalAttributes;
 
-export const mark = (
+export function mark(
+  attributes: MarkAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function mark(
   content: string | HTMLTemplate,
-  attributes: MarkAttributes = {},
-) => html`<mark ${attributeList<MarkAttributes>(attributes)}>${content}</mark>`;
+): HTMLTemplateGenerator;
+
+export function mark(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    MarkAttributes
+  >(...args);
+  return html`<mark ${
+    attributeList<MarkAttributes>(attributes)
+  }>${content}</mark>`;
+}

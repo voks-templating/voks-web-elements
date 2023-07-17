@@ -15,7 +15,6 @@ Deno.test("ul tag element", async (t) => {
   await t.step("ul with attributes", async () => {
     const actual = ul(
       "Content",
-      {},
     );
 
     const expected = `<ul>Content</ul>`;

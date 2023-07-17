@@ -14,11 +14,11 @@ Deno.test("del tag element", async (t) => {
 
   await t.step("del with attributes", async () => {
     const actual = del(
-      "Content",
       {
         cite: "https://deno.land/",
         datetime: "2021-05-27T01:02:03Z",
       },
+      "Content",
     );
 
     const expected =

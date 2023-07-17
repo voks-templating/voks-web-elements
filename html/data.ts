@@ -1,31 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type DataAttributes = { value: string | number } | HTMLGlobalAttributes;
 
-export const data = (
-  contentOrOptions: string | HTMLTemplate | DataAttributes,
-  optionsOrNothing: DataAttributes = {},
-) => {
-  const content = isTypeOfDataElementOptions(contentOrOptions)
-    ? undefined
-    : contentOrOptions;
+export function data(
+  attributes: DataAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
 
-  const options = isTypeOfDataElementOptions(contentOrOptions)
-    ? contentOrOptions
-    : optionsOrNothing;
+export function data(
+  content: string | HTMLTemplate,
+): HTMLTemplateGenerator;
 
-  const attributes = options;
-
-  return content
-    ? html`<data ${attributeList<DataAttributes>(attributes)}>${content}</data>`
-    : html`<data ${attributeList<DataAttributes>(attributes)}>`;
-};
-
-function isTypeOfDataElementOptions(
-  contentOrOptions: string | HTMLTemplate | DataAttributes,
-): contentOrOptions is DataAttributes {
-  return typeof contentOrOptions === "object" &&
-    (contentOrOptions as DataAttributes) !== undefined;
+export function data(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    DataAttributes
+  >(...args);
+  return html`<data ${
+    attributeList<DataAttributes>(attributes)
+  }>${content}</data>`;
 }

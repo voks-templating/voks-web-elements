@@ -5,11 +5,11 @@ import { blockquote } from "./blockquote.ts";
 Deno.test("blockquote tag element", async (t) => {
   await t.step("blockquote with attributes", async () => {
     const actual = blockquote(
-      "Content",
       {
         cite:
           "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote",
       },
+      "Content",
     );
 
     const expected =

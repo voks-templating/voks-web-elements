@@ -1,13 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type TemplateAttributes = HTMLGlobalAttributes;
 
-export const template = (
+export function template(
+  attributes: TemplateAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function template(
   content: string | HTMLTemplate,
-  attributes: TemplateAttributes = {},
-) =>
-  html`<template ${
+): HTMLTemplateGenerator;
+
+export function template(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    TemplateAttributes
+  >(...args);
+  return html`<template ${
     attributeList<TemplateAttributes>(attributes)
   }>${content}</template>`;
+}

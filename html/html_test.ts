@@ -14,10 +14,10 @@ Deno.test("html tag element", async (t) => {
 
   await t.step("html with attributes", async () => {
     const actual = htmlElement(
-      "Content",
       {
         xmlns: "http://www.w3.org/1999/xhtml",
       },
+      "Content",
     );
 
     const expected =

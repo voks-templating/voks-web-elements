@@ -6,7 +6,6 @@ Deno.test("bdi tag element", async (t) => {
   await t.step("bdi with attributes", async () => {
     const actual = bdi(
       "Content",
-      {},
     );
 
     const expected = `<bdi>Content</bdi>`;

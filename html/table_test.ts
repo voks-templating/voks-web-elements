@@ -15,7 +15,6 @@ Deno.test("table tag element", async (t) => {
   await t.step("table with attributes", async () => {
     const actual = table(
       "Content",
-      {},
     );
 
     const expected = `<table>Content</table>`;

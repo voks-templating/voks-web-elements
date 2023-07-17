@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 import {
@@ -32,10 +33,20 @@ export type ButtonAttributes =
   }
   | HTMLGlobalAttributes;
 
-export const button = (
+export function button(
+  attributes: ButtonAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function button(
   content: string | HTMLTemplate,
-  attributes: ButtonAttributes = {},
-) =>
-  html`<button ${
+): HTMLTemplateGenerator;
+
+export function button(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    ButtonAttributes
+  >(...args);
+  return html`<button ${
     attributeList<ButtonAttributes>(attributes)
   }>${content}</button>`;
+}

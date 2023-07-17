@@ -5,7 +5,6 @@ import { body } from "./body.ts";
 Deno.test("body tag element", async (t) => {
   await t.step("body with attributes", async () => {
     const actual = body(
-      "Content",
       {
         onafterprint: "functionRef",
         onbeforeunload: "functionRef",
@@ -25,6 +24,7 @@ Deno.test("body tag element", async (t) => {
         onundo: "functionRef",
         onunload: "functionRef",
       },
+      "Content",
     );
 
     const expected =

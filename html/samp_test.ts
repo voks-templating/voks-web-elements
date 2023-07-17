@@ -15,7 +15,6 @@ Deno.test("samp tag element", async (t) => {
   await t.step("samp with attributes", async () => {
     const actual = samp(
       "Content",
-      {},
     );
 
     const expected = `<samp>Content</samp>`;

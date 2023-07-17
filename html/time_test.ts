@@ -14,10 +14,10 @@ Deno.test("time tag element", async (t) => {
 
   await t.step("time with attributes", async () => {
     const actual = time(
-      "Content",
       {
         datetime: "test",
       },
+      "Content",
     );
 
     const expected = `<time datetime="test">Content</time>`;

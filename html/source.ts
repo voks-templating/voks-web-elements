@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -12,10 +13,21 @@ export type SourceAttributes = {
   width?: number;
 } | HTMLGlobalAttributes;
 
-export const source = (
+export function source(
+  attributes: SourceAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function source(
   content: string | HTMLTemplate,
-  attributes: SourceAttributes = {},
-) =>
-  html`<source ${
+): HTMLTemplateGenerator;
+
+export function source(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    SourceAttributes
+  >(...args);
+
+  return html`<source ${
     attributeList<SourceAttributes>(attributes)
   }>${content}</source>`;
+}

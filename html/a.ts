@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -15,7 +16,18 @@ export type AnchorAttributes =
   }
   | HTMLGlobalAttributes;
 
-export const a = (
+export function a(
+  attributes: AnchorAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function a(
   content: string | HTMLTemplate,
-  attributes: AnchorAttributes = {},
-) => html`<a ${attributeList<AnchorAttributes>(attributes)}>${content}</a>`;
+): HTMLTemplateGenerator;
+
+export function a(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    AnchorAttributes
+  >(...args);
+  return html`<a ${attributeList<AnchorAttributes>(attributes)}>${content}</a>`;
+}

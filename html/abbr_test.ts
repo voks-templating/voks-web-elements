@@ -5,10 +5,10 @@ import { abbr } from "./abbr.ts";
 Deno.test("abbr tag element", async (t) => {
   await t.step("abbr with attributes", async () => {
     const actual = abbr(
-      "HTML",
       {
         title: "HyperText Markup Language",
       },
+      "HTML",
     );
 
     const expected = `<abbr title="HyperText Markup Language">HTML</abbr>`;

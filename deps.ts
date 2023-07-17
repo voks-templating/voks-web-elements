@@ -3,6 +3,7 @@ export {
   type AttributeValue,
   html,
   type HTMLTemplate,
+  type HTMLTemplateGenerator,
   renderToString,
 } from "https://deno.land/x/voks@2.0.0/mod.ts";
 

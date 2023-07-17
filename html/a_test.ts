@@ -5,7 +5,6 @@ import { a } from "./a.ts";
 Deno.test("anchor tag element", async (t) => {
   await t.step("anchor with attributes", async () => {
     const actual = a(
-      "anchor",
       {
         download: "filename.txt",
         href: "https://example.com",
@@ -16,6 +15,7 @@ Deno.test("anchor tag element", async (t) => {
         target: "_blank",
         type: "text/html",
       },
+      "anchor",
     );
 
     const expected =
@@ -26,13 +26,29 @@ Deno.test("anchor tag element", async (t) => {
 
   await t.step("anchor with html content as label", async () => {
     const actual = a(
-      html`<span>anchor</span>`,
       {
         download: "filename.txt",
       },
+      html`<span>anchor</span>`,
     );
 
     const expected = `<a download="filename.txt"><span>anchor</span></a>`;
+    const rendered = minify(await renderToString(actual));
+    assertEquals(rendered, expected);
+  });
+
+  await t.step("anchor with no attributes but content", async () => {
+    const actual = a(html`<span>anchor</span>`);
+
+    const expected = `<a><span>anchor</span></a>`;
+    const rendered = minify(await renderToString(actual));
+    assertEquals(rendered, expected);
+  });
+
+  await t.step("anchor attributes but no content", async () => {
+    const actual = a({ download: "foobar.doc" });
+
+    const expected = `<a download="foobar.doc"></a>`;
     const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });

@@ -15,7 +15,6 @@ Deno.test("footer tag element", async (t) => {
   await t.step("footer with attributes", async () => {
     const actual = footer(
       "Content",
-      {},
     );
 
     const expected = `<footer>Content</footer>`;

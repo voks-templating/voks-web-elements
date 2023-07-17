@@ -12,7 +12,7 @@ Deno.test("tr tag element", async (t) => {
   });
 
   await t.step("tr with attributes", async () => {
-    const actual = tr("", {});
+    const actual = tr({});
 
     const expected = `<tr></tr>`;
     const rendered = minify(await renderToString(actual));
@@ -22,7 +22,6 @@ Deno.test("tr tag element", async (t) => {
   await t.step("tr with attributes", async () => {
     const actual = tr(
       "Content",
-      {},
     );
 
     const expected = `<tr>Content</tr>`;

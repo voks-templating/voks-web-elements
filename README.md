@@ -28,6 +28,12 @@ in kebap and camel case) are supported.
 **NOTE!: please be aware, that attributes are no longer passed via `attributes`
 sub-property. Instead, they are passed directly to the element function.**
 
+If a dom element is allowed to have content the attributes run as first
+parameter, whereas the content can be passed as second parameter.
+
+If no attributes are present the attributes param can be skipped and the content
+can be passed instead.
+
 ## Usage
 
 ### [Deno](https://deno.land/x/voks_web_elements)
@@ -45,7 +51,7 @@ import {
 const template = htmlElement(html`
   ${head()}
   ${body(html`
-    ${h1("Hello World!", { class: "title" })}
+    ${h1({ class: "title" }, "Hello World!")}
   `)}
 `)
 
@@ -67,7 +73,7 @@ import { body, h1, head, htmlElement } from "@voks/voks-web-elements";
 const template = htmlElement(html`
   ${head()}
   ${body(html`
-    ${h1("Hello World!", { class: "title" })}
+    ${h1({ class: "title" }, "Hello World!")}
   `)}
 `)
 

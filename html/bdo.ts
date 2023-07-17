@@ -1,10 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type BdoAttributes = HTMLGlobalAttributes;
 
-export const bdo = (
+export function bdo(
+  attributes: BdoAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function bdo(
   content: string | HTMLTemplate,
-  attributes: BdoAttributes = {},
-) => html`<bdo ${attributeList<BdoAttributes>(attributes)}>${content}</bdo>`;
+): HTMLTemplateGenerator;
+
+export function bdo(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    BdoAttributes
+  >(...args);
+  return html`<bdo ${
+    attributeList<BdoAttributes>(attributes)
+  }>${content}</bdo>`;
+}

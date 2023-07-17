@@ -14,10 +14,10 @@ Deno.test("col tag element", async (t) => {
 
   await t.step("col with attributes", async () => {
     const actual = col(
-      "Content",
       {
         span: 2,
       },
+      "Content",
     );
 
     const expected = `<col span="2">Content</col>`;

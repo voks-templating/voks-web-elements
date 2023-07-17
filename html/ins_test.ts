@@ -14,11 +14,11 @@ Deno.test("ins tag element", async (t) => {
 
   await t.step("ins with attributes", async () => {
     const actual = ins(
-      "Content",
       {
         cite: "https://deno.land",
         datetime: "2021-05-27T01:02:03Z",
       },
+      "Content",
     );
 
     const expected =
