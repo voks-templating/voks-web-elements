@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "check": "deno lint && deno check *.ts **/*.ts",
+    "check": "deno lint && deno check *.ts **/*.ts && deno fmt --check *.ts html/*.ts",
     "build:node": "deno run -A ./scripts/build.node.ts",
     "bootstrap": "deno run --allow-write=html,mod.ts ./scripts/bootstrap_component.ts",
     "example:simple": "deno run ./examples/simple.ts"
@@ -10,5 +10,11 @@
     "asserts": "https://deno.land/std@0.190.0/testing/asserts.ts",
     "esbuild": "https://deno.land/x/esbuild@v0.17.19/mod.js",
     "esbuild_deno_loader": "https://deno.land/x/esbuild_deno_loader@0.8.0/mod.ts"
+  },
+  "lint": {
+    "exclude": ["dist"]
+  },
+  "fmt": {
+    "exclude": ["dist"]
   }
 }
