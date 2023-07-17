@@ -25,7 +25,7 @@ import {
   urlInput,
   weekInput,
 } from "./input.ts";
-import { InputAttributes, TypedInputAttributes } from "./input_attributes.ts";
+import { TypedInputAttributes } from "./input_attributes.ts";
 import { label } from "./label.ts";
 
 Deno.test("input", async (t) => {
@@ -379,7 +379,7 @@ Deno.test("input", async (t) => {
   });
 });
 
-Deno.test("subtyping input elements", async (t) => {
+Deno.test("subtyping input elements", async () => {
   const textField = (
     labelText: string,
     attributes: TypedInputAttributes<"text">,
