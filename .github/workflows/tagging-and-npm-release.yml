@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: denoland/setup-deno@v1.1.1
         with:
           deno-version: v1.x # Run with latest stable Deno.
@@ -16,8 +18,9 @@ jobs:
       - run: deno lint *.ts
       - run: deno test
       - run: deno task build:node
-      - name: Semantic Release
-        uses: mechanoid/semantic-release-action@main
+      - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
+
