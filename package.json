@@ -30,5 +30,8 @@
       "main"
     ],
     "tagFormat": "${version}"
+  },
+  "devDependencies": {
+    "semantic-release": "21.0.7"
   }
 }
