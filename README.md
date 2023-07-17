@@ -25,9 +25,6 @@ as well as the specific attributes for each element. Also data-* attributes (in
 the form of `dataXyz: true` or `"data-xyz": true`) and aria-* attributes (also
 in kebap and camel case) are supported.
 
-**NOTE!: please be aware, that attributes are no longer passed via `attributes`
-sub-property. Instead, they are passed directly to the element function.**
-
 If a dom element is allowed to have content the attributes run as first
 parameter, whereas the content can be passed as second parameter.
 
