@@ -1,5 +1,5 @@
 import { assertEquals } from "asserts";
-import { minify, renderToString } from "../deps.ts";
+import { html, minify, renderToString } from "../deps.ts";
 
 import {
   buttonInput,
@@ -25,6 +25,8 @@ import {
   urlInput,
   weekInput,
 } from "./input.ts";
+import { InputAttributes, TypedInputAttributes } from "./input_attributes.ts";
+import { label } from "./label.ts";
 
 Deno.test("input", async (t) => {
   await t.step("input[type=button]", async () => {
@@ -376,3 +378,18 @@ Deno.test("input", async (t) => {
     assertEquals(rendered, expected);
   });
 });
+
+Deno.test("subtyping input elements", async (t) => {
+  const textField = (
+    labelText: string,
+    attributes: TypedInputAttributes<"text">,
+  ) => {
+    const id = attributes.id;
+    return html`${label(labelText, { for: id })}${textInput(attributes)}`;
+  };
+
+  const expected =
+      `<label for="my-element">content</label><input type="text" id="my-element" />`;
+    const rendered = minify(await renderToString(textField("content", { id: "my-element" })));
+    assertEquals(rendered, expected);
+})

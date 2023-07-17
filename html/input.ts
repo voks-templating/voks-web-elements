@@ -1,9 +1,9 @@
 import { html } from "../deps.ts";
 import { attributeList } from "./element_helper.ts";
-import { InputAttributes } from "./input_attributes.ts";
+import { InputAttributes, TypedInputAttributes } from "./input_attributes.ts";
 
 export const input = <T>(
-  attributes: InputAttributes<T> = {},
+  attributes: InputAttributes<T>,
 ) => {
   return html`<input ${
     attributeList<InputAttributes<T>>(attributes, {
@@ -13,89 +13,89 @@ export const input = <T>(
 };
 
 export const buttonInput = (
-  attributes: InputAttributes<"button"> = {},
+  attributes: TypedInputAttributes<"button"> = {},
 ) => input({ ...attributes, type: "button" });
 
 export const checkboxInput = (
-  attributes: InputAttributes<"checkbox"> = {},
+  attributes: TypedInputAttributes<"checkbox"> = {},
 ) => input({ ...attributes, type: "checkbox" });
 
 export const colorInput = (
-  attributes: InputAttributes<"color"> = {},
+  attributes: TypedInputAttributes<"color"> = {},
 ) => input({ ...attributes, type: "color" });
 
 export const dateInput = (
-  attributes: InputAttributes<"date"> = {},
+  attributes: TypedInputAttributes<"date"> = {},
 ) => input({ ...attributes, type: "date" });
 
 export const datetimeLocalInput = (
-  attributes: InputAttributes<"datetime-local"> = {},
+  attributes: TypedInputAttributes<"datetime-local"> = {},
 ) => input({ ...attributes, type: "datetime-local" });
 
 export const emailInput = (
-  attributes: InputAttributes<"email"> = {},
+  attributes: TypedInputAttributes<"email"> = {},
 ) => input({ ...attributes, type: "email" });
 
 export const fileInput = (
-  attributes: InputAttributes<"file"> = {},
+  attributes: TypedInputAttributes<"file"> = {},
 ) => input({ ...attributes, type: "file" });
 
 export const hiddenInput = (
-  attributes: InputAttributes<"hidden"> = {},
+  attributes: TypedInputAttributes<"hidden"> = {},
 ) => input({ ...attributes, type: "hidden" });
 
 export const imageInput = (
-  attributes: InputAttributes<"image"> = {},
+  attributes: TypedInputAttributes<"image"> = {},
 ) => input({ ...attributes, type: "image" });
 
 export const monthInput = (
-  attributes: InputAttributes<"month"> = {},
+  attributes: TypedInputAttributes<"month"> = {},
 ) => input({ ...attributes, type: "month" });
 
 export const numberInput = (
-  attributes: InputAttributes<"number"> = {},
+  attributes: TypedInputAttributes<"number"> = {},
 ) => input({ ...attributes, type: "number" });
 
 export const passwordInput = (
-  attributes: InputAttributes<"password"> = {},
+  attributes: TypedInputAttributes<"password"> = {},
 ) => input({ ...attributes, type: "password" });
 
 export const radioInput = (
-  attributes: InputAttributes<"radio"> = {},
+  attributes: TypedInputAttributes<"radio"> = {},
 ) => input({ ...attributes, type: "radio" });
 
 export const rangeInput = (
-  attributes: InputAttributes<"range"> = {},
+  attributes: TypedInputAttributes<"range"> = {},
 ) => input({ ...attributes, type: "range" });
 
 export const resetInput = (
-  attributes: InputAttributes<"reset"> = {},
+  attributes: TypedInputAttributes<"reset"> = {},
 ) => input({ ...attributes, type: "reset" });
 
 export const searchInput = (
-  attributes: InputAttributes<"search"> = {},
+  attributes: TypedInputAttributes<"search"> = {},
 ) => input({ ...attributes, type: "search" });
 
 export const submitInput = (
-  attributes: InputAttributes<"submit"> = {},
+  attributes: TypedInputAttributes<"submit"> = {},
 ) => input({ ...attributes, type: "submit" });
 
 export const telInput = (
-  attributes: InputAttributes<"tel"> = {},
+  attributes: TypedInputAttributes<"tel"> = {},
 ) => input({ ...attributes, type: "tel" });
 
 export const textInput = (
-  attributes: InputAttributes<"text"> = {},
+  attributes: TypedInputAttributes<"text"> = {},
 ) => input({ ...attributes, type: "text" });
 
 export const timeInput = (
-  attributes: InputAttributes<"time"> = {},
+  attributes: TypedInputAttributes<"time"> = {},
 ) => input({ ...attributes, type: "time" });
 
 export const urlInput = (
-  attributes: InputAttributes<"url"> = {},
+  attributes: TypedInputAttributes<"url"> = {},
 ) => input({ ...attributes, type: "url" });
 
 export const weekInput = (
-  attributes: InputAttributes<"week"> = {},
+  attributes: TypedInputAttributes<"week"> = {},
 ) => input({ ...attributes, type: "week" });

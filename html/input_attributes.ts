@@ -257,9 +257,11 @@ export type InputTypeAttributes<T> =
   );
 
 export type InputAttributes<T> =
-  | HTMLGlobalAttributes
-  | HTMLInputSharedAttributes
-  | InputTypeAttributes<T>;
+  & HTMLGlobalAttributes
+  & HTMLInputSharedAttributes
+  & InputTypeAttributes<T>;
+
+  export type TypedInputAttributes<T> = Omit<InputAttributes<T>, "type">;
 
 export type AcceptAttribute = {
   accept?: string;
