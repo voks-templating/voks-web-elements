@@ -14,7 +14,6 @@ Deno.test("track tag element", async (t) => {
 
   await t.step("track with attributes", async () => {
     const actual = track(
-      "Content",
       {
         default: true,
         kind: "subtitles",
@@ -22,6 +21,7 @@ Deno.test("track tag element", async (t) => {
         chapters: "test",
         metadata: "test",
       },
+      "Content",
     );
 
     const expected =

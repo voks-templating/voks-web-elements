@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -10,8 +11,20 @@ export type TrackAttributes = {
   metadata?: string;
 } | HTMLGlobalAttributes;
 
-export const track = (
+export function track(
+  attributes: TrackAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function track(
   content: string | HTMLTemplate,
-  attributes: TrackAttributes = {},
-) =>
-  html`<track ${attributeList<TrackAttributes>(attributes)}>${content}</track>`;
+): HTMLTemplateGenerator;
+
+export function track(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    TrackAttributes
+  >(...args);
+  return html`<track ${
+    attributeList<TrackAttributes>(attributes)
+  }>${content}</track>`;
+}

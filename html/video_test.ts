@@ -14,7 +14,6 @@ Deno.test("video tag element", async (t) => {
 
   await t.step("video with attributes", async () => {
     const actual = video(
-      "Content",
       {
         autoplay: true,
         controls: true,
@@ -28,6 +27,7 @@ Deno.test("video tag element", async (t) => {
         src: "test",
         width: 100,
       },
+      "Content",
     );
 
     const expected =

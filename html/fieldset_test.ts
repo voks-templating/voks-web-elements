@@ -14,12 +14,12 @@ Deno.test("fieldset tag element", async (t) => {
 
   await t.step("fieldset with attributes", async () => {
     const actual = fieldset(
-      "Content",
       {
         disabled: true,
         form: "form-id",
         name: "name",
       },
+      "Content",
     );
 
     const expected =

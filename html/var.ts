@@ -1,10 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type VarAttributes = HTMLGlobalAttributes;
 
-export const variable = (
+export function variable(
+  attributes: VarAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function variable(
   content: string | HTMLTemplate,
-  attributes: VarAttributes = {},
-) => html`<var ${attributeList<VarAttributes>(attributes)}>${content}</var>`;
+): HTMLTemplateGenerator;
+
+export function variable(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    VarAttributes
+  >(...args);
+  return html`<var ${
+    attributeList<VarAttributes>(attributes)
+  }>${content}</var>`;
+}

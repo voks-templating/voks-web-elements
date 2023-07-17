@@ -5,7 +5,6 @@ import { audio } from "./audio.ts";
 Deno.test("audio tag element", async (t) => {
   await t.step("audio with attributes", async () => {
     const actual = audio(
-      "Content",
       {
         autoplay: true,
         controls: true,
@@ -17,6 +16,7 @@ Deno.test("audio tag element", async (t) => {
         muted: true,
         preload: "auto",
       },
+      "Content",
     );
 
     const expected =

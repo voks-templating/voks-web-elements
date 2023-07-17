@@ -14,11 +14,11 @@ Deno.test("optgroup tag element", async (t) => {
 
   await t.step("optgroup with attributes", async () => {
     const actual = optgroup(
-      "Content",
       {
         disabled: true,
         label: "label",
       },
+      "Content",
     );
 
     const expected = `<optgroup disabled label="label">Content</optgroup>`;

@@ -15,7 +15,6 @@ Deno.test("wbr tag element", async (t) => {
   await t.step("wbr with attributes", async () => {
     const actual = wbr(
       "Content",
-      {},
     );
 
     const expected = `<wbr>Content</wbr>`;

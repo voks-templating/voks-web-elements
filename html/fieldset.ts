@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -8,10 +9,20 @@ export type FieldsetAttributes = {
   name?: string;
 } | HTMLGlobalAttributes;
 
-export const fieldset = (
+export function fieldset(
+  attributes: FieldsetAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function fieldset(
   content: string | HTMLTemplate,
-  attributes: FieldsetAttributes = {},
-) =>
-  html`<fieldset ${
+): HTMLTemplateGenerator;
+
+export function fieldset(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    FieldsetAttributes
+  >(...args);
+  return html`<fieldset ${
     attributeList<FieldsetAttributes>(attributes)
   }>${content}</fieldset>`;
+}

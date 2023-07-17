@@ -15,7 +15,6 @@ Deno.test("menu tag element", async (t) => {
   await t.step("menu with attributes", async () => {
     const actual = menu(
       "Content",
-      {},
     );
 
     const expected = `<menu>Content</menu>`;

@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -15,7 +16,20 @@ export type FormAttributes = {
   novalidate?: boolean;
 } | HTMLGlobalAttributes;
 
-export const form = (
+export function form(
+  attributes: FormAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function form(
   content: string | HTMLTemplate,
-  attributes: FormAttributes = {},
-) => html`<form ${attributeList<FormAttributes>(attributes)}>${content}</form>`;
+): HTMLTemplateGenerator;
+
+export function form(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    FormAttributes
+  >(...args);
+  return html`<form ${
+    attributeList<FormAttributes>(attributes)
+  }>${content}</form>`;
+}

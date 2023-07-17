@@ -15,7 +15,6 @@ Deno.test("tfoot tag element", async (t) => {
   await t.step("tfoot with attributes", async () => {
     const actual = tfoot(
       "Content",
-      {},
     );
 
     const expected = `<tfoot>Content</tfoot>`;

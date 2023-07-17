@@ -14,12 +14,12 @@ Deno.test("td tag element", async (t) => {
 
   await t.step("td with attributes", async () => {
     const actual = td(
-      "Content",
       {
         colspan: 2,
         rowspan: 2,
         headers: "#foo #bar",
       },
+      "Content",
     );
 
     const expected =

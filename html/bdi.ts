@@ -1,10 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type BdiAttributes = HTMLGlobalAttributes;
 
-export const bdi = (
+export function bdi(
+  attributes: BdiAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function bdi(
   content: string | HTMLTemplate,
-  attributes: BdiAttributes = {},
-) => html`<bdi ${attributeList<BdiAttributes>(attributes)}>${content}</bdi>`;
+): HTMLTemplateGenerator;
+
+export function bdi(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    BdiAttributes
+  >(...args);
+  return html`<bdi ${
+    attributeList<BdiAttributes>(attributes)
+  }>${content}</bdi>`;
+}

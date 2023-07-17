@@ -14,7 +14,6 @@ Deno.test("meter tag element", async (t) => {
 
   await t.step("meter with attributes", async () => {
     const actual = meter(
-      "Content",
       {
         value: 2,
         min: 1,
@@ -23,6 +22,7 @@ Deno.test("meter tag element", async (t) => {
         high: 2.5,
         optimum: 2,
       },
+      "Content",
     );
 
     const expected =

@@ -386,7 +386,7 @@ Deno.test("sub-typed input elements", async (t) => {
       attributes: TypedInputAttributes<"text">,
     ) => {
       const id = attributes.id;
-      return html`${label(labelText, { for: id })}${textInput(attributes)}`;
+      return html`${label({ for: id }, labelText)}${textInput(attributes)}`;
     };
 
     const expected =
@@ -403,7 +403,7 @@ Deno.test("sub-typed input elements", async (t) => {
       attributes: TypedInputAttributes<"button">,
     ) => {
       const id = attributes.id;
-      return html`${label(labelText, { for: id })}${buttonInput(attributes)}`;
+      return html`${label({ for: id }, labelText)}${buttonInput(attributes)}`;
     };
 
     const expected =

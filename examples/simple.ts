@@ -17,9 +17,9 @@ const documentHead = head(html`
 
 // deno-fmt-ignore
 const searchForm = html`
-  ${form(html`
+  ${form({ action: "/search", method: "GET" }, html`
     ${textInput({ name: "q" })}
-  `, { action: "/search", method: "GET" })}
+  `)}
 `
 // deno-fmt-ignore
 const document = htmlElement(

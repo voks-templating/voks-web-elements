@@ -14,10 +14,10 @@ Deno.test("colgroup tag element", async (t) => {
 
   await t.step("colgroup with attributes", async () => {
     const actual = colgroup(
-      "Content",
       {
         span: 2,
       },
+      "Content",
     );
 
     const expected = `<colgroup span="2">Content</colgroup>`;

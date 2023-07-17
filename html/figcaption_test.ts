@@ -15,7 +15,6 @@ Deno.test("figcaption tag element", async (t) => {
   await t.step("figcaption with attributes", async () => {
     const actual = figcaption(
       "Content",
-      {},
     );
 
     const expected = `<figcaption>Content</figcaption>`;

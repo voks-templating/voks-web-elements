@@ -1,13 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type FigureAttributes = HTMLGlobalAttributes;
 
-export const figure = (
+export function figure(
+  attributes: FigureAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function figure(
   content: string | HTMLTemplate,
-  attributes: FigureAttributes = {},
-) =>
-  html`<figure ${
+): HTMLTemplateGenerator;
+
+export function figure(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    FigureAttributes
+  >(...args);
+  return html`<figure ${
     attributeList<FigureAttributes>(attributes)
   }>${content}</figure>`;
+}

@@ -14,10 +14,10 @@ Deno.test("map tag element", async (t) => {
 
   await t.step("map with attributes", async () => {
     const actual = map(
-      "Content",
       {
         name: "map",
       },
+      "Content",
     );
 
     const expected = `<map name="map">Content</map>`;

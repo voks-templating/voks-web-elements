@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -22,7 +23,20 @@ export type BodyAttributes = {
   onunload?: string;
 } | HTMLGlobalAttributes;
 
-export const body = (
+export function body(
+  attributes: BodyAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function body(
   content: string | HTMLTemplate,
-  attributes: BodyAttributes = {},
-) => html`<body ${attributeList<BodyAttributes>(attributes)}>${content}</body>`;
+): HTMLTemplateGenerator;
+
+export function body(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    BodyAttributes
+  >(...args);
+  return html`<body ${
+    attributeList<BodyAttributes>(attributes)
+  }>${content}</body>`;
+}

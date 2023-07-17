@@ -14,10 +14,10 @@ Deno.test("dialog tag element", async (t) => {
 
   await t.step("dialog with attributes", async () => {
     const actual = dialog(
-      "Content",
       {
         open: true,
       },
+      "Content",
     );
 
     const expected = `<dialog open>Content</dialog>`;

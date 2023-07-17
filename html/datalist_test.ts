@@ -14,14 +14,14 @@ Deno.test("datalist tag element", async (t) => {
 
   await t.step("datalist with attributes", async () => {
     const actual = datalist(
+      {
+        id: "browsers", // id is a global attribute
+      },
       html`<option value="Chrome"></option>
     <option value="Firefox"></option>
     <option value="Opera"></option>
     <option value="Safari"></option>
     <option value="Microsoft Edge"></option>`,
-      {
-        id: "browsers", // id is a global attribute
-      },
     );
 
     const expected =

@@ -14,10 +14,10 @@ Deno.test("details tag element", async (t) => {
 
   await t.step("details with attributes", async () => {
     const actual = details(
-      "Content",
       {
         open: true,
       },
+      "Content",
     );
 
     const expected = `<details open>Content</details>`;

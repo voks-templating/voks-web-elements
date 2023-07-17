@@ -14,13 +14,13 @@ Deno.test("embed tag element", async (t) => {
 
   await t.step("embed with attributes", async () => {
     const actual = embed(
-      "Content",
       {
         height: 100,
         src: "https://example.com",
         type: "video/mp4",
         width: 100,
       },
+      "Content",
     );
 
     const expected =

@@ -14,7 +14,6 @@ Deno.test("button tag element", async (t) => {
 
   await t.step("button with attributes", async () => {
     const actual = button(
-      "Content",
       {
         autofocus: true,
         disabled: true,
@@ -30,6 +29,7 @@ Deno.test("button tag element", async (t) => {
         type: "submit",
         value: "button-value",
       },
+      "Content",
     );
 
     const expected =

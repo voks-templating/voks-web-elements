@@ -14,7 +14,6 @@ Deno.test("textarea tag element", async (t) => {
 
   await t.step("textarea with attributes", async () => {
     const actual = textarea(
-      "Content",
       {
         autocomplete: "test",
         autofocus: true,
@@ -26,6 +25,7 @@ Deno.test("textarea tag element", async (t) => {
         name: "test",
         placeholder: "test",
       },
+      "Content",
     );
 
     const expected =

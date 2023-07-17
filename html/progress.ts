@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -7,10 +8,20 @@ export type ProgressAttributes = {
   value?: number;
 } | HTMLGlobalAttributes;
 
-export const progress = (
+export function progress(
+  attributes: ProgressAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function progress(
   content: string | HTMLTemplate,
-  attributes: ProgressAttributes = {},
-) =>
-  html`<progress ${
+): HTMLTemplateGenerator;
+
+export function progress(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    ProgressAttributes
+  >(...args);
+  return html`<progress ${
     attributeList<ProgressAttributes>(attributes)
   }>${content}</progress>`;
+}

@@ -5,8 +5,8 @@ import { aside } from "./aside.ts";
 Deno.test("aside tag element", async (t) => {
   await t.step("aside with attributes", async () => {
     const actual = aside(
-      html`<p>The movie earned $87 million during its initial release.</p>`,
       {},
+      html`<p>The movie earned $87 million during its initial release.</p>`,
     );
 
     const expected =

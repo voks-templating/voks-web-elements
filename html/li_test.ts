@@ -14,10 +14,10 @@ Deno.test("li tag element", async (t) => {
 
   await t.step("li with attributes", async () => {
     const actual = li(
-      "Content",
       {
         value: 1,
       },
+      "Content",
     );
 
     const expected = `<li value="1">Content</li>`;

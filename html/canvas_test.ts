@@ -14,11 +14,11 @@ Deno.test("canvas tag element", async (t) => {
 
   await t.step("canvas with attributes", async () => {
     const actual = canvas(
-      "Content",
       {
         height: 100,
         width: 100,
       },
+      "Content",
     );
 
     const expected = `<canvas height="100" width="100">Content</canvas>`;

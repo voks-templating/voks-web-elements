@@ -1,13 +1,24 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type AddressAttributes = HTMLGlobalAttributes;
 
-export const address = (
+export function address(
+  attributes: AddressAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function address(
   content: string | HTMLTemplate,
-  attributes: AddressAttributes = {},
-) =>
-  html`<address ${
+): HTMLTemplateGenerator;
+
+export function address(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    AddressAttributes
+  >(...args);
+  return html`<address ${
     attributeList<AddressAttributes>(attributes)
   }>${content}</address>`;
+}

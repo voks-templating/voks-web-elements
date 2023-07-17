@@ -1,10 +1,22 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
 export type PAttributes = HTMLGlobalAttributes;
 
-export const p = (
+export function p(
+  attributes: PAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function p(
   content: string | HTMLTemplate,
-  attributes: PAttributes = {},
-) => html`<p ${attributeList<PAttributes>(attributes)}>${content}</p>`;
+): HTMLTemplateGenerator;
+
+export function p(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    PAttributes
+  >(...args);
+  return html`<p ${attributeList<PAttributes>(attributes)}>${content}</p>`;
+}

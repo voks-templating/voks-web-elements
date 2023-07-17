@@ -14,12 +14,12 @@ Deno.test("output tag element", async (t) => {
 
   await t.step("output with attributes", async () => {
     const actual = output(
-      "Content",
       {
         for: "id",
         form: "form",
         name: "name",
       },
+      "Content",
     );
 
     const expected =

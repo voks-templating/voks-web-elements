@@ -14,10 +14,10 @@ Deno.test("slot tag element", async (t) => {
 
   await t.step("slot with attributes", async () => {
     const actual = slot(
-      "Content",
       {
         name: "test",
       },
+      "Content",
     );
 
     const expected = `<slot name="test">Content</slot>`;

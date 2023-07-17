@@ -6,7 +6,6 @@ Deno.test("b tag element", async (t) => {
   await t.step("b with attributes", async () => {
     const actual = b(
       "Content",
-      {},
     );
 
     const expected = `<b>Content</b>`;

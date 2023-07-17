@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 import {
@@ -20,10 +21,20 @@ export type TextareaAttributes =
   | PlaceholderAttribute
   | HTMLGlobalAttributes;
 
-export const textarea = (
+export function textarea(
+  attributes: TextareaAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function textarea(
   content: string | HTMLTemplate,
-  attributes: TextareaAttributes = {},
-) =>
-  html`<textarea ${
+): HTMLTemplateGenerator;
+
+export function textarea(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    TextareaAttributes
+  >(...args);
+  return html`<textarea ${
     attributeList<TextareaAttributes>(attributes)
   }>${content}</textarea>`;
+}

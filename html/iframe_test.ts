@@ -14,7 +14,6 @@ Deno.test("iframe tag element", async (t) => {
 
   await t.step("iframe with attributes", async () => {
     const actual = iframe(
-      "Content",
       {
         allow: "autoplay",
         allowfullscreen: true,
@@ -28,6 +27,7 @@ Deno.test("iframe tag element", async (t) => {
         src: "https://example.com",
         srcdoc: "srcdoc",
       },
+      "Content",
     );
 
     const expected =

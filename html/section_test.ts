@@ -15,7 +15,6 @@ Deno.test("section tag element", async (t) => {
   await t.step("section with attributes", async () => {
     const actual = section(
       "Content",
-      {},
     );
 
     const expected = `<section>Content</section>`;

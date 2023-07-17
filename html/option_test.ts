@@ -14,13 +14,13 @@ Deno.test("option tag element", async (t) => {
 
   await t.step("option with attributes", async () => {
     const actual = option(
-      "Content",
       {
         disabled: true,
         label: "label",
         selected: true,
         value: "value",
       },
+      "Content",
     );
 
     const expected =

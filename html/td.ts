@@ -1,4 +1,5 @@
-import { html, HTMLTemplate } from "../deps.ts";
+import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 
@@ -8,7 +9,18 @@ export type TdAttributes = {
   rowspan?: number;
 } | HTMLGlobalAttributes;
 
-export const td = (
+export function td(
+  attributes: TdAttributes,
+  content?: string | HTMLTemplate,
+): HTMLTemplateGenerator;
+
+export function td(
   content: string | HTMLTemplate,
-  attributes: TdAttributes = {},
-) => html`<td ${attributeList<TdAttributes>(attributes)}>${content}</td>`;
+): HTMLTemplateGenerator;
+
+export function td(...args: [unknown, unknown?]) {
+  const { content, attributes } = attributesAndContentFromArgs<
+    TdAttributes
+  >(...args);
+  return html`<td ${attributeList<TdAttributes>(attributes)}>${content}</td>`;
+}

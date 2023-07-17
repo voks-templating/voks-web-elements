@@ -14,10 +14,10 @@ Deno.test("q tag element", async (t) => {
 
   await t.step("q with attributes", async () => {
     const actual = q(
-      "Content",
       {
         cite: "cite",
       },
+      "Content",
     );
 
     const expected = `<q cite="cite">Content</q>`;
