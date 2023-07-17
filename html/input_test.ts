@@ -379,17 +379,38 @@ Deno.test("input", async (t) => {
   });
 });
 
-Deno.test("subtyping input elements", async () => {
-  const textField = (
-    labelText: string,
-    attributes: TypedInputAttributes<"text">,
-  ) => {
-    const id = attributes.id;
-    return html`${label(labelText, { for: id })}${textInput(attributes)}`;
-  };
+Deno.test("sub-typed input elements", async (t) => {
+  await t.step("for textInputs", async () => {
+    const textField = (
+      labelText: string,
+      attributes: TypedInputAttributes<"text">,
+    ) => {
+      const id = attributes.id;
+      return html`${label(labelText, { for: id })}${textInput(attributes)}`;
+    };
 
-  const expected =
+    const expected =
       `<label for="my-element">content</label><input type="text" id="my-element" />`;
-    const rendered = minify(await renderToString(textField("content", { id: "my-element" })));
+    const rendered = minify(
+      await renderToString(textField("content", { id: "my-element" })),
+    );
     assertEquals(rendered, expected);
-})
+  });
+
+  await t.step("for buttonInputs", async () => {
+    const buttonField = (
+      labelText: string,
+      attributes: TypedInputAttributes<"button">,
+    ) => {
+      const id = attributes.id;
+      return html`${label(labelText, { for: id })}${buttonInput(attributes)}`;
+    };
+
+    const expected =
+      `<label for="my-element">content</label><input type="button" id="my-element" />`;
+    const rendered = minify(
+      await renderToString(buttonField("content", { id: "my-element" })),
+    );
+    assertEquals(rendered, expected);
+  });
+});
