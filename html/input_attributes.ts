@@ -261,7 +261,7 @@ export type InputAttributes<T> =
   & HTMLInputSharedAttributes
   & InputTypeAttributes<T>;
 
-  export type TypedInputAttributes<T> = Omit<InputAttributes<T>, "type">;
+export type TypedInputAttributes<T> = Omit<InputAttributes<T>, "type">;
 
 export type AcceptAttribute = {
   accept?: string;
