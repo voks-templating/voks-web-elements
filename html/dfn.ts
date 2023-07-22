@@ -14,7 +14,10 @@ export function dfn(
 ): HTMLTemplateGenerator;
 
 export function dfn(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function dfn(...args: [unknown, unknown?]) {

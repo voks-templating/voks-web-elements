@@ -14,7 +14,10 @@ export function picture(
 ): HTMLTemplateGenerator;
 
 export function picture(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function picture(...args: [unknown, unknown?]) {

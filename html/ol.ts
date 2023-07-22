@@ -18,7 +18,10 @@ export function ol(
 ): HTMLTemplateGenerator;
 
 export function ol(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function ol(...args: [unknown, unknown?]) {

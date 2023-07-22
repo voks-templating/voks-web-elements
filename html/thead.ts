@@ -14,7 +14,10 @@ export function thead(
 ): HTMLTemplateGenerator;
 
 export function thead(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function thead(...args: [unknown, unknown?]) {

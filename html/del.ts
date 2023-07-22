@@ -17,7 +17,10 @@ export function del(
 ): HTMLTemplateGenerator;
 
 export function del(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function del(...args: [unknown, unknown?]) {

@@ -14,7 +14,10 @@ export function bdi(
 ): HTMLTemplateGenerator;
 
 export function bdi(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function bdi(...args: [unknown, unknown?]) {

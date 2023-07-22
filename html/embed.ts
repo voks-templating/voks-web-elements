@@ -19,7 +19,10 @@ export function embed(
 ): HTMLTemplateGenerator;
 
 export function embed(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function embed(...args: [unknown, unknown?]) {

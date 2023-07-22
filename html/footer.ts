@@ -14,7 +14,10 @@ export function footer(
 ): HTMLTemplateGenerator;
 
 export function footer(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function footer(...args: [unknown, unknown?]) {

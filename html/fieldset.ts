@@ -18,7 +18,10 @@ export function fieldset(
 ): HTMLTemplateGenerator;
 
 export function fieldset(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function fieldset(...args: [unknown, unknown?]) {

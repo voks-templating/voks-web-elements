@@ -14,7 +14,10 @@ export function dd(
 ): HTMLTemplateGenerator;
 
 export function dd(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function dd(...args: [unknown, unknown?]) {

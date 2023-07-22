@@ -14,7 +14,10 @@ export function legend(
 ): HTMLTemplateGenerator;
 
 export function legend(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function legend(...args: [unknown, unknown?]) {

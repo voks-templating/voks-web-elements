@@ -18,7 +18,10 @@ export function td(
 ): HTMLTemplateGenerator;
 
 export function td(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function td(...args: [unknown, unknown?]) {

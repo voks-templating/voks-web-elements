@@ -16,7 +16,10 @@ export function htmlElement(
 ): HTMLTemplateGenerator;
 
 export function htmlElement(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function htmlElement(...args: [unknown, unknown?]) {

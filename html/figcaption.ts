@@ -14,7 +14,10 @@ export function figcaption(
 ): HTMLTemplateGenerator;
 
 export function figcaption(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function figcaption(...args: [unknown, unknown?]) {

@@ -16,7 +16,10 @@ export function map(
 ): HTMLTemplateGenerator;
 
 export function map(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function map(...args: [unknown, unknown?]) {

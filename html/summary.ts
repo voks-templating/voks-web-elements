@@ -14,7 +14,10 @@ export function summary(
 ): HTMLTemplateGenerator;
 
 export function summary(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function summary(...args: [unknown, unknown?]) {

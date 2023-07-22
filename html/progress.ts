@@ -17,7 +17,10 @@ export function progress(
 ): HTMLTemplateGenerator;
 
 export function progress(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function progress(...args: [unknown, unknown?]) {

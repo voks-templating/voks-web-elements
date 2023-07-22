@@ -14,7 +14,10 @@ export function strong(
 ): HTMLTemplateGenerator;
 
 export function strong(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function strong(...args: [unknown, unknown?]) {

@@ -14,7 +14,10 @@ export function kbd(
 ): HTMLTemplateGenerator;
 
 export function kbd(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function kbd(...args: [unknown, unknown?]) {

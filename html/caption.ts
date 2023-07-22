@@ -14,7 +14,10 @@ export function caption(
 ): HTMLTemplateGenerator;
 
 export function caption(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function caption(...args: [unknown, unknown?]) {

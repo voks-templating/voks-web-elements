@@ -14,7 +14,10 @@ export function mark(
 ): HTMLTemplateGenerator;
 
 export function mark(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function mark(...args: [unknown, unknown?]) {

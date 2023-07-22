@@ -19,7 +19,10 @@ export function option(
 ): HTMLTemplateGenerator;
 
 export function option(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function option(...args: [unknown, unknown?]) {

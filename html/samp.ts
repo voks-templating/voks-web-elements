@@ -14,7 +14,10 @@ export function samp(
 ): HTMLTemplateGenerator;
 
 export function samp(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function samp(...args: [unknown, unknown?]) {

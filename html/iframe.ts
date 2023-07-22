@@ -25,7 +25,10 @@ export function iframe(
 ): HTMLTemplateGenerator;
 
 export function iframe(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function iframe(...args: [unknown, unknown?]) {

@@ -14,7 +14,10 @@ export function sup(
 ): HTMLTemplateGenerator;
 
 export function sup(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function sup(...args: [unknown, unknown?]) {

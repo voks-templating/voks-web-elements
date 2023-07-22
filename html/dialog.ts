@@ -16,7 +16,10 @@ export function dialog(
 ): HTMLTemplateGenerator;
 
 export function dialog(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function dialog(...args: [unknown, unknown?]) {

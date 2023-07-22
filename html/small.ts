@@ -14,7 +14,10 @@ export function small(
 ): HTMLTemplateGenerator;
 
 export function small(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function small(...args: [unknown, unknown?]) {

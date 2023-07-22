@@ -14,7 +14,10 @@ export function h1(
 ): HTMLTemplateGenerator;
 
 export function h1(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function h1(...args: [unknown, unknown?]) {

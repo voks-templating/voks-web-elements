@@ -14,7 +14,10 @@ export function tr(
 ): HTMLTemplateGenerator;
 
 export function tr(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function tr(...args: [unknown, unknown?]) {

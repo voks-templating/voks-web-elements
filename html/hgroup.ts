@@ -14,7 +14,10 @@ export function hgroup(
 ): HTMLTemplateGenerator;
 
 export function hgroup(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function hgroup(...args: [unknown, unknown?]) {

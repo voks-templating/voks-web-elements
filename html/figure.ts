@@ -14,7 +14,10 @@ export function figure(
 ): HTMLTemplateGenerator;
 
 export function figure(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function figure(...args: [unknown, unknown?]) {

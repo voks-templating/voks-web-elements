@@ -14,7 +14,10 @@ export function span(
 ): HTMLTemplateGenerator;
 
 export function span(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function span(...args: [unknown, unknown?]) {

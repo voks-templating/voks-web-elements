@@ -17,7 +17,10 @@ export function canvas(
 ): HTMLTemplateGenerator;
 
 export function canvas(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function canvas(...args: [unknown, unknown?]) {

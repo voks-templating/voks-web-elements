@@ -14,7 +14,10 @@ export function colgroup(
 ): HTMLTemplateGenerator;
 
 export function colgroup(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function colgroup(...args: [unknown, unknown?]) {

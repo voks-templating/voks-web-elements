@@ -14,7 +14,10 @@ export function cite(
 ): HTMLTemplateGenerator;
 
 export function cite(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function cite(...args: [unknown, unknown?]) {

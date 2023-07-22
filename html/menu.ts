@@ -14,7 +14,10 @@ export function menu(
 ): HTMLTemplateGenerator;
 
 export function menu(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function menu(...args: [unknown, unknown?]) {

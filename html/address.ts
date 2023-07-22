@@ -14,7 +14,10 @@ export function address(
 ): HTMLTemplateGenerator;
 
 export function address(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function address(...args: [unknown, unknown?]) {

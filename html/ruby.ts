@@ -14,7 +14,10 @@ export function ruby(
 ): HTMLTemplateGenerator;
 
 export function ruby(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function ruby(...args: [unknown, unknown?]) {

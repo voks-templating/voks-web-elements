@@ -17,7 +17,10 @@ export function optgroup(
 ): HTMLTemplateGenerator;
 
 export function optgroup(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function optgroup(...args: [unknown, unknown?]) {

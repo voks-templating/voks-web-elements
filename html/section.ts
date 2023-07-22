@@ -14,7 +14,10 @@ export function section(
 ): HTMLTemplateGenerator;
 
 export function section(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function section(...args: [unknown, unknown?]) {

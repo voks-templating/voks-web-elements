@@ -17,7 +17,10 @@ export function ins(
 ): HTMLTemplateGenerator;
 
 export function ins(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function ins(...args: [unknown, unknown?]) {

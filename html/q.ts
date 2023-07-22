@@ -16,7 +16,10 @@ export function q(
 ): HTMLTemplateGenerator;
 
 export function q(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function q(...args: [unknown, unknown?]) {

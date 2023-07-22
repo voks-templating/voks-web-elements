@@ -14,7 +14,10 @@ export function title(
 ): HTMLTemplateGenerator;
 
 export function title(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function title(...args: [unknown, unknown?]) {

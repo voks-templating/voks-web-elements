@@ -16,7 +16,10 @@ export function label(
 ): HTMLTemplateGenerator;
 
 export function label(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function label(...args: [unknown, unknown?]) {

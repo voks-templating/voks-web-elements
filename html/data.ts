@@ -14,7 +14,10 @@ export function data(
 ): HTMLTemplateGenerator;
 
 export function data(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function data(...args: [unknown, unknown?]) {

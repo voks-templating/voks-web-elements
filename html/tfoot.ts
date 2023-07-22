@@ -14,7 +14,10 @@ export function tfoot(
 ): HTMLTemplateGenerator;
 
 export function tfoot(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function tfoot(...args: [unknown, unknown?]) {

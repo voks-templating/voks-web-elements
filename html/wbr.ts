@@ -14,7 +14,10 @@ export function wbr(
 ): HTMLTemplateGenerator;
 
 export function wbr(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function wbr(...args: [unknown, unknown?]) {

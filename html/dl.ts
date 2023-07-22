@@ -14,7 +14,10 @@ export function dl(
 ): HTMLTemplateGenerator;
 
 export function dl(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function dl(...args: [unknown, unknown?]) {

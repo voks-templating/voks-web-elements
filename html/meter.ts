@@ -21,7 +21,10 @@ export function meter(
 ): HTMLTemplateGenerator;
 
 export function meter(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function meter(...args: [unknown, unknown?]) {

@@ -32,7 +32,10 @@ export function select(
 ): HTMLTemplateGenerator;
 
 export function select(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function select(...args: [unknown, unknown?]) {

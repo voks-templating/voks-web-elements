@@ -14,7 +14,10 @@ export function blockquote(
 ): HTMLTemplateGenerator;
 
 export function blockquote(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function blockquote(...args: [unknown, unknown?]) {

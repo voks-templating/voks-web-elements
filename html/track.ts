@@ -20,7 +20,10 @@ export function track(
 ): HTMLTemplateGenerator;
 
 export function track(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function track(...args: [unknown, unknown?]) {

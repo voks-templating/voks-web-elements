@@ -18,7 +18,10 @@ export function style(
 ): HTMLTemplateGenerator;
 
 export function style(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function style(...args: [unknown, unknown?]) {

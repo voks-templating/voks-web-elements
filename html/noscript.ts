@@ -14,7 +14,10 @@ export function noscript(
 ): HTMLTemplateGenerator;
 
 export function noscript(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function noscript(...args: [unknown, unknown?]) {

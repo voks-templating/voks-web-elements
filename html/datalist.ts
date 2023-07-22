@@ -14,7 +14,10 @@ export function datalist(
 ): HTMLTemplateGenerator;
 
 export function datalist(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function datalist(...args: [unknown, unknown?]) {

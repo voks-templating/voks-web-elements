@@ -14,7 +14,10 @@ export function rp(
 ): HTMLTemplateGenerator;
 
 export function rp(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function rp(...args: [unknown, unknown?]) {

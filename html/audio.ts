@@ -26,7 +26,10 @@ export function audio(
 ): HTMLTemplateGenerator;
 
 export function audio(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function audio(...args: [unknown, unknown?]) {

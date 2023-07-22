@@ -25,7 +25,10 @@ export function form(
 ): HTMLTemplateGenerator;
 
 export function form(
-  content: string | HTMLTemplate,
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function form(...args: [unknown, unknown?]) {
