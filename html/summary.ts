@@ -7,7 +7,7 @@ export type SummaryAttributes = HTMLGlobalAttributes;
 
 export function summary(
   attributes: SummaryAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function summary(

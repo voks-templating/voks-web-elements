@@ -18,7 +18,7 @@ export type FormAttributes = {
 
 export function form(
   attributes: FormAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function form(

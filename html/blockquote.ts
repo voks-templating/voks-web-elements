@@ -7,7 +7,7 @@ export type BlockquoteAttributes = { cite?: string } | HTMLGlobalAttributes;
 
 export function blockquote(
   attributes: BlockquoteAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function blockquote(

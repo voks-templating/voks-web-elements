@@ -11,7 +11,7 @@ export type OutputAttributes = {
 
 export function output(
   attributes: OutputAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function output(

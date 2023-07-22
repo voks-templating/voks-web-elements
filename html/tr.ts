@@ -7,7 +7,7 @@ export type TrAttributes = HTMLGlobalAttributes;
 
 export function tr(
   attributes: TrAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function tr(

@@ -7,7 +7,7 @@ export type DataAttributes = { value: string | number } | HTMLGlobalAttributes;
 
 export function data(
   attributes: DataAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function data(

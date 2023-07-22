@@ -7,7 +7,7 @@ export type PreAttributes = HTMLGlobalAttributes;
 
 export function pre(
   attributes: PreAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function pre(

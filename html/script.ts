@@ -17,7 +17,7 @@ export type ScriptAttributes = {
 
 export function script(
   attributes: ScriptAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function script(

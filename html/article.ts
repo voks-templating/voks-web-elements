@@ -7,7 +7,7 @@ export type ArticleAttributes = HTMLGlobalAttributes;
 
 export function article(
   attributes: ArticleAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function article(

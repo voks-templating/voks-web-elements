@@ -9,7 +9,7 @@ export type DialogAttributes = {
 
 export function dialog(
   attributes: DialogAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function dialog(

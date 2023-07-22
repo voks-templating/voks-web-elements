@@ -7,7 +7,7 @@ export type FigureAttributes = HTMLGlobalAttributes;
 
 export function figure(
   attributes: FigureAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function figure(

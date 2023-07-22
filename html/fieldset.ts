@@ -11,7 +11,7 @@ export type FieldsetAttributes = {
 
 export function fieldset(
   attributes: FieldsetAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function fieldset(

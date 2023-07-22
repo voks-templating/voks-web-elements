@@ -19,7 +19,7 @@ export type VideoAttributes = {
 
 export function video(
   attributes: VideoAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function video(

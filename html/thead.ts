@@ -7,7 +7,7 @@ export type TheadAttributes = HTMLGlobalAttributes;
 
 export function thead(
   attributes: TheadAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function thead(

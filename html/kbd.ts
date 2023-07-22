@@ -7,7 +7,7 @@ export type KbdAttributes = HTMLGlobalAttributes;
 
 export function kbd(
   attributes: KbdAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function kbd(

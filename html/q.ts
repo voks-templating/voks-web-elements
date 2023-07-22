@@ -9,7 +9,7 @@ export type QAttributes = {
 
 export function q(
   attributes: QAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function q(

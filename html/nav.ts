@@ -7,7 +7,7 @@ export type NavAttributes = HTMLGlobalAttributes;
 
 export function nav(
   attributes: NavAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function nav(

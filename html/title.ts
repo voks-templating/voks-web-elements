@@ -7,7 +7,7 @@ export type TitleAttributes = HTMLGlobalAttributes;
 
 export function title(
   attributes: TitleAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function title(

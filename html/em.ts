@@ -7,7 +7,7 @@ export type EmAttributes = HTMLGlobalAttributes;
 
 export function em(
   attributes: EmAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function em(

@@ -7,7 +7,7 @@ export type DatalistAttributes = HTMLGlobalAttributes;
 
 export function datalist(
   attributes: DatalistAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function datalist(

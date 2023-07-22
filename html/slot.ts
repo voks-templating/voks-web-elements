@@ -7,7 +7,7 @@ export type SlotAttributes = { name?: string } | HTMLGlobalAttributes;
 
 export function slot(
   attributes: SlotAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function slot(

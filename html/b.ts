@@ -7,7 +7,7 @@ export type BAttributes = HTMLGlobalAttributes;
 
 export function b(
   attributes: BAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function b(

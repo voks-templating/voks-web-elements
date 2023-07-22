@@ -7,7 +7,7 @@ export type AsideAttributes = HTMLGlobalAttributes;
 
 export function aside(
   attributes: AsideAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function aside(

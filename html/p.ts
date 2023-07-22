@@ -7,7 +7,7 @@ export type PAttributes = HTMLGlobalAttributes;
 
 export function p(
   attributes: PAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function p(

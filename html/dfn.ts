@@ -7,7 +7,7 @@ export type DfnAttributes = HTMLGlobalAttributes;
 
 export function dfn(
   attributes: DfnAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function dfn(

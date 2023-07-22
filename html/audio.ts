@@ -19,7 +19,7 @@ export type AudioAttributes =
 
 export function audio(
   attributes: AudioAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function audio(

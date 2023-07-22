@@ -7,7 +7,7 @@ export type PictureAttributes = HTMLGlobalAttributes;
 
 export function picture(
   attributes: PictureAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function picture(

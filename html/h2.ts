@@ -7,7 +7,7 @@ export type H2Attributes = HTMLGlobalAttributes;
 
 export function h2(
   attributes: H2Attributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function h2(

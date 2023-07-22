@@ -11,7 +11,7 @@ export type OlAttributes = {
 
 export function ol(
   attributes: OlAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function ol(

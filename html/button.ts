@@ -35,7 +35,7 @@ export type ButtonAttributes =
 
 export function button(
   attributes: ButtonAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function button(

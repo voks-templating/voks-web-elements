@@ -7,7 +7,7 @@ export type UAttributes = HTMLGlobalAttributes;
 
 export function u(
   attributes: UAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function u(

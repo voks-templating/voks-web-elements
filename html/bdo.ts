@@ -7,7 +7,7 @@ export type BdoAttributes = HTMLGlobalAttributes;
 
 export function bdo(
   attributes: BdoAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function bdo(

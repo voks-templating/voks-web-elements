@@ -10,7 +10,7 @@ export type DelAttributes = {
 
 export function del(
   attributes: DelAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function del(

@@ -11,7 +11,7 @@ export type TdAttributes = {
 
 export function td(
   attributes: TdAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function td(

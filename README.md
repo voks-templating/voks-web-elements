@@ -31,6 +31,33 @@ parameter, whereas the content can be passed as second parameter.
 If no attributes are present the attributes param can be skipped and the content
 can be passed instead.
 
+## Element Usage and Composition
+
+Many HTML Elements allow to have child elements as content. Content is usually
+the second argument of a Web Element, but can also be passed as first argument
+when no attributes are passed.
+
+You can compose child content by passing an voks `html` string template or by
+passing an array with a list of child elements.
+
+```typescript
+import { html, renderToString } from "https://deno.land/x/voks/mod.ts";
+import { div, p, span } from "https://deno.land/x/voks_web_elements";
+
+div(
+  { class: "container" },
+  html`
+  ${p("hello, ")}
+  ${span({ class: "highlight" }, "world!")}
+`,
+);
+
+div({ class: "container" }, [
+  p("hello,"),
+  span({ class: "highlight" }, "world!"),
+]);
+```
+
 ## Usage
 
 ### [Deno](https://deno.land/x/voks_web_elements)

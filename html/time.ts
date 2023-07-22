@@ -9,7 +9,7 @@ export type TimeAttributes = {
 
 export function time(
   attributes: TimeAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function time(

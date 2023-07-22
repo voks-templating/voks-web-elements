@@ -7,7 +7,7 @@ export type UlAttributes = HTMLGlobalAttributes;
 
 export function ul(
   attributes: UlAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function ul(

@@ -7,7 +7,7 @@ export type SpanAttributes = HTMLGlobalAttributes;
 
 export function span(
   attributes: SpanAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function span(

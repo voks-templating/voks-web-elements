@@ -10,7 +10,7 @@ export type InsAttributes = {
 
 export function ins(
   attributes: InsAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function ins(

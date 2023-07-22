@@ -7,7 +7,7 @@ export type WbrAttributes = HTMLGlobalAttributes;
 
 export function wbr(
   attributes: WbrAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function wbr(

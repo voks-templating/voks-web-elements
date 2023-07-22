@@ -7,7 +7,7 @@ export type HeadAttributes = HTMLGlobalAttributes;
 
 export function head(
   attributes: HeadAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function head(

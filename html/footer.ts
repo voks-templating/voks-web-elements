@@ -7,7 +7,7 @@ export type FooterAttributes = HTMLGlobalAttributes;
 
 export function footer(
   attributes: FooterAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function footer(

@@ -9,7 +9,7 @@ export type DetailsAttributes = {
 
 export function details(
   attributes: DetailsAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function details(

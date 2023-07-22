@@ -10,7 +10,7 @@ export type CanvasAttributes = {
 
 export function canvas(
   attributes: CanvasAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function canvas(

@@ -7,7 +7,7 @@ export type H6Attributes = HTMLGlobalAttributes;
 
 export function h6(
   attributes: H6Attributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function h6(

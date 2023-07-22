@@ -25,7 +25,7 @@ export type BodyAttributes = {
 
 export function body(
   attributes: BodyAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function body(

@@ -9,7 +9,7 @@ export type HtmlAttributes = {
 
 export function htmlElement(
   attributes: HtmlAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function htmlElement(

@@ -12,7 +12,7 @@ export type EmbedAttributes = {
 
 export function embed(
   attributes: EmbedAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function embed(

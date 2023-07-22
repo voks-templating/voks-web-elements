@@ -1,6 +1,7 @@
 import { assertEquals } from "asserts";
 import { html, minify, renderToString } from "../deps.ts";
 import { a } from "./a.ts";
+import { span } from "./span.ts";
 
 Deno.test("anchor tag element", async (t) => {
   await t.step("anchor with attributes", async () => {
@@ -49,6 +50,30 @@ Deno.test("anchor tag element", async (t) => {
     const actual = a({ download: "foobar.doc" });
 
     const expected = `<a download="foobar.doc"></a>`;
+    const rendered = minify(await renderToString(actual));
+    assertEquals(rendered, expected);
+  });
+
+  await t.step("passing child elements as array", async () => {
+    const actual = a({ download: "foobar.doc" }, [
+      span("hello,"),
+      span("world!"),
+    ]);
+
+    const expected =
+      `<a download="foobar.doc"><span>hello,</span><span>world!</span></a>`;
+    const rendered = minify(await renderToString(actual));
+    assertEquals(rendered, expected);
+  });
+
+  await t.step("passing child elements as array", async () => {
+    const actual = a({ download: "foobar.doc" }, [
+      html`<span>hello,</span>`,
+      html`<span>world!</span>`,
+    ]);
+
+    const expected =
+      `<a download="foobar.doc"><span>hello,</span><span>world!</span></a>`;
     const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });

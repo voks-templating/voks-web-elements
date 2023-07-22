@@ -23,7 +23,7 @@ export type TextareaAttributes =
 
 export function textarea(
   attributes: TextareaAttributes,
-  content?: string | HTMLTemplate,
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function textarea(
