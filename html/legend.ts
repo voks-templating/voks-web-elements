@@ -7,7 +7,10 @@ export type LegendAttributes = HTMLGlobalAttributes;
 
 export function legend(
   attributes: LegendAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function legend(

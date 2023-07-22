@@ -7,7 +7,10 @@ export type AddressAttributes = HTMLGlobalAttributes;
 
 export function address(
   attributes: AddressAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function address(

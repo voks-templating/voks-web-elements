@@ -11,7 +11,10 @@ export type StyleAttributes = {
 
 export function style(
   attributes: StyleAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function style(

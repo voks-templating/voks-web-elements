@@ -7,7 +7,10 @@ export type CiteAttributes = HTMLGlobalAttributes;
 
 export function cite(
   attributes: CiteAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function cite(

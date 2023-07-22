@@ -10,7 +10,10 @@ export type OptgroupAttributes = {
 
 export function optgroup(
   attributes: OptgroupAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function optgroup(

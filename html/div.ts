@@ -7,7 +7,10 @@ export type DivAttributes = HTMLGlobalAttributes;
 
 export function div(
   attributes: DivAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function div(

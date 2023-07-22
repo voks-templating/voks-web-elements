@@ -7,7 +7,10 @@ export type H3Attributes = HTMLGlobalAttributes;
 
 export function h3(
   attributes: H3Attributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function h3(

@@ -18,11 +18,17 @@ export type AnchorAttributes =
 
 export function a(
   attributes: AnchorAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function a(
-  content: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function a(...args: [unknown, unknown?]) {

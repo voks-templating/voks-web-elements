@@ -7,7 +7,10 @@ export type SmallAttributes = HTMLGlobalAttributes;
 
 export function small(
   attributes: SmallAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function small(

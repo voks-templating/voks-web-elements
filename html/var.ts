@@ -7,7 +7,10 @@ export type VarAttributes = HTMLGlobalAttributes;
 
 export function variable(
   attributes: VarAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function variable(

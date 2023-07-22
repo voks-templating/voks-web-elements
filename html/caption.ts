@@ -7,7 +7,10 @@ export type CaptionAttributes = HTMLGlobalAttributes;
 
 export function caption(
   attributes: CaptionAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function caption(

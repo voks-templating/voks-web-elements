@@ -7,7 +7,10 @@ export type BdiAttributes = HTMLGlobalAttributes;
 
 export function bdi(
   attributes: BdiAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function bdi(

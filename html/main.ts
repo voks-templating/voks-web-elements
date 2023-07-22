@@ -7,7 +7,10 @@ export type MainAttributes = HTMLGlobalAttributes;
 
 export function main(
   attributes: MainAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function main(

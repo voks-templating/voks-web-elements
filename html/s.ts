@@ -7,7 +7,10 @@ export type SAttributes = HTMLGlobalAttributes;
 
 export function s(
   attributes: SAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function s(

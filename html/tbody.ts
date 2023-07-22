@@ -7,7 +7,10 @@ export type TbodyAttributes = HTMLGlobalAttributes;
 
 export function tbody(
   attributes: TbodyAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function tbody(

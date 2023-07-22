@@ -7,7 +7,10 @@ export type RtAttributes = HTMLGlobalAttributes;
 
 export function rt(
   attributes: RtAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function rt(

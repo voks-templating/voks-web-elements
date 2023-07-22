@@ -7,7 +7,10 @@ export type SampAttributes = HTMLGlobalAttributes;
 
 export function samp(
   attributes: SampAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function samp(

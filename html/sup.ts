@@ -7,7 +7,10 @@ export type SupAttributes = HTMLGlobalAttributes;
 
 export function sup(
   attributes: SupAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function sup(

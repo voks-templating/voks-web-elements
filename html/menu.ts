@@ -7,7 +7,10 @@ export type MenuAttributes = HTMLGlobalAttributes;
 
 export function menu(
   attributes: MenuAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function menu(

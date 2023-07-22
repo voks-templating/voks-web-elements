@@ -7,7 +7,10 @@ export type CodeAttributes = HTMLGlobalAttributes;
 
 export function code(
   attributes: CodeAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function code(

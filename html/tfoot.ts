@@ -7,7 +7,10 @@ export type TfootAttributes = HTMLGlobalAttributes;
 
 export function tfoot(
   attributes: TfootAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function tfoot(

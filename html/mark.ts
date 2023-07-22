@@ -7,7 +7,10 @@ export type MarkAttributes = HTMLGlobalAttributes;
 
 export function mark(
   attributes: MarkAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function mark(

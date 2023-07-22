@@ -7,7 +7,10 @@ export type ColgroupAttributes = { span?: number } | HTMLGlobalAttributes;
 
 export function colgroup(
   attributes: ColgroupAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function colgroup(

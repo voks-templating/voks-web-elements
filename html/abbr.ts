@@ -7,7 +7,10 @@ export type AbbrAttributes = HTMLGlobalAttributes;
 
 export function abbr(
   attributes: AbbrAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function abbr(

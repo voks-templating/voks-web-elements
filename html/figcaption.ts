@@ -7,7 +7,10 @@ export type FigcaptionAttributes = HTMLGlobalAttributes;
 
 export function figcaption(
   attributes: FigcaptionAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function figcaption(

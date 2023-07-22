@@ -7,7 +7,10 @@ export type SubAttributes = HTMLGlobalAttributes;
 
 export function sub(
   attributes: SubAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function sub(

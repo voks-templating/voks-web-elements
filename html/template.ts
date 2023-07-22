@@ -7,7 +7,10 @@ export type TemplateAttributes = HTMLGlobalAttributes;
 
 export function template(
   attributes: TemplateAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function template(

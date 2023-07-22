@@ -7,7 +7,10 @@ export type DdAttributes = HTMLGlobalAttributes;
 
 export function dd(
   attributes: DdAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function dd(

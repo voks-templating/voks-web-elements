@@ -7,7 +7,10 @@ export type NoscriptAttributes = HTMLGlobalAttributes;
 
 export function noscript(
   attributes: NoscriptAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function noscript(

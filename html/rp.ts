@@ -7,7 +7,10 @@ export type RpAttributes = HTMLGlobalAttributes;
 
 export function rp(
   attributes: RpAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function rp(

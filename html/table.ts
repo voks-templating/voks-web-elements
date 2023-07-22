@@ -7,7 +7,10 @@ export type TableAttributes = HTMLGlobalAttributes;
 
 export function table(
   attributes: TableAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function table(

@@ -7,7 +7,10 @@ export type HeaderAttributes = HTMLGlobalAttributes;
 
 export function header(
   attributes: HeaderAttributes,
-  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?:
+    | string
+    | HTMLTemplate
+    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
 ): HTMLTemplateGenerator;
 
 export function header(
