@@ -30,7 +30,7 @@ export function textarea(
 ): HTMLTemplateGenerator;
 
 export function textarea(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

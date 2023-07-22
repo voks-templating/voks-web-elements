@@ -14,7 +14,7 @@ export function legend(
 ): HTMLTemplateGenerator;
 
 export function legend(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

@@ -26,7 +26,7 @@ export function audio(
 ): HTMLTemplateGenerator;
 
 export function audio(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

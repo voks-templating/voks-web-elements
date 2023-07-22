@@ -14,7 +14,7 @@ export function ul(
 ): HTMLTemplateGenerator;
 
 export function ul(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

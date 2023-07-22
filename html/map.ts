@@ -16,7 +16,7 @@ export function map(
 ): HTMLTemplateGenerator;
 
 export function map(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

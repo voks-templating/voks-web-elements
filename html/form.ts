@@ -25,7 +25,7 @@ export function form(
 ): HTMLTemplateGenerator;
 
 export function form(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

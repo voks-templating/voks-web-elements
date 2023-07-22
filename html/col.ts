@@ -14,7 +14,7 @@ export function col(
 ): HTMLTemplateGenerator;
 
 export function col(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

@@ -5,7 +5,6 @@ import { object } from "./object.ts";
 Deno.test("object tag element", async (t) => {
   await t.step("object with attributes", async () => {
     const actual = object(
-      "Content",
       {
         data: "https://example.com",
         form: "form-id",
@@ -15,6 +14,7 @@ Deno.test("object tag element", async (t) => {
         type: "video/mp4",
         usemap: "#map-id",
       },
+      "Content",
     );
 
     const expected =

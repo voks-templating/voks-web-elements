@@ -14,7 +14,7 @@ export function small(
 ): HTMLTemplateGenerator;
 
 export function small(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

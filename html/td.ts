@@ -18,7 +18,7 @@ export function td(
 ): HTMLTemplateGenerator;
 
 export function td(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

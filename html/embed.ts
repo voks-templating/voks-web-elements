@@ -19,7 +19,7 @@ export function embed(
 ): HTMLTemplateGenerator;
 
 export function embed(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

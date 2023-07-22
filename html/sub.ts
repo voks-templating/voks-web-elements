@@ -14,7 +14,7 @@ export function sub(
 ): HTMLTemplateGenerator;
 
 export function sub(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

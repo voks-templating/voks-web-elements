@@ -14,7 +14,7 @@ export function samp(
 ): HTMLTemplateGenerator;
 
 export function samp(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

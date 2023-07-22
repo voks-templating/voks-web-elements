@@ -14,7 +14,7 @@ export function main(
 ): HTMLTemplateGenerator;
 
 export function main(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

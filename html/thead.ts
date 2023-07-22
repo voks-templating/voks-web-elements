@@ -14,7 +14,7 @@ export function thead(
 ): HTMLTemplateGenerator;
 
 export function thead(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

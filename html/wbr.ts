@@ -14,7 +14,7 @@ export function wbr(
 ): HTMLTemplateGenerator;
 
 export function wbr(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

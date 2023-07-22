@@ -20,7 +20,7 @@ export function th(
 ): HTMLTemplateGenerator;
 
 export function th(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

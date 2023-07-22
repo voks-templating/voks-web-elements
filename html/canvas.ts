@@ -17,7 +17,7 @@ export function canvas(
 ): HTMLTemplateGenerator;
 
 export function canvas(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

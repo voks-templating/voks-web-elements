@@ -14,7 +14,7 @@ export function hgroup(
 ): HTMLTemplateGenerator;
 
 export function hgroup(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

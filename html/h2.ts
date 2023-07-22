@@ -14,7 +14,7 @@ export function h2(
 ): HTMLTemplateGenerator;
 
 export function h2(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

@@ -16,7 +16,7 @@ export function q(
 ): HTMLTemplateGenerator;
 
 export function q(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

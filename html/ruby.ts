@@ -14,7 +14,7 @@ export function ruby(
 ): HTMLTemplateGenerator;
 
 export function ruby(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

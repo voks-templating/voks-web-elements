@@ -14,7 +14,7 @@ export function tr(
 ): HTMLTemplateGenerator;
 
 export function tr(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

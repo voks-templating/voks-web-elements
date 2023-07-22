@@ -32,7 +32,7 @@ export function select(
 ): HTMLTemplateGenerator;
 
 export function select(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

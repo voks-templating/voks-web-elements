@@ -16,7 +16,7 @@ export function dialog(
 ): HTMLTemplateGenerator;
 
 export function dialog(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

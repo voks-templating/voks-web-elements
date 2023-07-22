@@ -14,7 +14,7 @@ export function cite(
 ): HTMLTemplateGenerator;
 
 export function cite(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

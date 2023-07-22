@@ -14,7 +14,7 @@ export function menu(
 ): HTMLTemplateGenerator;
 
 export function menu(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

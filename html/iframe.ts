@@ -25,7 +25,7 @@ export function iframe(
 ): HTMLTemplateGenerator;
 
 export function iframe(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

@@ -14,7 +14,7 @@ export function div(
 ): HTMLTemplateGenerator;
 
 export function div(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

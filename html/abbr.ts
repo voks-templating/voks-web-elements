@@ -14,7 +14,7 @@ export function abbr(
 ): HTMLTemplateGenerator;
 
 export function abbr(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

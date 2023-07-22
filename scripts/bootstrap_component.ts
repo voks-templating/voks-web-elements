@@ -76,7 +76,7 @@ export type ${capitalized}Attributes = HTMLGlobalAttributes;
 
 
 export const ${name} = (${content ? `
-  content: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],` : ""}
+  content?: string | HTMLTemplate | (string | HTMLTemplate | HTMLTemplateGenerator)[],` : ""}
   attributes: ${capitalized}Attributes = {},
 ) =>${selfClosing ? `html\`<${name} \${
   attributeList<${capitalized}Attributes>(attributes)

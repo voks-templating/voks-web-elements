@@ -14,7 +14,7 @@ export function slot(
 ): HTMLTemplateGenerator;
 
 export function slot(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

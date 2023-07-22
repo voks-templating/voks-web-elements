@@ -32,7 +32,7 @@ export function body(
 ): HTMLTemplateGenerator;
 
 export function body(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

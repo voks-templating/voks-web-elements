@@ -14,7 +14,7 @@ export function figure(
 ): HTMLTemplateGenerator;
 
 export function figure(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

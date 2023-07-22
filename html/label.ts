@@ -16,7 +16,7 @@ export function label(
 ): HTMLTemplateGenerator;
 
 export function label(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

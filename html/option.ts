@@ -19,7 +19,7 @@ export function option(
 ): HTMLTemplateGenerator;
 
 export function option(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

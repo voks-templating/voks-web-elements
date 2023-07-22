@@ -16,7 +16,7 @@ export function li(
 ): HTMLTemplateGenerator;
 
 export function li(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

@@ -26,7 +26,7 @@ export function video(
 ): HTMLTemplateGenerator;
 
 export function video(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

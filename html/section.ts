@@ -14,7 +14,7 @@ export function section(
 ): HTMLTemplateGenerator;
 
 export function section(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

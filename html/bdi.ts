@@ -14,7 +14,7 @@ export function bdi(
 ): HTMLTemplateGenerator;
 
 export function bdi(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

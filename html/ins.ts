@@ -17,7 +17,7 @@ export function ins(
 ): HTMLTemplateGenerator;
 
 export function ins(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

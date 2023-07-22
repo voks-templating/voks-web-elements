@@ -14,7 +14,7 @@ export function title(
 ): HTMLTemplateGenerator;
 
 export function title(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

@@ -14,7 +14,7 @@ export function table(
 ): HTMLTemplateGenerator;
 
 export function table(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

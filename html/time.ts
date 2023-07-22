@@ -16,7 +16,7 @@ export function time(
 ): HTMLTemplateGenerator;
 
 export function time(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

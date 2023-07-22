@@ -18,7 +18,7 @@ export function style(
 ): HTMLTemplateGenerator;
 
 export function style(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

@@ -14,7 +14,7 @@ export function nav(
 ): HTMLTemplateGenerator;
 
 export function nav(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

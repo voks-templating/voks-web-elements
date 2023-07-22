@@ -14,7 +14,7 @@ export function blockquote(
 ): HTMLTemplateGenerator;
 
 export function blockquote(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

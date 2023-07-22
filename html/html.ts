@@ -16,7 +16,7 @@ export function htmlElement(
 ): HTMLTemplateGenerator;
 
 export function htmlElement(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

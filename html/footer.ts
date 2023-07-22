@@ -14,7 +14,7 @@ export function footer(
 ): HTMLTemplateGenerator;
 
 export function footer(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

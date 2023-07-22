@@ -22,7 +22,7 @@ export function source(
 ): HTMLTemplateGenerator;
 
 export function source(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

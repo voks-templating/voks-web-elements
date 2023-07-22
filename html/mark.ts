@@ -14,7 +14,7 @@ export function mark(
 ): HTMLTemplateGenerator;
 
 export function mark(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

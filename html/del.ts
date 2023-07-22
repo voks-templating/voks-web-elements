@@ -17,7 +17,7 @@ export function del(
 ): HTMLTemplateGenerator;
 
 export function del(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

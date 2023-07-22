@@ -14,7 +14,7 @@ export function code(
 ): HTMLTemplateGenerator;
 
 export function code(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

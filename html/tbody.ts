@@ -14,7 +14,7 @@ export function tbody(
 ): HTMLTemplateGenerator;
 
 export function tbody(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

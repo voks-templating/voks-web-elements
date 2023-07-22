@@ -14,7 +14,7 @@ export function datalist(
 ): HTMLTemplateGenerator;
 
 export function datalist(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

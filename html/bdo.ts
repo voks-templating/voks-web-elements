@@ -14,7 +14,7 @@ export function bdo(
 ): HTMLTemplateGenerator;
 
 export function bdo(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

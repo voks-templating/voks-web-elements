@@ -14,7 +14,7 @@ export function address(
 ): HTMLTemplateGenerator;
 
 export function address(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

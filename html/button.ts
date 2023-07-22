@@ -42,7 +42,7 @@ export function button(
 ): HTMLTemplateGenerator;
 
 export function button(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

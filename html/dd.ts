@@ -14,7 +14,7 @@ export function dd(
 ): HTMLTemplateGenerator;
 
 export function dd(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

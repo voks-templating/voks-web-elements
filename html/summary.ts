@@ -14,7 +14,7 @@ export function summary(
 ): HTMLTemplateGenerator;
 
 export function summary(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

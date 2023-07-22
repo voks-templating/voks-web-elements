@@ -14,7 +14,7 @@ export function strong(
 ): HTMLTemplateGenerator;
 
 export function strong(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

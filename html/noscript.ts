@@ -14,7 +14,7 @@ export function noscript(
 ): HTMLTemplateGenerator;
 
 export function noscript(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

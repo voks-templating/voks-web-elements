@@ -14,7 +14,7 @@ export function sup(
 ): HTMLTemplateGenerator;
 
 export function sup(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

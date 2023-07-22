@@ -18,7 +18,7 @@ export function ol(
 ): HTMLTemplateGenerator;
 
 export function ol(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

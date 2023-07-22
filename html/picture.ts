@@ -14,7 +14,7 @@ export function picture(
 ): HTMLTemplateGenerator;
 
 export function picture(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],

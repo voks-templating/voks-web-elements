@@ -14,7 +14,7 @@ export function aside(
 ): HTMLTemplateGenerator;
 
 export function aside(
-  content:
+  content?:
     | string
     | HTMLTemplate
     | (string | HTMLTemplate | HTMLTemplateGenerator)[],
