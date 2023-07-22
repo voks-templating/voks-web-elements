@@ -1,7 +1,8 @@
-import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplateGenerator } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
+import { WebElementContent } from "./web_element_content.ts";
 
 export type VideoAttributes = {
   autoplay?: boolean;
@@ -19,17 +20,11 @@ export type VideoAttributes = {
 
 export function video(
   attributes: VideoAttributes,
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function video(
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function video(...args: [unknown, unknown?]) {

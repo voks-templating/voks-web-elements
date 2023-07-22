@@ -1,7 +1,8 @@
-import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplateGenerator } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
+import { WebElementContent } from "./web_element_content.ts";
 
 export type MapAttributes = {
   name?: string;
@@ -9,17 +10,11 @@ export type MapAttributes = {
 
 export function map(
   attributes: MapAttributes,
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function map(
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function map(...args: [unknown, unknown?]) {

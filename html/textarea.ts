@@ -1,4 +1,4 @@
-import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplateGenerator } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
@@ -9,6 +9,7 @@ import {
   LengthAttributes,
   PlaceholderAttribute,
 } from "./input_attributes.ts";
+import { WebElementContent } from "./web_element_content.ts";
 
 export type TextareaAttributes =
   | AutocompleteAttribute
@@ -23,17 +24,11 @@ export type TextareaAttributes =
 
 export function textarea(
   attributes: TextareaAttributes,
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function textarea(
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function textarea(...args: [unknown, unknown?]) {

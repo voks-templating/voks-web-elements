@@ -1,4 +1,4 @@
-import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplateGenerator } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
@@ -12,6 +12,7 @@ import {
   FormnovalidateAttribute,
   FormtargetAttribute,
 } from "./input_attributes.ts";
+import { WebElementContent } from "./web_element_content.ts";
 
 export type ButtonAttributes =
   | (
@@ -35,17 +36,11 @@ export type ButtonAttributes =
 
 export function button(
   attributes: ButtonAttributes,
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function button(
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function button(...args: [unknown, unknown?]) {

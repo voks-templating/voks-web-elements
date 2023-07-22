@@ -1,7 +1,8 @@
-import { html, HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplateGenerator } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
+import { WebElementContent } from "./web_element_content.ts";
 
 export type FormAttributes = {
   acceptCharset?: string;
@@ -18,17 +19,11 @@ export type FormAttributes = {
 
 export function form(
   attributes: FormAttributes,
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function form(
-  content?:
-    | string
-    | HTMLTemplate
-    | (string | HTMLTemplate | HTMLTemplateGenerator)[],
+  content?: WebElementContent,
 ): HTMLTemplateGenerator;
 
 export function form(...args: [unknown, unknown?]) {
