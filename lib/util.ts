@@ -1,7 +1,8 @@
 import { HTMLTemplate } from "../deps.ts";
 
 export const isObjectLiteral = (thing: unknown) => {
-  return Object.getPrototypeOf(thing) === Object.prototype;
+  return thing !== undefined &&
+    Object.getPrototypeOf(thing) === Object.prototype;
 };
 
 export const attributesAndContentFromArgs = <T>(

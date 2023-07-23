@@ -46,6 +46,16 @@ Deno.test("anchor tag element", async (t) => {
     assertEquals(rendered, expected);
   });
 
+  await t.step("anchor with nullish content", async () => {
+    const withUndefined = a(undefined);
+    const withNull = a(false);
+    const withFalsish = a(false);
+
+    assertEquals(minify(await renderToString(withUndefined)), "<a></a>");
+    assertEquals(minify(await renderToString(withNull)), "<a></a>");
+    assertEquals(minify(await renderToString(withFalsish)), "<a></a>");
+  });
+
   await t.step("anchor attributes but no content", async () => {
     const actual = a({ download: "foobar.doc" });
 
@@ -77,4 +87,19 @@ Deno.test("anchor tag element", async (t) => {
     const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
+
+  await t.step(
+    "allow passing nullish values to array content array",
+    async () => {
+      const actual = a({ download: "foobar.doc" }, [
+        undefined,
+        null,
+        false,
+      ]);
+
+      const expected = `<a download="foobar.doc"></a>`;
+      const rendered = minify(await renderToString(actual));
+      assertEquals(rendered, expected);
+    },
+  );
 });
