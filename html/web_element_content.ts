@@ -6,4 +6,11 @@ export type WebElementContent =
   | false
   | string
   | HTMLTemplate
-  | (string | HTMLTemplate | HTMLTemplateGenerator)[];
+  | (
+    | undefined
+    | null
+    | false
+    | string
+    | HTMLTemplate
+    | HTMLTemplateGenerator
+  )[];
