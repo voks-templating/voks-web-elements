@@ -3,13 +3,13 @@ import { HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
 export type WebElementContent =
   | undefined
   | null
-  | false
+  | boolean
   | string
   | HTMLTemplate
   | (
     | undefined
     | null
-    | false
+    | boolean
     | string
     | HTMLTemplate
     | HTMLTemplateGenerator
