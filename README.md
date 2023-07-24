@@ -44,14 +44,18 @@ passing an array with a list of child elements.
 import { html, renderToString } from "https://deno.land/x/voks/mod.ts";
 import { div, p, span } from "https://deno.land/x/voks_web_elements";
 
+// use with html`` tagged templates to be more flexible
 div(
   { class: "container" },
   html`
-  ${p("hello, ")}
-  ${span({ class: "highlight" }, "world!")}
-`,
+    <p><!-- useful in combination with otherwise static html snippets --></p>
+    ${p("hello, ")}
+    ${span({ class: "highlight" }, "world!")}
+    <p><!-- useful in combination with otherwise static html snippets --></p>
+  `,
 );
 
+// use with [] to maintain a cleaner structure
 div({ class: "container" }, [
   p("hello,"),
   span({ class: "highlight" }, "world!"),
