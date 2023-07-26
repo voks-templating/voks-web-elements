@@ -8,7 +8,7 @@ export type FieldsetAttributes = {
   disabled?: boolean;
   form?: string;
   name?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function fieldset(
   attributes: FieldsetAttributes,

@@ -8,7 +8,7 @@ export type OlAttributes = {
   reversed?: boolean;
   start?: number;
   type?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function ol(
   attributes: OlAttributes,

@@ -8,7 +8,7 @@ export type OutputAttributes = {
   for?: string;
   form?: string;
   name: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function output(
   attributes: OutputAttributes,
@@ -24,6 +24,6 @@ export function output(...args: [unknown, unknown?]) {
     OutputAttributes
   >(...args);
   return html`<output ${
-    attributeList<OutputAttributes>(attributes)
+    attributeList<OutputAttributes>(attributes as OutputAttributes)
   }>${content}</output>`;
 }

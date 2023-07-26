@@ -5,7 +5,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 import { WebElementContent } from "./web_element_content.ts";
 
 export type AudioAttributes =
-  | {
+  & {
     autoplay?: boolean;
     controls?: boolean;
     controlslist?: string;
@@ -16,7 +16,7 @@ export type AudioAttributes =
     muted?: boolean;
     preload?: string;
   }
-  | HTMLGlobalAttributes;
+  & HTMLGlobalAttributes;
 
 export function audio(
   attributes: AudioAttributes,

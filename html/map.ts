@@ -6,7 +6,7 @@ import { WebElementContent } from "./web_element_content.ts";
 
 export type MapAttributes = {
   name?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function map(
   attributes: MapAttributes,

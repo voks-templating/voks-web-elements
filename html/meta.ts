@@ -7,7 +7,7 @@ export type MetaAttributes = {
   content?: string;
   httpEquiv?: string;
   name?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export const meta = (
   attributes: MetaAttributes = {},

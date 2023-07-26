@@ -5,7 +5,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 export type BaseAttributes = {
   href?: string;
   target?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export const base = (
   attributes: BaseAttributes = {},

@@ -6,7 +6,7 @@ import { WebElementContent } from "./web_element_content.ts";
 
 export type LabelAttributes = {
   for?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function label(
   attributes: LabelAttributes,

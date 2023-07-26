@@ -16,7 +16,7 @@ export type VideoAttributes = {
   preload?: string;
   src?: string;
   width?: number;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function video(
   attributes: VideoAttributes,

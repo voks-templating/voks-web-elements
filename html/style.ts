@@ -8,7 +8,7 @@ export type StyleAttributes = {
   media?: string;
   nonce?: string;
   title?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function style(
   attributes: StyleAttributes,

@@ -10,7 +10,7 @@ export type ThAttributes = {
   headers?: string;
   rowspan?: number;
   scope?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function th(
   attributes: ThAttributes,

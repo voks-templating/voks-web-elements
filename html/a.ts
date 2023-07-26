@@ -5,7 +5,7 @@ import { HTMLGlobalAttributes } from "./global_attributes.ts";
 import { WebElementContent } from "./web_element_content.ts";
 
 export type AnchorAttributes =
-  | {
+  & {
     download?: boolean | string;
     href?: string;
     hreflang?: string;
@@ -13,9 +13,9 @@ export type AnchorAttributes =
     refererPolicy?: string;
     rel?: string;
     target?: string;
-    type: string;
+    type?: string;
   }
-  | HTMLGlobalAttributes;
+  & HTMLGlobalAttributes;
 
 export function a(
   attributes: AnchorAttributes,

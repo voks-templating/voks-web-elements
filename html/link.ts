@@ -17,7 +17,7 @@ export type LinkAttributes = {
   imagesizes?: string;
   imagesrcset?: string;
   imagesrc?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export const link = (
   attributes: LinkAttributes = {},

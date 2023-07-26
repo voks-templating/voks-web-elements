@@ -6,7 +6,7 @@ import { WebElementContent } from "./web_element_content.ts";
 
 export type QAttributes = {
   cite?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function q(
   attributes: QAttributes,

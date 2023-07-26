@@ -11,7 +11,7 @@ export type MeterAttributes = {
   low?: number;
   high?: number;
   optimum?: number;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function meter(
   attributes: MeterAttributes,

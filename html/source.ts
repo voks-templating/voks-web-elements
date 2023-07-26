@@ -12,7 +12,7 @@ export type SourceAttributes = {
   src?: string;
   height?: number;
   width?: number;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function source(
   attributes: SourceAttributes,

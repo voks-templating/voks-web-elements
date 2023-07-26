@@ -9,7 +9,7 @@ export type EmbedAttributes = {
   width?: number;
   src?: string;
   type?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function embed(
   attributes: EmbedAttributes,

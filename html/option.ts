@@ -9,7 +9,7 @@ export type OptionAttributes = {
   label?: string;
   selected?: boolean;
   value?: string | number;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function option(
   attributes: OptionAttributes,

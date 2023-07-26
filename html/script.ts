@@ -14,7 +14,7 @@ export type ScriptAttributes = {
   nomodule?: boolean;
   nonce?: string;
   referrerpolicy?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function script(
   attributes: ScriptAttributes,

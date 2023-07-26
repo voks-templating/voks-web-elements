@@ -7,7 +7,7 @@ import { WebElementContent } from "./web_element_content.ts";
 export type DelAttributes = {
   cite?: string;
   datetime?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function del(
   attributes: DelAttributes,

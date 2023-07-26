@@ -22,7 +22,7 @@ export type BodyAttributes = {
   onstorage?: string;
   onundo?: string;
   onunload?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function body(
   attributes: BodyAttributes,

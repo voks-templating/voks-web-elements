@@ -6,7 +6,7 @@ import { WebElementContent } from "./web_element_content.ts";
 
 export type TimeAttributes = {
   datetime?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function time(
   attributes: TimeAttributes,

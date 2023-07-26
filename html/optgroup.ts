@@ -7,7 +7,7 @@ import { WebElementContent } from "./web_element_content.ts";
 export type OptgroupAttributes = {
   disabled?: boolean;
   label?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function optgroup(
   attributes: OptgroupAttributes,

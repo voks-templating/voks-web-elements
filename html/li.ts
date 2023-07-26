@@ -6,7 +6,7 @@ import { WebElementContent } from "./web_element_content.ts";
 
 export type LiAttributes = {
   value?: number;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function li(
   attributes: LiAttributes,

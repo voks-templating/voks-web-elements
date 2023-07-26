@@ -4,7 +4,7 @@ import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 import { WebElementContent } from "./web_element_content.ts";
 
-export type DataAttributes = { value: string | number } | HTMLGlobalAttributes;
+export type DataAttributes = { value: string | number } & HTMLGlobalAttributes;
 
 export function data(
   attributes: DataAttributes,
@@ -20,6 +20,6 @@ export function data(...args: [unknown, unknown?]) {
     DataAttributes
   >(...args);
   return html`<data ${
-    attributeList<DataAttributes>(attributes)
+    attributeList<DataAttributes>(attributes as DataAttributes)
   }>${content}</data>`;
 }

@@ -8,7 +8,7 @@ export type TdAttributes = {
   colspan?: number;
   headers?: string;
   rowspan?: number;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function td(
   attributes: TdAttributes,

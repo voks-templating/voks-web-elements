@@ -10,16 +10,14 @@ export type ObjectAttributes =
   } | {
     type: string;
   })
-  & (
-    | {
-      form?: string;
-      height?: number;
-      width?: number;
-      name?: string;
-      usemap?: string;
-    }
-    | HTMLGlobalAttributes
-  );
+  & {
+    form?: string;
+    height?: number;
+    width?: number;
+    name?: string;
+    usemap?: string;
+  }
+  & HTMLGlobalAttributes;
 
 export function object(
   attributes: ObjectAttributes,

@@ -12,15 +12,15 @@ import {
 import { WebElementContent } from "./web_element_content.ts";
 
 export type TextareaAttributes =
-  | AutocompleteAttribute
-  | { autofocus?: boolean }
-  | { cols?: number }
-  | DisabledAttribute
-  | FormAttribute
-  | LengthAttributes
-  | { name?: string }
-  | PlaceholderAttribute
-  | HTMLGlobalAttributes;
+  & AutocompleteAttribute
+  & { autofocus?: boolean }
+  & { cols?: number }
+  & DisabledAttribute
+  & FormAttribute
+  & LengthAttributes
+  & { name?: string }
+  & PlaceholderAttribute
+  & HTMLGlobalAttributes;
 
 export function textarea(
   attributes: TextareaAttributes,

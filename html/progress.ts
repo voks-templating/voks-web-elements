@@ -7,7 +7,7 @@ import { WebElementContent } from "./web_element_content.ts";
 export type ProgressAttributes = {
   max?: number;
   value?: number;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function progress(
   attributes: ProgressAttributes,

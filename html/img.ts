@@ -17,7 +17,7 @@ export type ImgAttributes = {
   loading?: string;
   elementtiming?: string;
   fetchpriority?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export const img = (
   attributes: ImgAttributes = {},

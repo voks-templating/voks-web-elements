@@ -14,15 +14,15 @@ import {
 import { WebElementContent } from "./web_element_content.ts";
 
 export type SelectAttributes =
-  | HTMLGlobalAttributes
-  | RequiredAttribute
-  | AutocompleteAttribute
-  | { autofocus?: boolean }
-  | DisabledAttribute
-  | FormAttribute
-  | MultipleAttribute
-  | NameAttribute
-  | SizeAttribute;
+  & HTMLGlobalAttributes
+  & RequiredAttribute
+  & AutocompleteAttribute
+  & { autofocus?: boolean }
+  & DisabledAttribute
+  & FormAttribute
+  & MultipleAttribute
+  & NameAttribute
+  & SizeAttribute;
 
 export function select(
   attributes: SelectAttributes,

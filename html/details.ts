@@ -6,7 +6,7 @@ import { WebElementContent } from "./web_element_content.ts";
 
 export type DetailsAttributes = {
   open?: boolean;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function details(
   attributes: DetailsAttributes,

@@ -15,24 +15,26 @@ import {
 import { WebElementContent } from "./web_element_content.ts";
 
 export type ButtonAttributes =
-  | (
-    & AutocompleteAttribute
-    & DisabledAttribute
-    & FormAttribute
-    & FormactionAttribute
-    & FormenctypeAttribute
-    & FormmethodAttribute
-    & FormnovalidateAttribute
-    & FormtargetAttribute
+  & (
+    | (
+      & AutocompleteAttribute
+      & DisabledAttribute
+      & FormAttribute
+      & FormactionAttribute
+      & FormenctypeAttribute
+      & FormmethodAttribute
+      & FormnovalidateAttribute
+      & FormtargetAttribute
+    )
+    | {
+      name?: string;
+      popovertarget?: string;
+      popovertargetaction?: string;
+      type?: string;
+      value?: string;
+    }
   )
-  | {
-    name?: string;
-    popovertarget?: string;
-    popovertargetaction?: string;
-    type?: string;
-    value?: string;
-  }
-  | HTMLGlobalAttributes;
+  & HTMLGlobalAttributes;
 
 export function button(
   attributes: ButtonAttributes,

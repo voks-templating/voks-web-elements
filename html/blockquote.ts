@@ -4,7 +4,7 @@ import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
 import { WebElementContent } from "./web_element_content.ts";
 
-export type BlockquoteAttributes = { cite?: string } | HTMLGlobalAttributes;
+export type BlockquoteAttributes = { cite?: string } & HTMLGlobalAttributes;
 
 export function blockquote(
   attributes: BlockquoteAttributes,

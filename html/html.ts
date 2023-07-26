@@ -6,7 +6,7 @@ import { WebElementContent } from "./web_element_content.ts";
 
 export type HtmlAttributes = {
   xmlns?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function htmlElement(
   attributes: HtmlAttributes,

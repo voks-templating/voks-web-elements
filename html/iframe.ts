@@ -15,7 +15,7 @@ export type IframeAttributes = {
   width?: number;
   loading?: string;
   referrerpolicy?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function iframe(
   attributes: IframeAttributes,

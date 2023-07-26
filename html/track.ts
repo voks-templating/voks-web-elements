@@ -10,7 +10,7 @@ export type TrackAttributes = {
   description?: string;
   chapters?: string;
   metadata?: string;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function track(
   attributes: TrackAttributes,

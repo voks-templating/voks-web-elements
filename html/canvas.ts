@@ -7,7 +7,7 @@ import { WebElementContent } from "./web_element_content.ts";
 export type CanvasAttributes = {
   height?: number;
   width?: number;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function canvas(
   attributes: CanvasAttributes,

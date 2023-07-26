@@ -15,7 +15,7 @@ export type FormAttributes = {
   target?: string;
   method?: string;
   novalidate?: boolean;
-} | HTMLGlobalAttributes;
+} & HTMLGlobalAttributes;
 
 export function form(
   attributes: FormAttributes,
