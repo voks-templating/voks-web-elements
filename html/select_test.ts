@@ -29,7 +29,7 @@ Deno.test("select tag element", async (t) => {
     );
 
     const expected =
-      `<select autocomplete="on" autofocus disabled form="form" multiple name="name" required size="1">Content</select>`;
+      `<select autocomplete="on" autofocus disabled form="form" id="fubar" multiple name="name" required size="1">Content</select>`;
     const rendered = minify(await renderToString(actual));
     assertEquals(rendered, expected);
   });
