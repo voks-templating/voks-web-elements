@@ -14,6 +14,7 @@ import {
 import { WebElementContent } from "./web_element_content.ts";
 
 export type SelectAttributes =
+  | HTMLGlobalAttributes
   | RequiredAttribute
   | AutocompleteAttribute
   | { autofocus?: boolean }
@@ -21,8 +22,7 @@ export type SelectAttributes =
   | FormAttribute
   | MultipleAttribute
   | NameAttribute
-  | SizeAttribute
-  | HTMLGlobalAttributes;
+  | SizeAttribute;
 
 export function select(
   attributes: SelectAttributes,

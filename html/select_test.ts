@@ -15,6 +15,7 @@ Deno.test("select tag element", async (t) => {
   await t.step("select with attributes", async () => {
     const actual = select(
       {
+        id: "fubar",
         autocomplete: "on",
         autofocus: true,
         disabled: true,
