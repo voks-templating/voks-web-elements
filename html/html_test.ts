@@ -8,7 +8,7 @@ Deno.test("html tag element", async (t) => {
 
     const expected = `<html>Content</html>`;
 
-    const rendered = minify(await renderToString(actual));
+    const rendered = await renderToString(actual);
     assertEquals(rendered, expected);
   });
 

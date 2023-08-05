@@ -4,7 +4,7 @@ export const attributeList = <T>(
   attributes?: T,
   options: { prioritySort?: string } = {},
 ) => {
-  if (!attributes) return "";
+  if (!attributes || Object.keys(attributes).length <= 0) return "";
 
   const resolvedAttributes = (options.prioritySort
     ? Object.entries(attributes)
