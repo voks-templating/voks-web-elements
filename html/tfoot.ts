@@ -19,7 +19,7 @@ export function tfoot(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TfootAttributes
   >(...args);
-  return html`<tfoot ${
+  return html`<tfoot${
     attributeList<TfootAttributes>(attributes)
   }>${content}</tfoot>`;
 }

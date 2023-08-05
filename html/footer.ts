@@ -19,7 +19,7 @@ export function footer(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     FooterAttributes
   >(...args);
-  return html`<footer ${
+  return html`<footer${
     attributeList<FooterAttributes>(attributes)
   }>${content}</footer>`;
 }

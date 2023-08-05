@@ -21,5 +21,5 @@ export function li(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     LiAttributes
   >(...args);
-  return html`<li ${attributeList<LiAttributes>(attributes)}>${content}</li>`;
+  return html`<li${attributeList<LiAttributes>(attributes)}>${content}</li>`;
 }

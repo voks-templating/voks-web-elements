@@ -19,7 +19,7 @@ export function wbr(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     WbrAttributes
   >(...args);
-  return html`<wbr ${
+  return html`<wbr${
     attributeList<WbrAttributes>(attributes)
   }>${content}</wbr>`;
 }

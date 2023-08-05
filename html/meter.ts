@@ -26,7 +26,7 @@ export function meter(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     MeterAttributes
   >(...args);
-  return html`<meter ${
+  return html`<meter${
     attributeList<MeterAttributes>(attributes)
   }>${content}</meter>`;
 }

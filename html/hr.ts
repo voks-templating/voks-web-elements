@@ -6,4 +6,4 @@ export type HrAttributes = HTMLGlobalAttributes;
 
 export const hr = (
   attributes: HrAttributes = {},
-) => html`<hr ${attributeList<HrAttributes>(attributes)} \\>`;
+) => html`<hr${attributeList<HrAttributes>(attributes)} \\>`;

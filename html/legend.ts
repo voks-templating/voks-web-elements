@@ -19,7 +19,7 @@ export function legend(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     LegendAttributes
   >(...args);
-  return html`<legend ${
+  return html`<legend${
     attributeList<LegendAttributes>(attributes)
   }>${content}</legend>`;
 }

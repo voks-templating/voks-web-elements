@@ -49,7 +49,7 @@ export function button(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     ButtonAttributes
   >(...args);
-  return html`<button ${
+  return html`<button${
     attributeList<ButtonAttributes>(attributes)
   }>${content}</button>`;
 }

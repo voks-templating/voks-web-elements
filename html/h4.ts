@@ -19,5 +19,5 @@ export function h4(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     H4Attributes
   >(...args);
-  return html`<h4 ${attributeList<H4Attributes>(attributes)}>${content}</h4>`;
+  return html`<h4${attributeList<H4Attributes>(attributes)}>${content}</h4>`;
 }

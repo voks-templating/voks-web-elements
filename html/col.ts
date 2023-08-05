@@ -19,7 +19,7 @@ export function col(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     ColAttributes
   >(...args);
-  return html`<col ${
+  return html`<col${
     attributeList<ColAttributes>(attributes)
   }>${content}</col>`;
 }

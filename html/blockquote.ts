@@ -19,7 +19,7 @@ export function blockquote(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     BlockquoteAttributes
   >(...args);
-  return html`<blockquote ${
+  return html`<blockquote${
     attributeList<BlockquoteAttributes>(attributes)
   }>${content}</blockquote>`;
 }

@@ -19,5 +19,5 @@ export function rt(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     RtAttributes
   >(...args);
-  return html`<rt ${attributeList<RtAttributes>(attributes)}>${content}</rt>`;
+  return html`<rt${attributeList<RtAttributes>(attributes)}>${content}</rt>`;
 }

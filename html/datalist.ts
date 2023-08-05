@@ -19,7 +19,7 @@ export function datalist(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     DatalistAttributes
   >(...args);
-  return html`<datalist ${
+  return html`<datalist${
     attributeList<DatalistAttributes>(attributes)
   }>${content}</datalist>`;
 }

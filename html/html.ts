@@ -21,7 +21,7 @@ export function htmlElement(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     HtmlAttributes
   >(...args);
-  return html`<html ${
+  return html`<html${
     attributeList<HtmlAttributes>(attributes)
   }>${content}</html>`;
 }

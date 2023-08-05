@@ -23,7 +23,7 @@ export function output(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     OutputAttributes
   >(...args);
-  return html`<output ${
+  return html`<output${
     attributeList<OutputAttributes>(attributes as OutputAttributes)
   }>${content}</output>`;
 }

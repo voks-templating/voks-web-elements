@@ -23,7 +23,7 @@ export function style(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     StyleAttributes
   >(...args);
-  return html`<style ${
+  return html`<style${
     attributeList<StyleAttributes>(attributes)
   }>${content}</style>`;
 }

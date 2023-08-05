@@ -19,7 +19,7 @@ export function figcaption(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     FigcaptionAttributes
   >(...args);
-  return html`<figcaption ${
+  return html`<figcaption${
     attributeList<FigcaptionAttributes>(attributes)
   }>${content}</figcaption>`;
 }

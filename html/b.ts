@@ -19,5 +19,5 @@ export function b(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     BAttributes
   >(...args);
-  return html`<b ${attributeList<BAttributes>(attributes)}>${content}</b>`;
+  return html`<b${attributeList<BAttributes>(attributes)}>${content}</b>`;
 }

@@ -30,7 +30,7 @@ export function iframe(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     IframeAttributes
   >(...args);
-  return html`<iframe ${
+  return html`<iframe${
     attributeList<IframeAttributes>(attributes)
   }>${content}</iframe>`;
 }

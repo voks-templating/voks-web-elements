@@ -19,7 +19,7 @@ export function thead(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TheadAttributes
   >(...args);
-  return html`<thead ${
+  return html`<thead${
     attributeList<TheadAttributes>(attributes)
   }>${content}</thead>`;
 }

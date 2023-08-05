@@ -19,7 +19,7 @@ export function slot(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SlotAttributes
   >(...args);
-  return html`<slot ${
+  return html`<slot${
     attributeList<SlotAttributes>(attributes)
   }>${content}</slot>`;
 }

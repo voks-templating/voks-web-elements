@@ -21,5 +21,5 @@ export function q(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     QAttributes
   >(...args);
-  return html`<q ${attributeList<QAttributes>(attributes)}>${content}</q>`;
+  return html`<q${attributeList<QAttributes>(attributes)}>${content}</q>`;
 }

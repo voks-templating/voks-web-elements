@@ -19,7 +19,7 @@ export function colgroup(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     ColgroupAttributes
   >(...args);
-  return html`<colgroup ${
+  return html`<colgroup${
     attributeList<ColgroupAttributes>(attributes)
   }>${content}</colgroup>`;
 }

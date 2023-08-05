@@ -19,7 +19,7 @@ export function title(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TitleAttributes
   >(...args);
-  return html`<title ${
+  return html`<title${
     attributeList<TitleAttributes>(attributes)
   }>${content}</title>`;
 }

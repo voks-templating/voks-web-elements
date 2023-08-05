@@ -19,5 +19,5 @@ export function dt(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     DtAttributes
   >(...args);
-  return html`<dt ${attributeList<DtAttributes>(attributes)}>${content}</dt>`;
+  return html`<dt${attributeList<DtAttributes>(attributes)}>${content}</dt>`;
 }

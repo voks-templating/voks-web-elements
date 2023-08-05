@@ -19,5 +19,5 @@ export function s(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SAttributes
   >(...args);
-  return html`<s ${attributeList<SAttributes>(attributes)}>${content}</s>`;
+  return html`<s${attributeList<SAttributes>(attributes)}>${content}</s>`;
 }

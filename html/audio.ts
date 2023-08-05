@@ -31,7 +31,7 @@ export function audio(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     AudioAttributes
   >(...args);
-  return html`<audio ${
+  return html`<audio${
     attributeList<AudioAttributes>(attributes)
   }>${content}</audio>`;
 }

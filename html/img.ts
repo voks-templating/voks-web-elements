@@ -21,4 +21,4 @@ export type ImgAttributes = {
 
 export const img = (
   attributes: ImgAttributes = {},
-) => html`<img ${attributeList<ImgAttributes>(attributes)} \\>`;
+) => html`<img${attributeList<ImgAttributes>(attributes)} \\>`;

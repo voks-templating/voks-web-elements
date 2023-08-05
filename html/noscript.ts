@@ -19,7 +19,7 @@ export function noscript(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     NoscriptAttributes
   >(...args);
-  return html`<noscript ${
+  return html`<noscript${
     attributeList<NoscriptAttributes>(attributes)
   }>${content}</noscript>`;
 }

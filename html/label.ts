@@ -21,7 +21,7 @@ export function label(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     LabelAttributes
   >(...args);
-  return html`<label ${
+  return html`<label${
     attributeList<LabelAttributes>(attributes)
   }>${content}</label>`;
 }

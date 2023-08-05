@@ -21,7 +21,7 @@ export function map(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     MapAttributes
   >(...args);
-  return html`<map ${
+  return html`<map${
     attributeList<MapAttributes>(attributes)
   }>${content}</map>`;
 }

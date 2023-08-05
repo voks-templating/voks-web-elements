@@ -19,7 +19,7 @@ export function template(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TemplateAttributes
   >(...args);
-  return html`<template ${
+  return html`<template${
     attributeList<TemplateAttributes>(attributes)
   }>${content}</template>`;
 }

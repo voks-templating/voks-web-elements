@@ -37,7 +37,7 @@ export function body(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     BodyAttributes
   >(...args);
-  return html`<body ${
+  return html`<body${
     attributeList<BodyAttributes>(attributes)
   }>${content}</body>`;
 }

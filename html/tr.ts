@@ -19,5 +19,5 @@ export function tr(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TrAttributes
   >(...args);
-  return html`<tr ${attributeList<TrAttributes>(attributes)}>${content}</tr>`;
+  return html`<tr${attributeList<TrAttributes>(attributes)}>${content}</tr>`;
 }

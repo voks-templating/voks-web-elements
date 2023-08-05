@@ -19,5 +19,5 @@ export function u(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     UAttributes
   >(...args);
-  return html`<u ${attributeList<UAttributes>(attributes)}>${content}</u>`;
+  return html`<u${attributeList<UAttributes>(attributes)}>${content}</u>`;
 }

@@ -25,7 +25,7 @@ export function track(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TrackAttributes
   >(...args);
-  return html`<track ${
+  return html`<track${
     attributeList<TrackAttributes>(attributes)
   }>${content}</track>`;
 }

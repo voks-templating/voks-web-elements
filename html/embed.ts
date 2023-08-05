@@ -24,7 +24,7 @@ export function embed(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     EmbedAttributes
   >(...args);
-  return html`<embed ${
+  return html`<embed${
     attributeList<EmbedAttributes>(attributes)
   }>${content}</embed>`;
 }

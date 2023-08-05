@@ -19,7 +19,7 @@ export function main(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     MainAttributes
   >(...args);
-  return html`<main ${
+  return html`<main${
     attributeList<MainAttributes>(attributes)
   }>${content}</main>`;
 }

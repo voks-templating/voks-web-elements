@@ -22,7 +22,7 @@ export function optgroup(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     OptgroupAttributes
   >(...args);
-  return html`<optgroup ${
+  return html`<optgroup${
     attributeList<OptgroupAttributes>(attributes)
   }>${content}</optgroup>`;
 }

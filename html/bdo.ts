@@ -19,7 +19,7 @@ export function bdo(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     BdoAttributes
   >(...args);
-  return html`<bdo ${
+  return html`<bdo${
     attributeList<BdoAttributes>(attributes)
   }>${content}</bdo>`;
 }

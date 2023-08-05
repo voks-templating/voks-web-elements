@@ -34,7 +34,7 @@ export function object(
   const { content, attributes } = attributesAndContentFromArgs<
     ObjectAttributes
   >(...args);
-  return html`<object ${
+  return html`<object${
     attributeList<ObjectAttributes>(attributes as ObjectAttributes)
   }>${content}</object>`;
 }

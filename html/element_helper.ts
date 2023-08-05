@@ -1,4 +1,4 @@
-import { attr, type AttributeValue } from "../deps.ts";
+import { attr, type AttributeValue, type TemplateAttribute } from "../deps.ts";
 
 export const attributeList = <T>(
   attributes?: T,
@@ -6,7 +6,7 @@ export const attributeList = <T>(
 ) => {
   if (!attributes) return "";
 
-  return (options.prioritySort
+  const resolvedAttributes = (options.prioritySort
     ? Object.entries(attributes)
       .sort(([a], [b]) => a.localeCompare(b))
       .sort(([a], [b]) => { // always start with priority attribute!
@@ -16,4 +16,6 @@ export const attributeList = <T>(
       })
     : Object.entries(attributes).sort(([a], [b]) => a.localeCompare(b)))
     .map(([attribute, value]) => attr(attribute, value as AttributeValue));
+
+  return ([" "] as (string | TemplateAttribute)[]).concat(resolvedAttributes);
 };

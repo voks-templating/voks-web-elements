@@ -19,7 +19,7 @@ export function mark(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     MarkAttributes
   >(...args);
-  return html`<mark ${
+  return html`<mark${
     attributeList<MarkAttributes>(attributes)
   }>${content}</mark>`;
 }

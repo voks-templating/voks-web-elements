@@ -29,7 +29,7 @@ export function script(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     ScriptAttributes
   >(...args);
-  return html`<script ${
+  return html`<script${
     attributeList<ScriptAttributes>(attributes)
   }>${content}</script>`;
 }

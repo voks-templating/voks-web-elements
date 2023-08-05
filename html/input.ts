@@ -5,7 +5,7 @@ import { InputAttributes, TypedInputAttributes } from "./input_attributes.ts";
 export const input = <T>(
   attributes: InputAttributes<T>,
 ) => {
-  return html`<input ${
+  return html`<input${
     attributeList<InputAttributes<T>>(attributes, {
       prioritySort: "type",
     })

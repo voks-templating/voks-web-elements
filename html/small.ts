@@ -19,7 +19,7 @@ export function small(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SmallAttributes
   >(...args);
-  return html`<small ${
+  return html`<small${
     attributeList<SmallAttributes>(attributes)
   }>${content}</small>`;
 }

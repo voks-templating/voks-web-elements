@@ -23,5 +23,5 @@ export function td(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TdAttributes
   >(...args);
-  return html`<td ${attributeList<TdAttributes>(attributes)}>${content}</td>`;
+  return html`<td${attributeList<TdAttributes>(attributes)}>${content}</td>`;
 }

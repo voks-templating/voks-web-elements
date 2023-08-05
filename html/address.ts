@@ -19,7 +19,7 @@ export function address(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     AddressAttributes
   >(...args);
-  return html`<address ${
+  return html`<address${
     attributeList<AddressAttributes>(attributes)
   }>${content}</address>`;
 }

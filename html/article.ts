@@ -19,7 +19,7 @@ export function article(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     ArticleAttributes
   >(...args);
-  return html`<article ${
+  return html`<article${
     attributeList<ArticleAttributes>(attributes)
   }>${content}</article>`;
 }

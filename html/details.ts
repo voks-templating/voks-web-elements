@@ -21,7 +21,7 @@ export function details(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     DetailsAttributes
   >(...args);
-  return html`<details ${
+  return html`<details${
     attributeList<DetailsAttributes>(attributes)
   }>${content}</details>`;
 }

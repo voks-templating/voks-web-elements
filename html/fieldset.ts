@@ -23,7 +23,7 @@ export function fieldset(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     FieldsetAttributes
   >(...args);
-  return html`<fieldset ${
+  return html`<fieldset${
     attributeList<FieldsetAttributes>(attributes)
   }>${content}</fieldset>`;
 }

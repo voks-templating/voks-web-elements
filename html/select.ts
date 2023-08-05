@@ -37,7 +37,7 @@ export function select(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SelectAttributes
   >(...args);
-  return html`<select ${
+  return html`<select${
     attributeList<SelectAttributes>(attributes)
   }>${content}</select>`;
 }

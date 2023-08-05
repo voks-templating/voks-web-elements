@@ -19,7 +19,7 @@ export function caption(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     CaptionAttributes
   >(...args);
-  return html`<caption ${
+  return html`<caption${
     attributeList<CaptionAttributes>(attributes)
   }>${content}</caption>`;
 }

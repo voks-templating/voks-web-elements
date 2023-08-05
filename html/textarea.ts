@@ -35,7 +35,7 @@ export function textarea(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TextareaAttributes
   >(...args);
-  return html`<textarea ${
+  return html`<textarea${
     attributeList<TextareaAttributes>(attributes)
   }>${content}</textarea>`;
 }

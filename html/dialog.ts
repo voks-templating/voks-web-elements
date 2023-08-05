@@ -21,7 +21,7 @@ export function dialog(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     DialogAttributes
   >(...args);
-  return html`<dialog ${
+  return html`<dialog${
     attributeList<DialogAttributes>(attributes)
   }>${content}</dialog>`;
 }

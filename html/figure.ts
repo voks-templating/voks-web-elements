@@ -19,7 +19,7 @@ export function figure(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     FigureAttributes
   >(...args);
-  return html`<figure ${
+  return html`<figure${
     attributeList<FigureAttributes>(attributes)
   }>${content}</figure>`;
 }

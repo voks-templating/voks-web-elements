@@ -23,5 +23,5 @@ export function ol(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     OlAttributes
   >(...args);
-  return html`<ol ${attributeList<OlAttributes>(attributes)}>${content}</ol>`;
+  return html`<ol${attributeList<OlAttributes>(attributes)}>${content}</ol>`;
 }

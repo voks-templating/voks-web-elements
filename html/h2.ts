@@ -19,5 +19,5 @@ export function h2(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     H2Attributes
   >(...args);
-  return html`<h2 ${attributeList<H2Attributes>(attributes)}>${content}</h2>`;
+  return html`<h2${attributeList<H2Attributes>(attributes)}>${content}</h2>`;
 }

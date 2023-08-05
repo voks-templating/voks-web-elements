@@ -6,4 +6,4 @@ export type IAttributes = HTMLGlobalAttributes;
 
 export const i = (
   attributes: IAttributes = {},
-) => html`<i ${attributeList<IAttributes>(attributes)} \\>`;
+) => html`<i${attributeList<IAttributes>(attributes)} \\>`;

@@ -19,7 +19,7 @@ export function summary(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SummaryAttributes
   >(...args);
-  return html`<summary ${
+  return html`<summary${
     attributeList<SummaryAttributes>(attributes)
   }>${content}</summary>`;
 }

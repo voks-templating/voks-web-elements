@@ -21,4 +21,4 @@ export type LinkAttributes = {
 
 export const link = (
   attributes: LinkAttributes = {},
-) => html`<link ${attributeList<LinkAttributes>(attributes)} />`;
+) => html`<link${attributeList<LinkAttributes>(attributes)} />`;

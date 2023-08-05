@@ -19,5 +19,5 @@ export function em(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     EmAttributes
   >(...args);
-  return html`<em ${attributeList<EmAttributes>(attributes)}>${content}</em>`;
+  return html`<em${attributeList<EmAttributes>(attributes)}>${content}</em>`;
 }

@@ -19,7 +19,7 @@ export function samp(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SampAttributes
   >(...args);
-  return html`<samp ${
+  return html`<samp${
     attributeList<SampAttributes>(attributes)
   }>${content}</samp>`;
 }

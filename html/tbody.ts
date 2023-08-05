@@ -19,7 +19,7 @@ export function tbody(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TbodyAttributes
   >(...args);
-  return html`<tbody ${
+  return html`<tbody${
     attributeList<TbodyAttributes>(attributes)
   }>${content}</tbody>`;
 }

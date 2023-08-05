@@ -19,7 +19,7 @@ export function bdi(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     BdiAttributes
   >(...args);
-  return html`<bdi ${
+  return html`<bdi${
     attributeList<BdiAttributes>(attributes)
   }>${content}</bdi>`;
 }

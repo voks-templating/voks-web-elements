@@ -19,7 +19,7 @@ export function table(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TableAttributes
   >(...args);
-  return html`<table ${
+  return html`<table${
     attributeList<TableAttributes>(attributes)
   }>${content}</table>`;
 }

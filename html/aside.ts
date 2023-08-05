@@ -19,7 +19,7 @@ export function aside(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     AsideAttributes
   >(...args);
-  return html`<aside ${
+  return html`<aside${
     attributeList<AsideAttributes>(attributes)
   }>${content}</aside>`;
 }

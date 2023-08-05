@@ -22,7 +22,7 @@ export function canvas(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     CanvasAttributes
   >(...args);
-  return html`<canvas ${
+  return html`<canvas${
     attributeList<CanvasAttributes>(attributes)
   }>${content}</canvas>`;
 }

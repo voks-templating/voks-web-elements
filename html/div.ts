@@ -19,7 +19,7 @@ export function div(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     DivAttributes
   >(...args);
-  return html`<div ${
+  return html`<div${
     attributeList<DivAttributes>(attributes)
   }>${content}</div>`;
 }

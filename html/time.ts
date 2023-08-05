@@ -21,7 +21,7 @@ export function time(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     TimeAttributes
   >(...args);
-  return html`<time ${
+  return html`<time${
     attributeList<TimeAttributes>(attributes)
   }>${content}</time>`;
 }

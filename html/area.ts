@@ -17,4 +17,4 @@ export type AreaAttributes = {
 
 export const area = (
   attributes: AreaAttributes = {},
-) => html`<area ${attributeList<AreaAttributes>(attributes)}>`;
+) => html`<area${attributeList<AreaAttributes>(attributes)}>`;

@@ -19,7 +19,7 @@ export function ruby(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     RubyAttributes
   >(...args);
-  return html`<ruby ${
+  return html`<ruby${
     attributeList<RubyAttributes>(attributes)
   }>${content}</ruby>`;
 }

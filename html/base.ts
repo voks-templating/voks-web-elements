@@ -9,4 +9,4 @@ export type BaseAttributes = {
 
 export const base = (
   attributes: BaseAttributes = {},
-) => html`<base ${attributeList<BaseAttributes>(attributes)} />`;
+) => html`<base${attributeList<BaseAttributes>(attributes)} />`;

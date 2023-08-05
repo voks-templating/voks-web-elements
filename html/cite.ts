@@ -19,7 +19,7 @@ export function cite(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     CiteAttributes
   >(...args);
-  return html`<cite ${
+  return html`<cite${
     attributeList<CiteAttributes>(attributes)
   }>${content}</cite>`;
 }

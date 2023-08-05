@@ -28,7 +28,7 @@ export function source(...args: [unknown, unknown?]) {
     SourceAttributes
   >(...args);
 
-  return html`<source ${
+  return html`<source${
     attributeList<SourceAttributes>(attributes)
   }>${content}</source>`;
 }

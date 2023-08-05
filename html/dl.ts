@@ -19,5 +19,5 @@ export function dl(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     DlAttributes
   >(...args);
-  return html`<dl ${attributeList<DlAttributes>(attributes)}>${content}</dl>`;
+  return html`<dl${attributeList<DlAttributes>(attributes)}>${content}</dl>`;
 }

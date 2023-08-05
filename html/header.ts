@@ -19,7 +19,7 @@ export function header(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     HeaderAttributes
   >(...args);
-  return html`<header ${
+  return html`<header${
     attributeList<HeaderAttributes>(attributes)
   }>${content}</header>`;
 }

@@ -19,5 +19,5 @@ export function p(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     PAttributes
   >(...args);
-  return html`<p ${attributeList<PAttributes>(attributes)}>${content}</p>`;
+  return html`<p${attributeList<PAttributes>(attributes)}>${content}</p>`;
 }

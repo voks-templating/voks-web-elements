@@ -30,5 +30,5 @@ export function a(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     AnchorAttributes
   >(...args);
-  return html`<a ${attributeList<AnchorAttributes>(attributes)}>${content}</a>`;
+  return html`<a${attributeList<AnchorAttributes>(attributes)}>${content}</a>`;
 }

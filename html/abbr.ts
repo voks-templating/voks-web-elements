@@ -19,7 +19,7 @@ export function abbr(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     AbbrAttributes
   >(...args);
-  return html`<abbr ${
+  return html`<abbr${
     attributeList<AbbrAttributes>(attributes)
   }>${content}</abbr>`;
 }

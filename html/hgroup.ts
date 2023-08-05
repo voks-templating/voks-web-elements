@@ -19,7 +19,7 @@ export function hgroup(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     HgroupAttributes
   >(...args);
-  return html`<hgroup ${
+  return html`<hgroup${
     attributeList<HgroupAttributes>(attributes)
   }>${content}</hgroup>`;
 }

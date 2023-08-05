@@ -19,5 +19,5 @@ export function h5(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     H5Attributes
   >(...args);
-  return html`<h5 ${attributeList<H5Attributes>(attributes)}>${content}</h5>`;
+  return html`<h5${attributeList<H5Attributes>(attributes)}>${content}</h5>`;
 }

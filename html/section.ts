@@ -19,7 +19,7 @@ export function section(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SectionAttributes
   >(...args);
-  return html`<section ${
+  return html`<section${
     attributeList<SectionAttributes>(attributes)
   }>${content}</section>`;
 }

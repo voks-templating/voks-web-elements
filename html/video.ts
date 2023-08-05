@@ -31,7 +31,7 @@ export function video(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     VideoAttributes
   >(...args);
-  return html`<video ${
+  return html`<video${
     attributeList<VideoAttributes>(attributes)
   }>${content}</video>`;
 }

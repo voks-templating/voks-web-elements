@@ -11,4 +11,4 @@ export type MetaAttributes = {
 
 export const meta = (
   attributes: MetaAttributes = {},
-) => html`<meta ${attributeList<MetaAttributes>(attributes)} />`;
+) => html`<meta${attributeList<MetaAttributes>(attributes)} />`;

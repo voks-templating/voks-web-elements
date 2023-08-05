@@ -19,7 +19,7 @@ export function strong(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     StrongAttributes
   >(...args);
-  return html`<strong ${
+  return html`<strong${
     attributeList<StrongAttributes>(attributes)
   }>${content}</strong>`;
 }

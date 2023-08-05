@@ -24,7 +24,7 @@ export function option(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     OptionAttributes
   >(...args);
-  return html`<option ${
+  return html`<option${
     attributeList<OptionAttributes>(attributes)
   }>${content}</option>`;
 }

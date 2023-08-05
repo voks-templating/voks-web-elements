@@ -19,7 +19,7 @@ export function span(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SpanAttributes
   >(...args);
-  return html`<span ${
+  return html`<span${
     attributeList<SpanAttributes>(attributes)
   }>${content}</span>`;
 }

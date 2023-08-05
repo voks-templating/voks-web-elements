@@ -19,7 +19,7 @@ export function menu(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     MenuAttributes
   >(...args);
-  return html`<menu ${
+  return html`<menu${
     attributeList<MenuAttributes>(attributes)
   }>${content}</menu>`;
 }

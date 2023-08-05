@@ -19,5 +19,5 @@ export function h3(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     H3Attributes
   >(...args);
-  return html`<h3 ${attributeList<H3Attributes>(attributes)}>${content}</h3>`;
+  return html`<h3${attributeList<H3Attributes>(attributes)}>${content}</h3>`;
 }

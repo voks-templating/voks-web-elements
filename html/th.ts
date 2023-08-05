@@ -25,5 +25,5 @@ export function th(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     ThAttributes
   >(...args);
-  return html`<th ${attributeList<ThAttributes>(attributes)}>${content}</th>`;
+  return html`<th${attributeList<ThAttributes>(attributes)}>${content}</th>`;
 }

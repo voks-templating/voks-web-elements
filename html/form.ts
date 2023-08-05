@@ -30,7 +30,7 @@ export function form(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     FormAttributes
   >(...args);
-  return html`<form ${
+  return html`<form${
     attributeList<FormAttributes>(attributes)
   }>${content}</form>`;
 }

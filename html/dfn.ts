@@ -19,7 +19,7 @@ export function dfn(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     DfnAttributes
   >(...args);
-  return html`<dfn ${
+  return html`<dfn${
     attributeList<DfnAttributes>(attributes)
   }>${content}</dfn>`;
 }

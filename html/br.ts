@@ -6,4 +6,4 @@ export type BrAttributes = HTMLGlobalAttributes;
 
 export const br = (
   attributes: BrAttributes = {},
-) => html`<br ${attributeList<BrAttributes>(attributes)}>`;
+) => html`<br${attributeList<BrAttributes>(attributes)}>`;

@@ -22,7 +22,7 @@ export function progress(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     ProgressAttributes
   >(...args);
-  return html`<progress ${
+  return html`<progress${
     attributeList<ProgressAttributes>(attributes)
   }>${content}</progress>`;
 }
