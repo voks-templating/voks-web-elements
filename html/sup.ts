@@ -19,7 +19,5 @@ export function sup(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SupAttributes
   >(...args);
-  return html`<sup${
-    attributeList<SupAttributes>(attributes)
-  }>${content}</sup>`;
+  return html`<sup${attributeList<SupAttributes>(attributes)}>${content}</sup>`;
 }

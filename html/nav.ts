@@ -19,7 +19,5 @@ export function nav(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     NavAttributes
   >(...args);
-  return html`<nav${
-    attributeList<NavAttributes>(attributes)
-  }>${content}</nav>`;
+  return html`<nav${attributeList<NavAttributes>(attributes)}>${content}</nav>`;
 }

@@ -22,7 +22,5 @@ export function del(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     DelAttributes
   >(...args);
-  return html`<del${
-    attributeList<DelAttributes>(attributes)
-  }>${content}</del>`;
+  return html`<del${attributeList<DelAttributes>(attributes)}>${content}</del>`;
 }

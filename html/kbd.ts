@@ -19,7 +19,5 @@ export function kbd(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     KbdAttributes
   >(...args);
-  return html`<kbd${
-    attributeList<KbdAttributes>(attributes)
-  }>${content}</kbd>`;
+  return html`<kbd${attributeList<KbdAttributes>(attributes)}>${content}</kbd>`;
 }

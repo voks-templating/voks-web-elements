@@ -19,7 +19,5 @@ export function variable(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     VarAttributes
   >(...args);
-  return html`<var${
-    attributeList<VarAttributes>(attributes)
-  }>${content}</var>`;
+  return html`<var${attributeList<VarAttributes>(attributes)}>${content}</var>`;
 }

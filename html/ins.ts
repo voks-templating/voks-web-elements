@@ -22,7 +22,5 @@ export function ins(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     InsAttributes
   >(...args);
-  return html`<ins${
-    attributeList<InsAttributes>(attributes)
-  }>${content}</ins>`;
+  return html`<ins${attributeList<InsAttributes>(attributes)}>${content}</ins>`;
 }

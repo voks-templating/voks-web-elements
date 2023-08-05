@@ -19,7 +19,5 @@ export function pre(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     PreAttributes
   >(...args);
-  return html`<pre${
-    attributeList<PreAttributes>(attributes)
-  }>${content}</pre>`;
+  return html`<pre${attributeList<PreAttributes>(attributes)}>${content}</pre>`;
 }

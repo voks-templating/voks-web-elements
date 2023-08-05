@@ -19,7 +19,5 @@ export function sub(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<
     SubAttributes
   >(...args);
-  return html`<sub${
-    attributeList<SubAttributes>(attributes)
-  }>${content}</sub>`;
+  return html`<sub${attributeList<SubAttributes>(attributes)}>${content}</sub>`;
 }
