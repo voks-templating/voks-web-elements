@@ -6,6 +6,6 @@ export {
   type HTMLTemplateGenerator,
   renderToString,
   type TemplateAttribute,
-} from "https://deno.land/x/voks@2.1.0/mod.ts";
+} from "https://deno.land/x/voks@2.2.0/mod.ts";
 
-export { minify } from "https://deno.land/x/voks@2.1.0/lib/minify.ts";
+export { minify } from "https://deno.land/x/voks@2.2.0/lib/minify.ts";
