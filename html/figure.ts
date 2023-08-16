@@ -1,4 +1,4 @@
-import { html, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplate } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
@@ -9,11 +9,11 @@ export type FigureAttributes = HTMLGlobalAttributes;
 export function figure(
   attributes: FigureAttributes,
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function figure(
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function figure(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<

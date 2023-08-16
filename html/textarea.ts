@@ -1,4 +1,4 @@
-import { html, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplate } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
@@ -25,11 +25,11 @@ export type TextareaAttributes =
 export function textarea(
   attributes: TextareaAttributes,
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function textarea(
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function textarea(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<

@@ -1,4 +1,4 @@
-import { html, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplate } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
@@ -21,11 +21,11 @@ export type VideoAttributes = {
 export function video(
   attributes: VideoAttributes,
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function video(
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function video(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<

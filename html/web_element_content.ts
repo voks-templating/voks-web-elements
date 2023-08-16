@@ -1,16 +1,3 @@
-import { HTMLTemplate, HTMLTemplateGenerator } from "../deps.ts";
+import { HTMLTemplate } from "../deps.ts";
 
-export type WebElementContent =
-  | undefined
-  | null
-  | boolean
-  | string
-  | HTMLTemplate
-  | (
-    | undefined
-    | null
-    | boolean
-    | string
-    | HTMLTemplate
-    | HTMLTemplateGenerator
-  )[];
+export type WebElementContent = HTMLTemplate;

@@ -1,4 +1,4 @@
-import { html, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplate } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
@@ -39,11 +39,11 @@ export type ButtonAttributes =
 export function button(
   attributes: ButtonAttributes,
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function button(
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function button(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<

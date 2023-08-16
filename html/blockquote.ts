@@ -1,4 +1,4 @@
-import { html, HTMLTemplateGenerator } from "../deps.ts";
+import { html, HTMLTemplate } from "../deps.ts";
 import { attributesAndContentFromArgs } from "../lib/util.ts";
 import { attributeList } from "./element_helper.ts";
 import { HTMLGlobalAttributes } from "./global_attributes.ts";
@@ -9,11 +9,11 @@ export type BlockquoteAttributes = { cite?: string } & HTMLGlobalAttributes;
 export function blockquote(
   attributes: BlockquoteAttributes,
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function blockquote(
   content?: WebElementContent,
-): HTMLTemplateGenerator;
+): HTMLTemplate;
 
 export function blockquote(...args: [unknown, unknown?]) {
   const { content, attributes } = attributesAndContentFromArgs<

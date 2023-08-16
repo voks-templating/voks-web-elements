@@ -3,9 +3,8 @@ export {
   type AttributeValue,
   html,
   type HTMLTemplate,
-  type HTMLTemplateGenerator,
   renderToString,
   type TemplateAttribute,
-} from "https://deno.land/x/voks@2.2.1/mod.ts";
+} from "https://deno.land/x/voks@2.2.2/mod.ts";
 
-export { minify } from "https://deno.land/x/voks@2.2.1/lib/minify.ts";
+export { minify } from "https://deno.land/x/voks@2.2.2/lib/minify.ts";

@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "check": "deno lint && deno check *.ts **/*.ts && deno fmt --check *.ts html/*.ts",
+    "check": "deno lint && deno check *.ts html/*.ts && deno fmt --check *.ts html/*.ts",
     "build:node": "deno run -A ./scripts/build.node.ts",
     "bootstrap": "deno run --allow-write=html,mod.ts ./scripts/bootstrap_component.ts",
     "example:simple": "deno run ./examples/simple.ts"
