@@ -15,7 +15,7 @@ jobs:
         with:
           deno-version: v1.x # Run with latest stable Deno.
       - run: deno fmt --check *.ts html/*.ts
-      - run: deno lint *.ts
+      - run: deno lint *.ts html/*.ts
       - run: deno test
       - run: deno task build:node
       - name: Setup Node.js
