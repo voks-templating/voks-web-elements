@@ -114,3 +114,4 @@ export * from "./html/tr.ts";
 export * from "./html/doctype.ts";
 export * from "./html/web_element_content.ts";
 export * from "./html/element_helper.ts";
+export * from "./lib/util.ts";
